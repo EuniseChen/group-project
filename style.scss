@@ -436,6 +436,8 @@ main {
 }
 footer {
   @include section-setting;
+  padding: 110px 320px;
+  align-items: flex-start;
   background-color: gray;
   .business-hours {
     .row {
@@ -444,5 +446,11 @@ footer {
   }
   .contact-details {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .line {
+    width: 100%;
+    padding: 45px 0;
   }
 }

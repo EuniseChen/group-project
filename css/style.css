@@ -2,65 +2,40 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: '微軟正黑體';
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  font-family: "微軟正黑體";
+  box-sizing: border-box;
 }
 
 main {
   background-color: gray;
 }
-
 main #banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
 }
-
 main #banner nav .nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 120px;
 }
-
 main #banner nav .nav-container .nav-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   list-style: none;
   width: 815px;
   height: 24px;
 }
-
 main #banner nav .nav-container .nav-items .nav-link {
   font-size: 21px;
   color: white;
   text-decoration: none;
 }
-
 main #banner .logo {
   margin: 155px 0 48px 0;
   width: 312px;
@@ -68,97 +43,68 @@ main #banner .logo {
   border-radius: 50%;
   background-color: #919191;
 }
-
 main #banner .logo-text {
   font-size: 40px;
   color: white;
 }
-
 main #banner .slogan {
   margin: 24px 0 74px 0;
   font-size: 20px;
   color: white;
 }
-
 main #banner .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   list-style: none;
   width: 289px;
   height: 50px;
 }
-
 main #banner .icons .icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: white;
 }
-
 main #concept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 1166px;
   background-color: #fff;
 }
-
 main #concept article {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 150px;
   width: 1313px;
   height: 583px;
 }
-
 main #concept article .text .concept-title {
   font-size: 48px;
 }
-
 main #concept article .text .concept-text {
   width: 539px;
   height: 268px;
   font-size: 24px;
   line-height: 48px;
 }
-
 main #concept article .concept-img {
   width: 660px;
   height: 471px;
 }
-
 main #environment {
   position: relative;
   width: 100%;
   height: 1300px;
   background-color: #ffffff;
 }
-
 main #environment .environment-img1 {
   position: absolute;
   top: 150px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   width: 1467px;
   height: 600px;
   background-color: #848484;
@@ -166,7 +112,6 @@ main #environment .environment-img1 {
           clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
   border-radius: 10px;
 }
-
 main #environment .environment-img2 {
   position: absolute;
   top: 647px;
@@ -178,7 +123,6 @@ main #environment .environment-img2 {
           clip-path: polygon(0 23%, 90% 0, 100% 100%, 0% 100%);
   border-radius: 10px;
 }
-
 main #environment .environment-img3 {
   position: absolute;
   top: 563px;
@@ -190,7 +134,6 @@ main #environment .environment-img3 {
           clip-path: polygon(0 14%, 100% 0, 100% 100%, 14% 100%);
   border-radius: 10px;
 }
-
 main #environment .cat-img {
   position: absolute;
   top: 842px;
@@ -198,7 +141,6 @@ main #environment .cat-img {
   width: 228px;
   height: 438px;
 }
-
 main #environment .dialog-img {
   position: absolute;
   top: 350px;
@@ -206,222 +148,141 @@ main #environment .dialog-img {
   width: 610px;
   height: 266px;
 }
-
 main #food-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
-
 main #food-card h1 {
   font-size: 48px;
   margin: 100px 0 45px 0;
 }
-
 main #food-card .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 1322px;
   height: 422px;
 }
-
 main #food-card .row .column {
   margin: 5px;
-  -webkit-perspective: 700px;
-          perspective: 700px;
+  perspective: 700px;
 }
-
 main #food-card .row .column .food-img {
   position: relative;
   width: 420px;
   height: 420px;
 }
-
 main #food-card .row .column .food-img:hover > .front {
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
-
 main #food-card .row .column .food-img:hover > .back {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
-
 main #food-card .row .column .food-img .front,
 main #food-card .row .column .food-img .back {
   position: absolute;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   width: 100%;
   height: 100%;
 }
-
 main #food-card .row .column .food-img .front {
   z-index: 2;
 }
-
 main #food-card .row .column .food-img .front .front-img {
   width: 100%;
   height: 100%;
 }
-
 main #food-card .row .column .food-img .back {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
   background-color: white;
 }
-
 main #food-card .row .column .food-img .back span {
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transform: translateZ(95px) scale(0.81);
-          transform: translateZ(95px) scale(0.81);
+  perspective: 1000px;
+  transform: translateZ(95px) scale(0.81);
   font-size: 50px;
 }
-
 main #menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin-top: 100px;
   background-color: #fff;
 }
-
 main #menu .menu-nav {
   text-align: center;
 }
-
 main #menu .menu-nav h1 {
   font-size: 48px;
   margin: 100px 0 45px 0;
 }
-
 main #menu .menu-nav .menu-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   width: 1310px;
   height: 64px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-
 main #menu .menu-nav .menu-items .menu-item {
   list-style-type: none;
 }
-
 main #menu .menu-nav .menu-items .menu-item .menu-link {
   text-decoration: none;
   color: black;
   font-size: 30px;
 }
-
 main #menu .pet-food {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 52px;
   width: 1310px;
   height: 810px;
 }
-
 main #menu .pet-food .pet-food-intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 532px;
   height: 422px;
 }
-
 main #menu .pet-food .pet-food-intro h2 {
   font-size: 36px;
 }
-
 main #menu .pet-food .pet-food-intro .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid gray;
 }
-
 main #menu .pet-food .pet-food-intro .row .column h3 {
   font-size: 30px;
 }
-
 main #menu .pet-food .pet-food-intro .row .column .content {
   font-size: 21px;
 }
-
 main #menu .pet-food .pet-food-intro .row .column .price {
   font-size: 30px;
 }
-
 main #menu .pet-food .food-pic {
   position: relative;
   width: 709px;
   height: 812px;
 }
-
 main #menu .pet-food .food-pic .small-pic {
   position: absolute;
   width: 350px;
   height: 400px;
 }
-
 main #menu .pet-food .food-pic .small-pic2 {
   top: 405px;
 }
-
 main #menu .pet-food .food-pic .large-pic {
   position: absolute;
   top: 0;
@@ -429,98 +290,65 @@ main #menu .pet-food .food-pic .large-pic {
   width: 350px;
   height: 805px;
 }
-
 main #adoption-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   background-color: #fff;
 }
-
 main #adoption-info h1 {
   font-size: 48px;
   margin: 100px 0 45px 0;
 }
-
 main #adoption-info .nav-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 main #adoption-info .nav-items .nav-item {
   list-style: none;
   text-align: center;
   width: 350px;
   height: 100px;
   line-height: 100px;
-  margin: 0  0 24px 12px;
+  margin: 0 0 24px 12px;
   background-color: gray;
 }
-
 main #adoption-info .nav-items .nav-item .nav-link {
   text-decoration: none;
   font-size: 36px;
   color: white;
 }
-
 main #adoption-info .content {
   width: 1321px;
   height: 783px;
   border-radius: 20px;
   background-color: gray;
 }
-
 main #story {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100vh;
   background-color: #fff;
 }
-
 main #story h1 {
   font-size: 48px;
   margin: 100px 0 45px 0;
 }
-
 main #story .swiper {
   width: 100%;
   height: 100%;
 }
-
 main #story .swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 main #story .swiper .swiper-slide img {
   display: block;
   width: 100%;
@@ -530,29 +358,23 @@ main #story .swiper .swiper-slide img {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  padding: 110px 320px;
+  align-items: flex-start;
   background-color: gray;
 }
-
 footer .business-hours .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 footer .contact-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
-/*# sourceMappingURL=style.css.map */
+footer .line {
+  width: 100%;
+  padding: 45px 0;
+}/*# sourceMappingURL=style.css.map */
