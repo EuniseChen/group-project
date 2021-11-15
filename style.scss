@@ -1,0 +1,448 @@
+@mixin main-heading {
+  font-size: 48px;
+  margin   : 100px 0 45px 0;
+}
+@mixin section-setting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+* {
+  margin     : 0;
+  padding    : 0;
+  font-family: '微軟正黑體';
+  box-sizing : border-box;
+}
+
+main {
+  background-color: gray;
+
+  // 大banner區開始
+  #banner {
+    display       : flex;
+    align-items   : center;
+    flex-direction: column;
+    width         : 100%;
+    height        : 100vh;
+
+    // 導航欄製作開始
+    nav {
+      .nav-container {
+        display            : flex;
+        align-items        : center;
+        justify-content    : center;
+        width              : 100%;
+        height             : 120px;
+
+        .nav-items {
+          display        : flex;
+          align-items    : center;
+          justify-content: space-between;
+          list-style     : none;
+          width          : 815px;
+          height         : 24px;
+
+          .nav-link {
+            font-size      : 21px;
+            color          : white;
+            text-decoration: none;
+
+          }
+        }
+      }
+    }
+
+    // 導航欄製作結束
+    .logo {
+      margin          : 155px 0 48px 0;
+      width           : 312px;
+      height          : 312px;
+      border-radius   : 50%;
+      background-color: #919191;
+    }
+
+    .logo-text {
+      font-size: 40px;
+      color    : white;
+    }
+
+    .slogan {
+      margin   : 24px 0 74px 0;
+      font-size: 20px;
+      color    : white;
+    }
+
+    .icons {
+      display        : flex;
+      justify-content: space-between;
+      list-style     : none;
+      width          : 289px;
+      height         : 50px;
+
+      .icon {
+        width           : 50px;
+        height          : 50px;
+        border-radius   : 50%;
+        background-color: white;
+      }
+    }
+  }
+
+  // 大banner區結束
+  // 店家理念區塊開始
+  #concept {
+    @include section-setting;
+    height          : 1166px;
+    background-color: #fff;
+
+    article {
+      display        : flex;
+      justify-content: space-between;
+      align-items    : center;
+      padding-top    : 150px;
+      width          : 1313px;
+      height         : 583px;
+
+      .text {
+        .concept-title {
+          font-size: 48px;
+        }
+
+        .concept-text {
+          width      : 539px;
+          height     : 268px;
+          font-size  : 24px;
+          line-height: 48px;
+        }
+      }
+
+      .concept-img {
+        width : 660px;
+        height: 471px;
+      }
+
+    }
+  }
+
+  // 店家理念區塊結束
+  // 店內環境區塊開始
+  #environment {
+    position        : relative;
+    width           : 100%;
+    height          : 1300px;
+    background-color: #ffffff;
+
+    .environment-img1 {
+      position        : absolute;
+      top             : 150px;
+      left            : 50%;
+      transform       : translateX(-50%);
+      width           : 1467px;
+      height          : 600px;
+      background-color: #848484;
+      clip-path       : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+      border-radius   : 10px;
+    }
+
+    .environment-img2 {
+      position        : absolute;
+      top             : 647px;
+      left            : 219px;
+      width           : 907px;
+      height          : 504px;
+      background-color: #848484;
+      clip-path       : polygon(0 23%, 90% 0, 100% 100%, 0% 100%);
+      border-radius   : 10px;
+    }
+
+    .environment-img3 {
+      position        : absolute;
+      top             : 563px;
+      left            : 1046px;
+      width           : 640px;
+      height          : 588px;
+      background-color: #848484;
+      clip-path       : polygon(0 14%, 100% 0, 100% 100%, 14% 100%);
+      border-radius   : 10px;
+    }
+
+    .cat-img {
+      position: absolute;
+      top     : 842px;
+      left    : 219px;
+      width   : 228px;
+      height  : 438px;
+    }
+
+    .dialog-img {
+      position: absolute;
+      top     : 350px;
+      left    : 1100px;
+      width   : 610px;
+      height  : 266px;
+    }
+
+  }
+
+  // 店內環境區塊結束
+  // 好食餐點區塊開始
+  #food-card {
+    @include section-setting;
+
+    h1 {
+      @include main-heading;
+    }
+
+    .row {
+      display        : flex;
+      justify-content: space-between;
+      width          : 1322px;
+      height         : 422px;
+
+      .column {
+        margin     : 5px;
+        perspective: 700px;
+
+        // 翻轉效果製作開始
+        .food-img {
+          position: relative;
+          width   : 420px;
+          height  : 420px;
+
+          &:hover>.front {
+            transform: rotateY(-180deg);
+          }
+
+          &:hover>.back {
+            transform: rotateY(0deg);
+          }
+
+          .front,
+          .back {
+            position           : absolute;
+            transform-style    : preserve-3d;
+            backface-visibility: hidden;
+            transition         : transform .9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            width              : 100%;
+            height             : 100%;
+          }
+
+          .front {
+            z-index: 2;
+
+            .front-img {
+              width : 100%;
+              height: 100%;
+            }
+          }
+
+          .back {
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            transform       : rotateY(180deg);
+            background-color: white;
+
+            span {
+              perspective: 1000px;
+              transform  : translateZ(95px) scale(0.81);
+              font-size  : 50px;
+            }
+          }
+        }
+        // 翻轉效果製作結束     
+      }
+    }
+  }
+
+  // 好食餐點區塊結束
+  // 幸福菜單區塊開始
+  #menu {
+    @include section-setting;
+    margin-top      : 100px;
+    // height: 1080px;
+    background-color: #fff;
+      // 菜單導航
+    .menu-nav {
+      text-align: center;
+
+      h1 {
+        @include main-heading;
+      }
+
+      .menu-items {
+        display        : flex;
+        justify-content: space-around;
+        align-items    : center;
+        width          : 1310px;
+        height         : 64px;
+        border-top     : 1px solid black;
+        border-bottom  : 1px solid black;
+
+        .menu-item {
+          list-style-type: none;
+
+          .menu-link {
+            text-decoration: none;
+            color          : black;
+            font-size      : 30px;
+          }
+        }
+      }
+    }
+     // 菜單導航
+    // 寵物鮮食菜單製作開始
+    .pet-food {
+      display        : flex;
+      justify-content: space-between;
+      margin-top     : 52px;
+      width          : 1310px;
+      height         : 810px;
+
+      .pet-food-intro {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        width         : 532px;
+        height        : 422px;
+
+        h2 {
+          font-size: 36px;
+        }
+
+        .row {
+          display      : flex;
+          border-bottom: 1px solid gray;
+
+          .column {
+            h3 {
+              font-size: 30px;
+            }
+
+            .content {
+              font-size: 21px;
+            }
+
+            .price {
+              font-size: 30px;
+            }
+          }
+        }
+
+      }
+
+      .food-pic {
+        position: relative;
+        width   : 709px;
+        height  : 812px;
+
+        .small-pic {
+          position: absolute;
+          width   : 350px;
+          height  : 400px;
+        }
+
+        .small-pic2 {
+          top: 405px;
+        }
+
+        .large-pic {
+          position: absolute;
+          top     : 0;
+          left    : 355px;
+          width   : 350px;
+          height  : 805px;
+        }
+      }
+    }
+    // 寵物鮮食菜單製作結束
+  }
+  // 幸福菜單區塊結束
+
+  // 寵物認養區塊開始
+  #adoption-info {
+    @include section-setting;
+    background-color: #fff;
+    h1 {
+      @include main-heading;
+    }
+    .nav-items {
+      display: flex;
+      .nav-item {
+        list-style: none;
+        text-align: center;
+        width: 350px;
+        height: 100px;
+        line-height: 100px;
+        margin: 0  0 24px 12px;
+        background-color: gray;
+        .nav-link {
+          text-decoration: none;
+          font-size: 36px;
+          color: white;
+        }
+      }
+    }
+    .content {
+      width: 1321px;
+      height: 783px;
+      border-radius: 20px;
+      background-color: gray;
+    }
+  }
+  #story {
+    @include section-setting;
+    height: 100vh;
+    background-color: #fff;
+    h1 {
+      @include main-heading;
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+  
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+  
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  
+    }
+
+   
+  }
+}
+footer {
+  @include section-setting;
+  background-color: gray;
+  .business-hours {
+    .row {
+      display: flex;
+    }
+  }
+  .contact-details {
+    display: flex;
+  }
+}
