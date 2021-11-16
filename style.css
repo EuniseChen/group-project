@@ -468,8 +468,6 @@ main #food-card .row .column .food-img .back {
 }
 
 main #food-card .row .column .food-img .front {
-  width: 100%;
-  height: 100%;
   z-index: 2;
 }
 
@@ -478,10 +476,54 @@ main #food-card .row .column .food-img .front .front-img {
   height: 100%;
 }
 
+main #food-card .row .column .food-img .front .front-img .cover {
+  width: 420px;
+  height: 360px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+
+main #food-card .row .column .food-img .front .front-img1 {
+  background-image: url(./images/好食餐點/beef.jpg);
+  background-size: cover;
+  background-position: -37px 0;
+}
+
+main #food-card .row .column .food-img .front .front-img2 {
+  background-image: url(./images/好食餐點/pork.jpg);
+  background-size: cover;
+  background-position: -40px 0;
+}
+
+main #food-card .row .column .food-img .front .front-img3 {
+  background-image: url(./images/好食餐點/cook.jpg);
+  background-size: cover;
+}
+
+main #food-card .row .column .food-img .front .front-img4 {
+  background-image: url(./images/好食餐點/fruit-tea.jpg);
+  background-size: cover;
+}
+
+main #food-card .row .column .food-img .front .front-img5 {
+  background-image: url(./images/好食餐點/covid-fight.jpg);
+  background-size: cover;
+}
+
+main #food-card .row .column .food-img .front .front-img6 {
+  background-image: url(./images/好食餐點/pet-food.jpg);
+  background-size: cover;
+}
+
 main #food-card .row .column .food-img .back {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -493,7 +535,11 @@ main #food-card .row .column .food-img .back {
   background-color: white;
 }
 
-main #food-card .row .column .food-img .back span {
+main #food-card .row .column .food-img .back img {
+  width: 131px;
+}
+
+main #food-card .row .column .food-img .back h2, main #food-card .row .column .food-img .back p {
   -webkit-perspective: 1000px;
           perspective: 1000px;
   -webkit-transform: translateZ(95px) scale(0.81);

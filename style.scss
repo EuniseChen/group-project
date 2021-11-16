@@ -385,24 +385,64 @@ main {
           }
 
           .front {
-            width  : 100%;
-            height : 100%;
+            // width  : 100%;
+            // height : 100%;
             z-index: 2;
 
             .front-img {
               width : 100%;
               height: 100%;
+              .cover {
+                width: 420px;
+                height: 360px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.7);
+                z-index: 3;
+              }
+            }
+
+            .front-img1 {
+              background-image: url(./images/好食餐點/beef.jpg);
+              background-size: cover;
+              background-position: -37px 0;
+            }
+
+            .front-img2 {
+              background-image: url(./images/好食餐點/pork.jpg);
+              background-size: cover;
+              background-position: -40px 0;
+            }
+
+            .front-img3 {
+              background-image: url(./images/好食餐點/cook.jpg);
+              background-size: cover;
+            }
+            .front-img4 {
+              background-image: url(./images/好食餐點/fruit-tea.jpg);
+              background-size: cover;
+            }
+            .front-img5 {
+              background-image: url(./images/好食餐點/covid-fight.jpg);
+              background-size: cover;
+            }
+            .front-img6 {
+              background-image: url(./images/好食餐點/pet-food.jpg);
+              background-size: cover;
             }
           }
 
           .back {
             display         : flex;
+            flex-direction: column;
             align-items     : center;
             justify-content : center;
             transform       : rotateY(180deg);
             background-color: white;
+            img{
+              width: 131px;
+            }
 
-            span {
+            h2, p {
               perspective: 1000px;
               transform  : translateZ(95px) scale(0.81);
               font-size  : 50px;
