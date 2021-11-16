@@ -6,41 +6,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="shortcut icon" href="./images/favicon/SVG/favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+  <!--彈出一個full-screen頁面  -->
+  <div id="mask">
+    <div id="modal">
+      <button><i class="bi bi-x close-btn"></i></button>
+    </div>
+  </div>
+  <!--  -->
 
   <main>
     <!-- banner開始 -->
     <section id="banner">
       <!-- 導航列開始 -->
-      <nav>
-        <div class="nav-container">
-          <ul class="nav-items">
-            <li class="nav-item">
-              <a href="#" class="nav-link">店家理念</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">店家環境</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">好食餐點</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">幸福菜單</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">寵物認養</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">店家咨詢</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="nav">
+        <ul class="nav-items">
+          <li class="logo-item">
+            <img src="./images/banner/logo/small-logo.svg" alt="">
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">店家理念</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">店家環境</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">好食餐點</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">幸福菜單</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">寵物認養</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">店家咨詢</a>
+          </li>
+        </ul>
+      </div>
+
       <!-- 導航列結束 -->
       <!-- 店家的logo與slogan開始 -->
       <div class="logo"></div>
@@ -49,10 +59,18 @@
       <!-- 店家的logo與slogan結束 -->
       <!-- 店家連結開始 -->
       <ul class="icons">
-        <li class="icon"></li>
-        <li class="icon"></li>
-        <li class="icon"></li>
-        <li class="icon"></li>
+        <li class="icon">
+          <img src="./images/banner/icons/fb.svg" alt="">
+        </li>
+        <li class="icon">
+          <img src="./images/banner/icons/ig.svg" alt="">
+        </li>
+        <li class="icon">
+          <img src="./images/banner/icons/fp.svg" alt="">
+        </li>
+        <li class="icon">
+          <img src="./images/banner/icons/ue.svg" alt="">
+        </li>
       </ul>
       <!-- 店家連結結束 -->
     </section>
@@ -62,26 +80,51 @@
       <article>
         <div class="text">
           <h2 class="concept-title">店家理念</h2>
-          <p class="concept-text">Homecafe是一間以「寵物認養」作為宗旨的複合式餐廳, 不同於一般「寵物餐廳」, 我們是流浪貓狗的"暫時之家"，目標幫他們找到充滿愛與關懷的永久之家.（還沒有修改好）
+          <img class="dog-img" src="./images/店家理念/HandDraw-Dog-01.png" alt="">
+          <p class="concept-text">
+            Homecafe是一間以〝寵物認養〞作為宗旨的複合式餐廳，不同於一般〝寵物餐廳〞，我們是流浪貓狗的〝暫時之家〞，目標幫他們找到充滿愛與關懷的永久之家！我們提供精緻有溫度的飲食與服務，用心規劃舒適整潔的認養區，專注於改善流浪動物處境。
+            本店不接受捐款，以店內營收支撐陪伴著十來隻毛孩子在這裡等家。
+
           </p>
         </div>
-        <img class="concept-img" src="./images/example/example.jpg" alt="">
+        <img class="concept-img" src="./images/店家理念/idea01.jpg" alt="狗狗用可愛的眼神望著上面">
       </article>
       <article>
-        <img class="concept-img" src="./images/example/example.jpg" alt="">
+        <img class="concept-img" src="./images/店家理念/idea02.jpg" alt="一群狗狗在跟客人玩">
         <div class="text">
-          <p class="concept-text">所謂"Homecafe",是邀請你來我們家作客,聊天和吃飯的同時, 給這些毛孩子親人的機會, 並讓有緣人帶他們回家（還沒有修改好</p>
+          <p class="concept-text">本店十年來收容了五百多隻流浪毛孩，幫這些毛孩子找到歸屬。平均救援一隻毛孩就耗資三到五萬，五百多隻的毛孩的救助費用也近乎千萬以上，而您在本店的消費盈利也會投資在動物救援之上。
+            這裡有幸福，有好食。邀請你來我們家作客，聊天和吃飯的同時，給這些毛孩子親人的機會，並讓有緣人帶牠們回家。</p>
+          <img class="cat-img" src="./images/店家理念/HandDraw-Cat-01.png" alt="">
         </div>
       </article>
     </section>
     <!-- 店家理念區塊結束 -->
     <!-- 店家環境區塊開始 -->
     <section id="environment">
-      <div class="environment-img1"></div>
-      <div class="environment-img2"></div>
-      <div class="environment-img3"></div>
-      <img class="cat-img" src="./images/example/cat.svg" alt="">
-      <img class="dialog-img" src="./images/example/dialog.svg" alt="">
+      <!-- <div class="full-screen">
+        <div class="images"></div>
+      </div> -->
+      <div class="environment-img">
+        <h1>店內環境</h1>
+        <div class="large-img">
+          <div class="filter1">
+            <i class="bi bi-zoom-in full-screen-1"></i>
+          </div>
+        </div>
+
+        <div class="small-img1">
+          <div class="filter2">
+            <i class="bi bi-zoom-in full-screen-2"></i>
+          </div>
+        </div>
+        <div class="small-img2">
+          <div class="filter3">
+            <i class="bi bi-zoom-in full-screen-3"></i>
+          </div>
+        </div>
+      </div>
+      <img class="cat-shadow" src="./images/店家環境/Shadow-Cat-01.png" alt="">
+      <img class="dialog-img" src="./images/店家環境/dialog-img.svg" alt="">
     </section>
     <!-- 店家環境區塊結束 -->
     <!-- 好食餐點區塊開始 -->
@@ -94,7 +137,7 @@
           <div class="food-img">
             <!-- 卡片前面內容物 -->
             <div class="front">
-              <img class="front-img" src="./images/example/example.jpg" alt="">
+              <img class="front-img" src="./images/好食餐點/beef.jpg" alt="">
             </div>
             <!-- 卡片後面內容物 -->
             <div class="back">
@@ -105,7 +148,7 @@
         <div class="column">
           <div class="food-img">
             <div class="front">
-              <img class="front-img" src="./images/example/example.jpg" alt="">
+              <img class="front-img" src="./images/好食餐點/pork.jpg" alt="">
             </div>
             <div class="back">
               <span>雞肉豬肉牛肉好吃</span>
@@ -115,7 +158,7 @@
         <div class="column">
           <div class="food-img">
             <div class="front">
-              <img class="front-img" src="./images/example/example.jpg" alt="">
+              <img class="front-img" src="./images/好食餐點/cook.jpg" alt="">
             </div>
             <div class="back">
               <span>雞肉豬肉牛肉好吃</span>
@@ -128,7 +171,7 @@
         <div class="column">
           <div class="food-img">
             <div class="front">
-              <img class="front-img" src="./images/example/example.jpg" alt="">
+              <img class="front-img" src="./images/好食餐點/fruit tea.jpg" alt="">
             </div>
             <div class="back">
               <span>雞肉豬肉牛肉好吃</span>
@@ -356,6 +399,7 @@
   <!-- footer結束 -->
   <!-- javascript 區塊 -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./index.js"></script>
 
   <!-- Initialize Swiper -->
   <script>

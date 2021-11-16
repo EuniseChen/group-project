@@ -1,12 +1,22 @@
 @mixin main-heading {
   font-size: 48px;
-  margin   : 100px 0 45px 0;
+  margin   : 70px 0 30px 0;
 }
+
 @mixin section-setting {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
+  align-items   : center;
+  width         : 100%;
+}
+
+@mixin filter {
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  border-radius   : 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity         : 0;
 }
 
 * {
@@ -16,39 +26,79 @@
   box-sizing : border-box;
 }
 
+#mask {
+  display         : none;
+  position        : fixed;
+  z-index         : 998;
+  width           : 100%;
+  height          : 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#modal {
+  display         : flex;
+  justify-content : flex-end;
+  align-items     : flex-start;
+  position        : fixed;
+  top             : 50%;
+  left            : 50%;
+  z-index         : 999;
+  width           : 80%;
+  height          : 80vh;
+  background-image: none;
+  background-size : cover;
+  transform       : translate(-50%, -50%);
+
+  .close-btn {
+    font-size: 50px;
+  }
+}
+
 main {
-  background-color: gray;
 
   // 大banner區開始
   #banner {
-    display       : flex;
-    align-items   : center;
-    flex-direction: column;
-    width         : 100%;
-    height        : 100vh;
+    @include section-setting;
+    padding            : 70px 0 180px 0;
+    background         : url(../images/banner/Banner.jpg) no-repeat;
+    background-size    : cover;
+    background-position: bottom;
 
     // 導航欄製作開始
-    nav {
-      .nav-container {
-        display            : flex;
-        align-items        : center;
-        justify-content    : center;
-        width              : 100%;
-        height             : 120px;
+    .nav {
+      position       : fixed;
+      top            : 0px;
+      display        : flex;
+      align-items    : center;
+      justify-content: center;
+      width          : 100%;
+      height         : 200px;
+      transition     : all .3s ease-in-out;
+      z-index        : 900;
 
-        .nav-items {
-          display        : flex;
-          align-items    : center;
-          justify-content: space-between;
-          list-style     : none;
-          width          : 815px;
-          height         : 24px;
+      .nav-items {
+        display   : flex;
+        list-style: none;
+        height    : 24px;
+
+        .logo-item {
+          width       : 50px;
+          height      : 34px;
+          margin-right: 365px;
+        }
+
+        .nav-item {
+          margin-left: 60px;
+
+          &:hover>.nav-link {
+            color: #f5c20c;
+          }
 
           .nav-link {
+            font-weight    : 600;
             font-size      : 21px;
             color          : white;
             text-decoration: none;
-
           }
         }
       }
@@ -56,11 +106,11 @@ main {
 
     // 導航欄製作結束
     .logo {
-      margin          : 155px 0 48px 0;
-      width           : 312px;
-      height          : 312px;
-      border-radius   : 50%;
-      background-color: #919191;
+      margin         : 215px 0 70px 0;
+      width          : 280px;
+      height         : 240px;
+      background     : url(../images/banner/logo/logo.svg) no-repeat;
+      background-size: contain;
     }
 
     .logo-text {
@@ -69,8 +119,8 @@ main {
     }
 
     .slogan {
-      margin   : 24px 0 74px 0;
-      font-size: 20px;
+      margin   : 25px 0 75px 0;
+      font-size: 21px;
       color    : white;
     }
 
@@ -78,14 +128,14 @@ main {
       display        : flex;
       justify-content: space-between;
       list-style     : none;
-      width          : 289px;
+      width          : 290px;
       height         : 50px;
 
       .icon {
-        width           : 50px;
-        height          : 50px;
-        border-radius   : 50%;
-        background-color: white;
+        img {
+          width : 50px;
+          height: 50px;
+        }
       }
     }
   }
@@ -93,26 +143,43 @@ main {
   // 大banner區結束
   // 店家理念區塊開始
   #concept {
-    @include section-setting;
-    height          : 1166px;
+    display         : flex;
+    justify-content : center;
+    flex-wrap       : wrap;
+    padding         : 130px 0 55px 0;
     background-color: #fff;
 
     article {
       display        : flex;
       justify-content: space-between;
       align-items    : center;
-      padding-top    : 150px;
-      width          : 1313px;
-      height         : 583px;
+      width          : 70%;
+      height         : 470px;
+      margin-bottom  : 75px;
 
       .text {
+        display  : flex;
+        flex-wrap: wrap;
+        width    : 40%;
+
         .concept-title {
-          font-size: 48px;
+          font-size    : 48px;
+          margin-bottom: 20px;
+        }
+
+        .dog-img {
+          width      : 55px;
+          height     : 70px;
+          margin-left: 30px;
+        }
+
+        .cat-img {
+          width      : 60px;
+          height     : 60px;
+          margin-left: 470px;
         }
 
         .concept-text {
-          width      : 539px;
-          height     : 268px;
           font-size  : 24px;
           line-height: 48px;
         }
@@ -120,7 +187,7 @@ main {
 
       .concept-img {
         width : 660px;
-        height: 471px;
+        height: 470px;
       }
 
     }
@@ -130,76 +197,164 @@ main {
   // 店內環境區塊開始
   #environment {
     position        : relative;
+    display         : flex;
+    justify-content : center;
+    flex-wrap       : wrap;
     width           : 100%;
-    height          : 1300px;
+    padding-bottom  : 45px;
     background-color: #ffffff;
 
-    .environment-img1 {
-      position        : absolute;
-      top             : 150px;
-      left            : 50%;
-      transform       : translateX(-50%);
-      width           : 1467px;
-      height          : 600px;
-      background-color: #848484;
-      clip-path       : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
-      border-radius   : 10px;
+    .environment-img {
+      position: relative;
+      width   : 1700px;
+      height  : 885px;
+
+      h1 {
+        position        : absolute;
+        top             : 50px;
+        left            : 50px;
+        width           : 240px;
+        height          : 95px;
+        background-color: #f5c20c;
+        font-size       : 48px;
+        text-align      : center;
+        line-height     : 100px;
+        z-index         : 2;
+      }
+
+      .large-img {
+        position        : absolute;
+        top             : 0;
+        left            : 0;
+        width           : 100%;
+        height          : 530px;
+        clip-path       : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+        border-radius   : 10px;
+        background-image: url(../images/店家環境/shop03.JPG);
+        background-size : cover;
+
+        &:hover>.filter1 {
+          transition: all 0.4s ease-in-out;
+          opacity   : 1;
+        }
+
+        .filter1 {
+          @include filter;
+          position : absolute;
+          top      : 0;
+          left     : 0;
+          width    : 100%;
+          height   : 530px;
+          clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+
+          i {
+            font-size: 50px;
+            color    : white;
+          }
+        }
+      }
+
+      .small-img1 {
+        position           : absolute;
+        bottom             : 0;
+        left               : 0;
+        width              : 60%;
+        height             : 430px;
+        background-image   : url(../images/店家環境/shop02.JPG);
+        background-size    : cover;
+        background-position: right;
+        clip-path          : polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
+        border-radius      : 10px;
+
+        &:hover>.filter2 {
+          transition: all 0.4s ease-in-out;
+          opacity   : 1;
+        }
+
+        .filter2 {
+          @include filter;
+          position : absolute;
+          bottom   : 0;
+          left     : 0;
+          width    : 100%;
+          height   : 430px;
+          clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
+
+          i {
+            font-size: 50px;
+            color    : white;
+          }
+        }
+      }
+
+      .small-img2 {
+        position           : absolute;
+        right              : 0px;
+        bottom             : 0px;
+        width              : 44%;
+        height             : 510px;
+        background-image   : url(../images/店家環境/shop03.JPG);
+        background-size    : cover;
+        background-position: left;
+        clip-path          : polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
+        border-radius      : 10px;
+
+        &:hover>.filter3 {
+          transition: all 0.4s ease-in-out;
+          opacity   : 1;
+        }
+
+        .filter3 {
+          @include filter;
+          position : absolute;
+          bottom   : 0;
+          left     : 0;
+          width    : 100%;
+          height   : 510px;
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
+
+          i {
+            font-size: 50px;
+            color    : white;
+          }
+        }
+      }
     }
 
-    .environment-img2 {
-      position        : absolute;
-      top             : 647px;
-      left            : 219px;
-      width           : 907px;
-      height          : 504px;
-      background-color: #848484;
-      clip-path       : polygon(0 23%, 90% 0, 100% 100%, 0% 100%);
-      border-radius   : 10px;
-    }
-
-    .environment-img3 {
-      position        : absolute;
-      top             : 563px;
-      left            : 1046px;
-      width           : 640px;
-      height          : 588px;
-      background-color: #848484;
-      clip-path       : polygon(0 14%, 100% 0, 100% 100%, 14% 100%);
-      border-radius   : 10px;
-    }
-
-    .cat-img {
+    .cat-shadow {
       position: absolute;
-      top     : 842px;
-      left    : 219px;
-      width   : 228px;
-      height  : 438px;
+      bottom  : 10px;
+      left    : 100px;
+      width   : 155px;
+      height  : 300px;
+      opacity : 0.8;
     }
 
     .dialog-img {
       position: absolute;
-      top     : 350px;
-      left    : 1100px;
+      top     : 200px;
+      right   : 100px;
       width   : 610px;
       height  : 266px;
     }
-
   }
 
   // 店內環境區塊結束
   // 好食餐點區塊開始
   #food-card {
     @include section-setting;
+    padding-bottom  : 100px;
+    background-color: #f5c20c;
 
     h1 {
       @include main-heading;
     }
 
     .row {
-      display        : flex;
-      justify-content: space-between;
-      width          : 1322px;
-      height         : 422px;
+      display           : flex;
+      justify-content   : space-between;
+      // width          : 1322px;
+      height            : 422px;
 
       .column {
         margin     : 5px;
@@ -209,7 +364,7 @@ main {
         .food-img {
           position: relative;
           width   : 420px;
-          height  : 420px;
+          height  : 360px;
 
           &:hover>.front {
             transform: rotateY(-180deg);
@@ -230,6 +385,8 @@ main {
           }
 
           .front {
+            width  : 100%;
+            height : 100%;
             z-index: 2;
 
             .front-img {
@@ -252,7 +409,8 @@ main {
             }
           }
         }
-        // 翻轉效果製作結束     
+
+        // 翻轉效果製作結束
       }
     }
   }
@@ -261,10 +419,9 @@ main {
   // 幸福菜單區塊開始
   #menu {
     @include section-setting;
-    margin-top      : 100px;
-    // height: 1080px;
     background-color: #fff;
-      // 菜單導航
+
+    // 菜單導航
     .menu-nav {
       text-align: center;
 
@@ -292,7 +449,8 @@ main {
         }
       }
     }
-     // 菜單導航
+
+    // 菜單導航
     // 寵物鮮食菜單製作開始
     .pet-food {
       display        : flex;
@@ -357,108 +515,124 @@ main {
         }
       }
     }
+
     // 寵物鮮食菜單製作結束
   }
+
   // 幸福菜單區塊結束
 
   // 寵物認養區塊開始
   #adoption-info {
     @include section-setting;
     background-color: #fff;
+
     h1 {
       @include main-heading;
     }
+
     .nav-items {
       display: flex;
+
       .nav-item {
-        list-style: none;
-        text-align: center;
-        width: 350px;
-        height: 100px;
-        line-height: 100px;
-        margin: 0  0 24px 12px;
+        list-style      : none;
+        text-align      : center;
+        width           : 350px;
+        height          : 100px;
+        line-height     : 100px;
+        margin          : 0 0 24px 12px;
         background-color: gray;
+
         .nav-link {
           text-decoration: none;
-          font-size: 36px;
-          color: white;
+          font-size      : 36px;
+          color          : white;
         }
       }
     }
+
     .content {
-      width: 1321px;
-      height: 783px;
-      border-radius: 20px;
+      width           : 1321px;
+      height          : 783px;
+      border-radius   : 20px;
       background-color: gray;
     }
   }
+
   #story {
     @include section-setting;
-    height: 100vh;
+    height          : 100vh;
     background-color: #fff;
+
     h1 {
       @include main-heading;
     }
+
     .swiper {
-      width: 100%;
+      width : 100%;
       height: 100%;
+
       .swiper-slide {
         text-align: center;
-        font-size: 18px;
+        font-size : 18px;
         background: #fff;
-  
+
         /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
+        display                : -webkit-box;
+        display                : -ms-flexbox;
+        display                : -webkit-flex;
+        display                : flex;
+        -webkit-box-pack       : center;
+        -ms-flex-pack          : center;
         -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
+        justify-content        : center;
+        -webkit-box-align      : center;
+        -ms-flex-align         : center;
+        -webkit-align-items    : center;
+        align-items            : center;
       }
-  
+
       .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
+        display   : block;
+        width     : 100%;
+        height    : 100%;
         object-fit: cover;
       }
-  
+
     }
 
-   
+
   }
 }
+
 footer {
   @include section-setting;
-  padding: 110px 320px;
-  align-items: flex-start;
+  padding         : 110px 320px;
+  align-items     : flex-start;
   background-color: gray;
+
   .business-hours {
     width: 100%;
+
     .row {
-      display: flex;
+      display        : flex;
       justify-content: space-between;
     }
+
     .line-break {
-      width: 100%;
+      width : 100%;
       height: 30px;
     }
   }
+
   .contact-details {
-    display: flex;
-    width: 100%;
+    display        : flex;
+    width          : 100%;
     justify-content: space-between;
 
-    
   }
+
   .line {
-    width: 100%;
+    width  : 100%;
     padding: 45px 0;
   }
 }
