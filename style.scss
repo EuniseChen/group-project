@@ -26,6 +26,7 @@
   box-sizing : border-box;
 }
 
+// full-screen頁面的製作
 #mask {
   display         : none;
   position        : fixed;
@@ -48,6 +49,7 @@
   background-image: none;
   background-size : cover;
   transform       : translate(-50%, -50%);
+  opacity         : 0;
 
   .close-btn {
     font-size: 50px;
@@ -55,7 +57,6 @@
 }
 
 main {
-
   // 大banner區開始
   #banner {
     @include section-setting;
@@ -139,8 +140,8 @@ main {
       }
     }
   }
-
   // 大banner區結束
+  
   // 店家理念區塊開始
   #concept {
     display         : flex;
@@ -189,11 +190,10 @@ main {
         width : 660px;
         height: 470px;
       }
-
     }
   }
-
   // 店家理念區塊結束
+
   // 店內環境區塊開始
   #environment {
     position        : relative;
@@ -208,6 +208,13 @@ main {
       position: relative;
       width   : 1700px;
       height  : 885px;
+
+      // 當滑鼠放到放大鏡的時候，游標變成小手指
+      .full-screen-1,
+      .full-screen-2,
+      .full-screen-3 {
+        cursor: pointer;
+      }
 
       h1 {
         position        : absolute;
@@ -233,11 +240,13 @@ main {
         background-image: url(./images/店家環境/shop03.JPG);
         background-size : cover;
 
+        // 當游標在圖片上，出現filter1
         &:hover>.filter1 {
           transition: all 0.4s ease-in-out;
           opacity   : 1;
         }
 
+        // 濾鏡1
         .filter1 {
           @include filter;
           position : absolute;
@@ -266,6 +275,7 @@ main {
         clip-path          : polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
         border-radius      : 10px;
 
+        // 當游標在圖片上，出現filter2
         &:hover>.filter2 {
           transition: all 0.4s ease-in-out;
           opacity   : 1;
@@ -299,6 +309,7 @@ main {
         clip-path          : polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
         border-radius      : 10px;
 
+        // 當游標在圖片上，出現filter3
         &:hover>.filter3 {
           transition: all 0.4s ease-in-out;
           opacity   : 1;
@@ -338,8 +349,8 @@ main {
       height  : 266px;
     }
   }
-
   // 店內環境區塊結束
+
   // 好食餐點區塊開始
   #food-card {
     @include section-setting;
@@ -385,77 +396,80 @@ main {
           }
 
           .front {
-            // width  : 100%;
-            // height : 100%;
             z-index: 2;
 
             .front-img {
               width : 100%;
               height: 100%;
+
               .cover {
-                width: 420px;
-                height: 360px;
-                color: white;
+                width           : 420px;
+                height          : 360px;
+                color           : white;
                 background-color: rgba(0, 0, 0, 0.7);
-                z-index: 3;
+                z-index         : 3;
               }
             }
 
             .front-img1 {
-              background-image: url(./images/好食餐點/beef.jpg);
-              background-size: cover;
+              background-image   : url(./images/好食餐點/beef.jpg);
+              background-size    : cover;
               background-position: -37px 0;
             }
 
             .front-img2 {
-              background-image: url(./images/好食餐點/pork.jpg);
-              background-size: cover;
+              background-image   : url(./images/好食餐點/pork.jpg);
+              background-size    : cover;
               background-position: -40px 0;
             }
 
             .front-img3 {
               background-image: url(./images/好食餐點/cook.jpg);
-              background-size: cover;
+              background-size : cover;
             }
+
             .front-img4 {
               background-image: url(./images/好食餐點/fruit-tea.jpg);
-              background-size: cover;
+              background-size : cover;
             }
+
             .front-img5 {
               background-image: url(./images/好食餐點/covid-fight.jpg);
-              background-size: cover;
+              background-size : cover;
             }
+
             .front-img6 {
               background-image: url(./images/好食餐點/pet-food.jpg);
-              background-size: cover;
+              background-size : cover;
             }
           }
 
           .back {
             display         : flex;
-            flex-direction: column;
+            flex-direction  : column;
             align-items     : center;
             justify-content : center;
             transform       : rotateY(180deg);
             background-color: white;
-            img{
+
+            img {
               width: 131px;
             }
 
-            h2, p {
+            h2,
+            p {
               perspective: 1000px;
               transform  : translateZ(95px) scale(0.81);
               font-size  : 50px;
             }
           }
         }
-
         // 翻轉效果製作結束
       }
     }
   }
-
   // 好食餐點區塊結束
+
   // 幸福菜單區塊開始
   #menu {
     @include section-setting;

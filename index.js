@@ -26,14 +26,36 @@ fullScreen_1.addEventListener('click', () => openModal(3))
 fullScreen_2.addEventListener('click', () => openModal(2))
 fullScreen_3.addEventListener('click', () => openModal(3))
 
-closeBtn.addEventListener('click', () => mask.style.display = 'none')
 
 // 打開full-screen的函數
-function openModal (img) {
+function openModal(img) {
   const mask = document.querySelector('#mask')
   const modal = document.querySelector('#modal')
+
+  fadeIn(mask, modal)
 
   mask.style.display = 'block'
 
   modal.style.backgroundImage = `url(./images/店家環境/shop0${img}.JPG)`
+
+  closeBtn.addEventListener('click', () => {
+    mask.style.display = 'none'
+    modal.style.opacity = '0'
+  })
+
 }
+
+// 漸入效果：剛開始opacity為0.1，每次增加（opacity*0.1）
+function fadeIn(mask, modal) {
+  let modalOpacity = 0.1 // initial modal opacity
+  mask.style.display = 'block'
+
+  // 設置定時器，當opacity變為1的時候停止
+  const timer = setInterval(() => {
+    if (modalOpacity >= 1) clearInterval(timer)
+
+    modal.style.opacity = modalOpacity
+    modalOpacity += modalOpacity * 0.1
+  }, 10)
+}
+

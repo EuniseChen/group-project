@@ -1,41 +1,42 @@
 @charset "UTF-8";
+
 * {
-  margin: 0;
-  padding: 0;
-  font-family: '微軟正黑體';
+  margin            : 0;
+  padding           : 0;
+  font-family       : '微軟正黑體';
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing        : border-box;
 }
 
 #mask {
-  display: none;
-  position: fixed;
-  z-index: 998;
-  width: 100%;
-  height: 100vh;
+  display         : none;
+  position        : fixed;
+  z-index         : 998;
+  width           : 100%;
+  height          : 100vh;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 #modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-box-pack : end;
+  -ms-flex-pack    : end;
+  justify-content  : flex-end;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 999;
-  width: 80%;
-  height: 80vh;
-  background-image: none;
-  background-size: cover;
+  -ms-flex-align   : start;
+  align-items      : flex-start;
+  position         : fixed;
+  top              : 50%;
+  left             : 50%;
+  z-index          : 999;
+  width            : 80%;
+  height           : 80vh;
+  background-image : none;
+  background-size  : cover;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform        : translate(-50%, -50%);
 }
 
 #modal .close-btn {
@@ -43,53 +44,53 @@
 }
 
 main #banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  padding: 70px 0 180px 0;
-  background: url(./images/banner/Banner.jpg) no-repeat;
-  background-size: cover;
-  background-position: bottom;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  width                : 100%;
+  padding              : 70px 0 180px 0;
+  background           : url(./images/banner/Banner.jpg) no-repeat;
+  background-size      : cover;
+  background-position  : bottom;
 }
 
 main #banner .nav {
-  position: fixed;
-  top: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 200px;
+  position          : fixed;
+  top               : 0px;
+  display           : -webkit-box;
+  display           : -ms-flexbox;
+  display           : flex;
+  -webkit-box-align : center;
+  -ms-flex-align    : center;
+  align-items       : center;
+  -webkit-box-pack  : center;
+  -ms-flex-pack     : center;
+  justify-content   : center;
+  width             : 100%;
+  height            : 200px;
   -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  z-index: 900;
+  transition        : all .3s ease-in-out;
+  z-index           : 900;
 }
 
 main #banner .nav .nav-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display   : -webkit-box;
+  display   : -ms-flexbox;
+  display   : flex;
   list-style: none;
-  height: 24px;
+  height    : 24px;
 }
 
 main #banner .nav .nav-items .logo-item {
-  width: 50px;
-  height: 34px;
+  width       : 50px;
+  height      : 34px;
   margin-right: 365px;
 }
 
@@ -97,374 +98,374 @@ main #banner .nav .nav-items .nav-item {
   margin-left: 60px;
 }
 
-main #banner .nav .nav-items .nav-item:hover > .nav-link {
+main #banner .nav .nav-items .nav-item:hover>.nav-link {
   color: #f5c20c;
 }
 
 main #banner .nav .nav-items .nav-item .nav-link {
-  font-weight: 600;
-  font-size: 21px;
-  color: white;
+  font-weight    : 600;
+  font-size      : 21px;
+  color          : white;
   text-decoration: none;
 }
 
 main #banner .logo {
-  margin: 215px 0 70px 0;
-  width: 280px;
-  height: 240px;
-  background: url(./images/banner/logo/logo.svg) no-repeat;
+  margin         : 215px 0 70px 0;
+  width          : 280px;
+  height         : 240px;
+  background     : url(./images/banner/logo/logo.svg) no-repeat;
   background-size: contain;
 }
 
 main #banner .logo-text {
   font-size: 40px;
-  color: white;
+  color    : white;
 }
 
 main #banner .slogan {
-  margin: 25px 0 75px 0;
+  margin   : 25px 0 75px 0;
   font-size: 21px;
-  color: white;
+  color    : white;
 }
 
 main #banner .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  list-style: none;
-  width: 290px;
-  height: 50px;
+  -ms-flex-pack   : justify;
+  justify-content : space-between;
+  list-style      : none;
+  width           : 290px;
+  height          : 50px;
 }
 
 main #banner .icons .icon img {
-  width: 50px;
+  width : 50px;
   height: 50px;
 }
 
 main #concept {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 130px 0 55px 0;
+  -ms-flex-pack   : center;
+  justify-content : center;
+  -ms-flex-wrap   : wrap;
+  flex-wrap       : wrap;
+  padding         : 130px 0 55px 0;
   background-color: #fff;
 }
 
 main #concept article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-box-pack : justify;
+  -ms-flex-pack    : justify;
+  justify-content  : space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 70%;
-  height: 470px;
-  margin-bottom: 75px;
+  -ms-flex-align   : center;
+  align-items      : center;
+  width            : 70%;
+  height           : 470px;
+  margin-bottom    : 75px;
 }
 
 main #concept article .text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display      : -webkit-box;
+  display      : -ms-flexbox;
+  display      : flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 40%;
+  flex-wrap    : wrap;
+  width        : 40%;
 }
 
 main #concept article .text .concept-title {
-  font-size: 48px;
+  font-size    : 48px;
   margin-bottom: 20px;
 }
 
 main #concept article .text .dog-img {
-  width: 55px;
-  height: 70px;
+  width      : 55px;
+  height     : 70px;
   margin-left: 30px;
 }
 
 main #concept article .text .cat-img {
-  width: 60px;
-  height: 60px;
+  width      : 60px;
+  height     : 60px;
   margin-left: 470px;
 }
 
 main #concept article .text .concept-text {
-  font-size: 24px;
+  font-size  : 24px;
   line-height: 48px;
 }
 
 main #concept article .concept-img {
-  width: 660px;
+  width : 660px;
   height: 470px;
 }
 
 main #environment {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position        : relative;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  padding-bottom: 45px;
+  -ms-flex-pack   : center;
+  justify-content : center;
+  -ms-flex-wrap   : wrap;
+  flex-wrap       : wrap;
+  width           : 100%;
+  padding-bottom  : 45px;
   background-color: #ffffff;
 }
 
 main #environment .environment-img {
   position: relative;
-  width: 1700px;
-  height: 885px;
+  width   : 1700px;
+  height  : 885px;
 }
 
 main #environment .environment-img h1 {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 240px;
-  height: 95px;
+  position        : absolute;
+  top             : 50px;
+  left            : 50px;
+  width           : 240px;
+  height          : 95px;
   background-color: #f5c20c;
-  font-size: 48px;
-  text-align: center;
-  line-height: 100px;
-  z-index: 2;
+  font-size       : 48px;
+  text-align      : center;
+  line-height     : 100px;
+  z-index         : 2;
 }
 
 main #environment .environment-img .large-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 530px;
+  position         : absolute;
+  top              : 0;
+  left             : 0;
+  width            : 100%;
+  height           : 530px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
-  border-radius: 10px;
-  background-image: url(./images/店家環境/shop03.JPG);
-  background-size: cover;
+  clip-path        : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+  border-radius    : 10px;
+  background-image : url(./images/店家環境/shop03.JPG);
+  background-size  : cover;
 }
 
-main #environment .environment-img .large-img:hover > .filter1 {
+main #environment .environment-img .large-img:hover>.filter1 {
   -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  opacity: 1;
+  transition        : all 0.4s ease-in-out;
+  opacity           : 1;
 }
 
 main #environment .environment-img .large-img .filter1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 530px;
+  -ms-flex-align   : center;
+  align-items      : center;
+  -webkit-box-pack : center;
+  -ms-flex-pack    : center;
+  justify-content  : center;
+  border-radius    : 10px;
+  background-color : rgba(0, 0, 0, 0.7);
+  opacity          : 0;
+  position         : absolute;
+  top              : 0;
+  left             : 0;
+  width            : 100%;
+  height           : 530px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+  clip-path        : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
 }
 
 main #environment .environment-img .large-img .filter1 i {
   font-size: 50px;
-  color: white;
+  color    : white;
 }
 
 main #environment .environment-img .small-img1 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60%;
-  height: 430px;
-  background-image: url(./images/店家環境/shop02.JPG);
-  background-size: cover;
+  position           : absolute;
+  bottom             : 0;
+  left               : 0;
+  width              : 60%;
+  height             : 430px;
+  background-image   : url(./images/店家環境/shop02.JPG);
+  background-size    : cover;
   background-position: right;
-  -webkit-clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
-  border-radius: 10px;
+  -webkit-clip-path  : polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
+  clip-path          : polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
+  border-radius      : 10px;
 }
 
-main #environment .environment-img .small-img1:hover > .filter2 {
+main #environment .environment-img .small-img1:hover>.filter2 {
   -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  opacity: 1;
+  transition        : all 0.4s ease-in-out;
+  opacity           : 1;
 }
 
 main #environment .environment-img .small-img1 .filter2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 430px;
+  -ms-flex-align   : center;
+  align-items      : center;
+  -webkit-box-pack : center;
+  -ms-flex-pack    : center;
+  justify-content  : center;
+  border-radius    : 10px;
+  background-color : rgba(0, 0, 0, 0.7);
+  opacity          : 0;
+  position         : absolute;
+  bottom           : 0;
+  left             : 0;
+  width            : 100%;
+  height           : 430px;
   -webkit-clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
+  clip-path        : polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
 }
 
 main #environment .environment-img .small-img1 .filter2 i {
   font-size: 50px;
-  color: white;
+  color    : white;
 }
 
 main #environment .environment-img .small-img2 {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-  width: 44%;
-  height: 510px;
-  background-image: url(./images/店家環境/shop03.JPG);
-  background-size: cover;
+  position           : absolute;
+  right              : 0px;
+  bottom             : 0px;
+  width              : 44%;
+  height             : 510px;
+  background-image   : url(./images/店家環境/shop03.JPG);
+  background-size    : cover;
   background-position: left;
-  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
-  border-radius: 10px;
+  -webkit-clip-path  : polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
+  clip-path          : polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
+  border-radius      : 10px;
 }
 
-main #environment .environment-img .small-img2:hover > .filter3 {
+main #environment .environment-img .small-img2:hover>.filter3 {
   -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  opacity: 1;
+  transition        : all 0.4s ease-in-out;
+  opacity           : 1;
 }
 
 main #environment .environment-img .small-img2 .filter3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 510px;
+  -ms-flex-align   : center;
+  align-items      : center;
+  -webkit-box-pack : center;
+  -ms-flex-pack    : center;
+  justify-content  : center;
+  border-radius    : 10px;
+  background-color : rgba(0, 0, 0, 0.7);
+  opacity          : 0;
+  position         : absolute;
+  bottom           : 0;
+  left             : 0;
+  width            : 100%;
+  height           : 510px;
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
-          clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
+  clip-path        : polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
 }
 
 main #environment .environment-img .small-img2 .filter3 i {
   font-size: 50px;
-  color: white;
+  color    : white;
 }
 
 main #environment .cat-shadow {
   position: absolute;
-  bottom: 10px;
-  left: 100px;
-  width: 155px;
-  height: 300px;
-  opacity: 0.8;
+  bottom  : 10px;
+  left    : 100px;
+  width   : 155px;
+  height  : 300px;
+  opacity : 0.8;
 }
 
 main #environment .dialog-img {
   position: absolute;
-  top: 200px;
-  right: 100px;
-  width: 610px;
-  height: 266px;
+  top     : 200px;
+  right   : 100px;
+  width   : 610px;
+  height  : 266px;
 }
 
 main #food-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  padding-bottom: 100px;
-  background-color: #f5c20c;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  width                : 100%;
+  padding-bottom       : 100px;
+  background-color     : #f5c20c;
 }
 
 main #food-card h1 {
   font-size: 48px;
-  margin: 70px 0 30px 0;
+  margin   : 70px 0 30px 0;
 }
 
 main #food-card .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 422px;
+  -ms-flex-pack   : justify;
+  justify-content : space-between;
+  height          : 422px;
 }
 
 main #food-card .row .column {
-  margin: 5px;
+  margin             : 5px;
   -webkit-perspective: 700px;
-          perspective: 700px;
+  perspective        : 700px;
 }
 
 main #food-card .row .column .food-img {
   position: relative;
-  width: 420px;
-  height: 360px;
+  width   : 420px;
+  height  : 360px;
 }
 
-main #food-card .row .column .food-img:hover > .front {
+main #food-card .row .column .food-img:hover>.front {
   -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
+  transform        : rotateY(-180deg);
 }
 
-main #food-card .row .column .food-img:hover > .back {
+main #food-card .row .column .food-img:hover>.back {
   -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  transform        : rotateY(0deg);
 }
 
 main #food-card .row .column .food-img .front,
 main #food-card .row .column .food-img .back {
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  position                   : absolute;
+  -webkit-transform-style    : preserve-3d;
+  transform-style            : preserve-3d;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  width: 100%;
-  height: 100%;
+  backface-visibility        : hidden;
+  -webkit-transition         : -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition                 : -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition                 : transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition                 : transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  width                      : 100%;
+  height                     : 100%;
 }
 
 main #food-card .row .column .food-img .front {
@@ -472,94 +473,95 @@ main #food-card .row .column .food-img .front {
 }
 
 main #food-card .row .column .food-img .front .front-img {
-  width: 100%;
+  width : 100%;
   height: 100%;
 }
 
 main #food-card .row .column .food-img .front .front-img .cover {
-  width: 420px;
-  height: 360px;
-  color: white;
+  width           : 420px;
+  height          : 360px;
+  color           : white;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 3;
+  z-index         : 3;
 }
 
 main #food-card .row .column .food-img .front .front-img1 {
-  background-image: url(./images/好食餐點/beef.jpg);
-  background-size: cover;
+  background-image   : url(./images/好食餐點/beef.jpg);
+  background-size    : cover;
   background-position: -37px 0;
 }
 
 main #food-card .row .column .food-img .front .front-img2 {
-  background-image: url(./images/好食餐點/pork.jpg);
-  background-size: cover;
+  background-image   : url(./images/好食餐點/pork.jpg);
+  background-size    : cover;
   background-position: -40px 0;
 }
 
 main #food-card .row .column .food-img .front .front-img3 {
   background-image: url(./images/好食餐點/cook.jpg);
-  background-size: cover;
+  background-size : cover;
 }
 
 main #food-card .row .column .food-img .front .front-img4 {
   background-image: url(./images/好食餐點/fruit-tea.jpg);
-  background-size: cover;
+  background-size : cover;
 }
 
 main #food-card .row .column .food-img .front .front-img5 {
   background-image: url(./images/好食餐點/covid-fight.jpg);
-  background-size: cover;
+  background-size : cover;
 }
 
 main #food-card .row .column .food-img .front .front-img6 {
   background-image: url(./images/好食餐點/pet-food.jpg);
-  background-size: cover;
+  background-size : cover;
 }
 
 main #food-card .row .column .food-img .back {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-  background-color: white;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  -webkit-box-pack     : center;
+  -ms-flex-pack        : center;
+  justify-content      : center;
+  -webkit-transform    : rotateY(180deg);
+  transform            : rotateY(180deg);
+  background-color     : white;
 }
 
 main #food-card .row .column .food-img .back img {
   width: 131px;
 }
 
-main #food-card .row .column .food-img .back h2, main #food-card .row .column .food-img .back p {
+main #food-card .row .column .food-img .back h2,
+main #food-card .row .column .food-img .back p {
   -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transform: translateZ(95px) scale(0.81);
-          transform: translateZ(95px) scale(0.81);
-  font-size: 50px;
+  perspective        : 1000px;
+  -webkit-transform  : translateZ(95px) scale(0.81);
+  transform          : translateZ(95px) scale(0.81);
+  font-size          : 50px;
 }
 
 main #menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  background-color: #fff;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  width                : 100%;
+  background-color     : #fff;
 }
 
 main #menu .menu-nav {
@@ -568,22 +570,22 @@ main #menu .menu-nav {
 
 main #menu .menu-nav h1 {
   font-size: 48px;
-  margin: 70px 0 30px 0;
+  margin   : 70px 0 30px 0;
 }
 
 main #menu .menu-nav .menu-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -ms-flex-pack    : distribute;
+  justify-content  : space-around;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 1310px;
-  height: 64px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  -ms-flex-align   : center;
+  align-items      : center;
+  width            : 1310px;
+  height           : 64px;
+  border-top       : 1px solid black;
+  border-bottom    : 1px solid black;
 }
 
 main #menu .menu-nav .menu-items .menu-item {
@@ -592,35 +594,35 @@ main #menu .menu-nav .menu-items .menu-item {
 
 main #menu .menu-nav .menu-items .menu-item .menu-link {
   text-decoration: none;
-  color: black;
-  font-size: 30px;
+  color          : black;
+  font-size      : 30px;
 }
 
 main #menu .pet-food {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 52px;
-  width: 1310px;
-  height: 810px;
+  -ms-flex-pack   : justify;
+  justify-content : space-between;
+  margin-top      : 52px;
+  width           : 1310px;
+  height          : 810px;
 }
 
 main #menu .pet-food .pet-food-intro {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 532px;
-  height: 422px;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  width                : 532px;
+  height               : 422px;
 }
 
 main #menu .pet-food .pet-food-intro h2 {
@@ -628,9 +630,9 @@ main #menu .pet-food .pet-food-intro h2 {
 }
 
 main #menu .pet-food .pet-food-intro .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display      : -webkit-box;
+  display      : -ms-flexbox;
+  display      : flex;
   border-bottom: 1px solid gray;
 }
 
@@ -648,14 +650,14 @@ main #menu .pet-food .pet-food-intro .row .column .price {
 
 main #menu .pet-food .food-pic {
   position: relative;
-  width: 709px;
-  height: 812px;
+  width   : 709px;
+  height  : 812px;
 }
 
 main #menu .pet-food .food-pic .small-pic {
   position: absolute;
-  width: 350px;
-  height: 400px;
+  width   : 350px;
+  height  : 400px;
 }
 
 main #menu .pet-food .food-pic .small-pic2 {
@@ -664,30 +666,30 @@ main #menu .pet-food .food-pic .small-pic2 {
 
 main #menu .pet-food .food-pic .large-pic {
   position: absolute;
-  top: 0;
-  left: 355px;
-  width: 350px;
-  height: 805px;
+  top     : 0;
+  left    : 355px;
+  width   : 350px;
+  height  : 805px;
 }
 
 main #adoption-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  background-color: #fff;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  width                : 100%;
+  background-color     : #fff;
 }
 
 main #adoption-info h1 {
   font-size: 48px;
-  margin: 70px 0 30px 0;
+  margin   : 70px 0 30px 0;
 }
 
 main #adoption-info .nav-items {
@@ -697,95 +699,95 @@ main #adoption-info .nav-items {
 }
 
 main #adoption-info .nav-items .nav-item {
-  list-style: none;
-  text-align: center;
-  width: 350px;
-  height: 100px;
-  line-height: 100px;
-  margin: 0 0 24px 12px;
+  list-style      : none;
+  text-align      : center;
+  width           : 350px;
+  height          : 100px;
+  line-height     : 100px;
+  margin          : 0 0 24px 12px;
   background-color: gray;
 }
 
 main #adoption-info .nav-items .nav-item .nav-link {
   text-decoration: none;
-  font-size: 36px;
-  color: white;
+  font-size      : 36px;
+  color          : white;
 }
 
 main #adoption-info .content {
-  width: 1321px;
-  height: 783px;
-  border-radius: 20px;
+  width           : 1321px;
+  height          : 783px;
+  border-radius   : 20px;
   background-color: gray;
 }
 
 main #story {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #fff;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  width                : 100%;
+  height               : 100vh;
+  background-color     : #fff;
 }
 
 main #story h1 {
   font-size: 48px;
-  margin: 70px 0 30px 0;
+  margin   : 70px 0 30px 0;
 }
 
 main #story .swiper {
-  width: 100%;
+  width : 100%;
   height: 100%;
 }
 
 main #story .swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
+  text-align       : center;
+  font-size        : 18px;
+  background       : #fff;
   /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  display          : -webkit-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-box-pack : center;
+  -ms-flex-pack    : center;
+  justify-content  : center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -ms-flex-align   : center;
+  align-items      : center;
 }
 
 main #story .swiper .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
+  display      : block;
+  width        : 100%;
+  height       : 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit   : cover;
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
+  display              : -webkit-box;
+  display              : -ms-flexbox;
+  display              : flex;
+  -webkit-box-orient   : vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  padding: 110px 320px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  background-color: gray;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  width                : 100%;
+  padding              : 110px 320px;
+  -webkit-box-align    : start;
+  -ms-flex-align       : start;
+  align-items          : flex-start;
+  background-color     : gray;
 }
 
 footer .business-hours {
@@ -793,31 +795,32 @@ footer .business-hours {
 }
 
 footer .business-hours .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack   : justify;
+  justify-content : space-between;
 }
 
 footer .business-hours .line-break {
-  width: 100%;
+  width : 100%;
   height: 30px;
 }
 
 footer .contact-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
+  display         : -webkit-box;
+  display         : -ms-flexbox;
+  display         : flex;
+  width           : 100%;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack   : justify;
+  justify-content : space-between;
 }
 
 footer .line {
-  width: 100%;
+  width  : 100%;
   padding: 45px 0;
 }
+
 /*# sourceMappingURL=style.css.map */
