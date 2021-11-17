@@ -60,7 +60,7 @@ main {
   #banner {
     @include section-setting;
     padding            : 70px 0 180px 0;
-    background         : url(../images/banner/Banner.jpg) no-repeat;
+    background         : url(./images/banner/Banner.jpg) no-repeat;
     background-size    : cover;
     background-position: bottom;
 
@@ -109,7 +109,7 @@ main {
       margin         : 215px 0 70px 0;
       width          : 280px;
       height         : 240px;
-      background     : url(../images/banner/logo/logo.svg) no-repeat;
+      background     : url(./images/banner/logo/logo.svg) no-repeat;
       background-size: contain;
     }
 
@@ -230,7 +230,7 @@ main {
         height          : 530px;
         clip-path       : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
         border-radius   : 10px;
-        background-image: url(../images/店家環境/shop03.JPG);
+        background-image: url(./images/店家環境/shop03.JPG);
         background-size : cover;
 
         &:hover>.filter1 {
@@ -260,7 +260,7 @@ main {
         left               : 0;
         width              : 60%;
         height             : 430px;
-        background-image   : url(../images/店家環境/shop02.JPG);
+        background-image   : url(./images/店家環境/shop02.JPG);
         background-size    : cover;
         background-position: right;
         clip-path          : polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
@@ -293,7 +293,7 @@ main {
         bottom             : 0px;
         width              : 44%;
         height             : 510px;
-        background-image   : url(../images/店家環境/shop03.JPG);
+        background-image   : url(./images/店家環境/shop03.JPG);
         background-size    : cover;
         background-position: left;
         clip-path          : polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
