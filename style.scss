@@ -57,6 +57,7 @@
 }
 
 main {
+
   // 大banner區開始
   #banner {
     @include section-setting;
@@ -140,8 +141,9 @@ main {
       }
     }
   }
+
   // 大banner區結束
-  
+
   // 店家理念區塊開始
   #concept {
     display         : flex;
@@ -192,6 +194,7 @@ main {
       }
     }
   }
+
   // 店家理念區塊結束
 
   // 店內環境區塊開始
@@ -349,6 +352,7 @@ main {
       height  : 266px;
     }
   }
+
   // 店內環境區塊結束
 
   // 好食餐點區塊開始
@@ -403,11 +407,21 @@ main {
               height: 100%;
 
               .cover {
-                width           : 420px;
-                height          : 360px;
-                color           : white;
-                background-color: rgba(0, 0, 0, 0.7);
+                display         : flex;
+                flex-direction  : column;
+                align-items     : center;
+                justify-content : center;
+                width           : 100%;
+                height          : 100%;
+                background-color: rgba(0, 0, 0, 0.3);
                 z-index         : 3;
+
+                span {
+                  color      : white;
+                  font-size  : 36px;
+                  font-weight: 600;
+                }
+
               }
             }
 
@@ -450,24 +464,37 @@ main {
             align-items     : center;
             justify-content : center;
             transform       : rotateY(180deg);
-            background-color: white;
+            background-color: black;
 
             img {
               width: 131px;
             }
 
+            img,
             h2,
             p {
               perspective: 1000px;
               transform  : translateZ(95px) scale(0.81);
-              font-size  : 50px;
+              font-weight: 600;
+              color: white;
+            }
+
+            h2 {
+              font-size: 36px;
+              margin-bottom: 15px;
+            }
+
+            p{
+              font-size: 24px;
             }
           }
         }
+
         // 翻轉效果製作結束
       }
     }
   }
+
   // 好食餐點區塊結束
 
   // 幸福菜單區塊開始
