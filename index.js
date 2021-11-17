@@ -58,4 +58,3 @@ function fadeIn(mask, modal) {
     modalOpacity += modalOpacity * 0.1
   }, 10)
 }
-
