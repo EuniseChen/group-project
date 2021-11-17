@@ -35,5 +35,5 @@ function openModal (img) {
 
   mask.style.display = 'block'
 
-  modal.style.backgroundImage = `url(../images/店家環境/shop0${img}.JPG)`
+  modal.style.backgroundImage = `url(./images/店家環境/shop0${img}.JPG)`
 }
