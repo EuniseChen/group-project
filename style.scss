@@ -1,8 +1,10 @@
+// 主要標題h1的統一設定
 @mixin main-heading {
   font-size: 48px;
   margin   : 70px 0 30px 0;
 }
 
+// 每個區塊的共同設定
 @mixin section-setting {
   display       : flex;
   flex-direction: column;
@@ -10,6 +12,7 @@
   width         : 100%;
 }
 
+// 店內環境區塊濾鏡的設定
 @mixin filter {
   display         : flex;
   align-items     : center;
@@ -17,6 +20,34 @@
   border-radius   : 10px;
   background-color: rgba(0, 0, 0, 0.7);
   opacity         : 0;
+}
+
+// 菜單小標題的樣式
+@mixin meal-title {
+  display    : flex;
+  align-items: center;
+  height     : 85px;
+}
+
+// 菜單小標題的字體樣式
+@mixin title-font {
+  color    : #E19040;
+  font-size: 36px;
+}
+
+// 貓腳印樣式
+@mixin cat-foot {
+  width : 23px;
+  height: 23px;
+}
+
+// 每個菜單內頁的樣式
+@mixin menu-content {
+  display        : flex;
+  justify-content: space-between;
+  margin-top     : 30px;
+  width          : 77%;
+  height         : 665px;
 }
 
 * {
@@ -93,7 +124,7 @@ main {
           margin-left: 60px;
 
           &:hover>.nav-link {
-            color: #f5c20c;
+            color: #f0bd0c;
           }
 
           .nav-link {
@@ -149,7 +180,9 @@ main {
     display         : flex;
     justify-content : center;
     flex-wrap       : wrap;
-    padding         : 130px 0 55px 0;
+    padding-top     : 130px;
+    width           : 100%;
+    height          : 1280px;
     background-color: #fff;
 
     article {
@@ -204,7 +237,7 @@ main {
     justify-content : center;
     flex-wrap       : wrap;
     width           : 100%;
-    padding-bottom  : 45px;
+    height          : 980px;
     background-color: #ffffff;
 
     .environment-img {
@@ -225,7 +258,7 @@ main {
         left            : 50px;
         width           : 240px;
         height          : 95px;
-        background-color: #f5c20c;
+        background-color: #f0bd0c;
         font-size       : 48px;
         text-align      : center;
         line-height     : 100px;
@@ -358,8 +391,9 @@ main {
   // 好食餐點區塊開始
   #food-card {
     @include section-setting;
-    padding-bottom  : 85px;
-    background-color: #f5c20c;
+    position        : relative;
+    height          : 980px;
+    background-color: #f0bd0c;
 
     h1 {
       @include main-heading;
@@ -368,14 +402,15 @@ main {
     .row {
       display        : flex;
       justify-content: space-between;
+      flex-wrap      : wrap;
       width          : 68.7%;
-      margin         : 0 0 -30px --30px;
+      margin         : 0 0 -30px -30px;
 
       .column {
         width      : 33.3%;
         height     : 360px;
         perspective: 700px;
-        margin     : 0 0 30px 30px;
+        padding    : 0 0 30px 30px;
 
         // 翻轉效果製作開始
         .food-img {
@@ -495,6 +530,14 @@ main {
         // 翻轉效果製作結束
       }
     }
+
+    .dog-shadow {
+      position: absolute;
+      right   : 190px;
+      bottom  : 25px;
+      width   : 210px;
+      height  : 245px;
+    }
   }
 
   // 好食餐點區塊結束
@@ -502,11 +545,12 @@ main {
   // 幸福菜單區塊開始
   #menu {
     @include section-setting;
+    height: 980px;
     background-color: #000000;
 
     // 菜單導航
-    .menu-nav {
-      width: 80%;
+    .menu-type {
+      width     : 80%;
       text-align: center;
 
       h1 {
@@ -520,76 +564,716 @@ main {
         align-items    : center;
         width          : 100%;
         height         : 64px;
-        border-top     : 1px solid #ffffff;
-        border-bottom  : 1px solid #ffffff;
+        border-top     : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+        border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
 
         .menu-item {
           list-style-type: none;
           text-decoration: none;
-          color          : #ffffff;
+          color          : rgba($color:#ffffff, $alpha: 0.5);
           font-size      : 36px;
-          font-weight: 800;
-          width: 14%;
+          width          : 14%;
+          cursor         : pointer;
+
+          &:hover {
+            color      : #dc8b40;
+            font-weight: 600;
+          }
+        }
+
+        .active {
+          position: relative;
+          color: #dc8b40;
+
+          &::before {
+            position: absolute;
+            top: 13px;
+            left: 10px;
+            content: '';
+            @include cat-foot;
+            margin-right: 2px;
+            background-image: url(./images/幸福菜單/icons/foot-print.svg);
+          }
         }
       }
     }
 
-    // 菜單導航
-    // 菜單製作開始
-    .meal {
-      display        : flex;
-      justify-content: space-between;
-      margin-top     : 52px;
-      width          : 1310px;
-      height         : 810px;
+    .content {
+      display: none;
+      width: 77%;
+    }
 
-      .meal-intro {
-        .meal-title {
-          display: flex;
-          align-items: center;
-          border-bottom: 1px solid #ffffff;
+    .now {
+      display: block;
+    }
+
+    // 義大利麵菜單製作開始
+    .pasta-content {
+      @include menu-content;
+      width: 100%;
+
+      .pasta-intro {
+        width: 73%;
+
+        .pasta-title {
+          @include meal-title;
+          width: 500px;
+
           img {
-            width: 23px;
-            height: 23px;
+            @include cat-foot;
             margin-right: 2px;
           }
+
           h2 {
-            color: #dc8b40;
+            @include title-font;
           }
         }
-        .meal-content {
+
+        .row {
+          display: flex;
+          width  : 100%;
+
+          .column1,
+          .column2 {
+            width       : 50%;
+            margin-right: 40px;
+            border-top  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+
+            .meal-content {
+              display        : flex;
+              justify-content: space-between;
+              align-items    : center;
+              height         : 85px;
+              border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+              font-size      : 30px;
+
+              h3 {
+                color    : #f0bd0c;
+                font-size: 30px;
+              }
+
+              span {
+                color    : #ffffff;
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+
+      .pasta-pic {
+        width           : 350px;
+        height          : 670px;
+        background-image: url(./images/幸福菜單/義大利麵/pasta01.jpg);
+        background-size : cover;
+
+        // 兩隻小可愛
+        .dog {
+          transform: translate(-340px, 483px);
+          width    : 140px;
+          height   : 180px;
+        }
+
+        .cat {
+          transform: translate(-340px, 483px);
+          width    : 160px;
+          height   : 160px;
+        }
+
+        // 兩隻小可愛
+      }
+    }
+    // 義大利麵菜單製作结束
+
+    // 暖心鍋物菜單製作開始
+    .hot-pot-content {
+      @include menu-content;
+      width: 100%;
+
+      .hot-pot-intro {
+        width: 35%;
+
+        .hot-pot-title {
+          @include meal-title;
+
+          img {
+            @include cat-foot;
+            margin-right: 2px;
+          }
+
+          h2 {
+            @include title-font;
+          }
 
         }
       }
+
+      .meal-content {
+        display       : flex;
+        flex-direction: column;
+        font-size     : 30px;
+
+        .meal-description {
+          display        : flex;
+          flex-direction : column;
+          justify-content: center;
+          border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+          border-top     : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+          height         : 144px;
+
+          .meal-title {
+            display        : flex;
+            justify-content: space-between;
+
+            h3 {
+              color        : #f0bd0c;
+              margin-bottom: 25px;
+              font-size    : 30px;
+            }
+
+            span {
+              color    : #ffffff;
+              font-size: 30px;
+            }
+          }
+
+          p {
+            color    : #ffffff;
+            font-size: 24px;
+          }
+        }
+
+        .row {
+          display        : flex;
+          justify-content: space-between;
+          margin-top     : 30px;
+
+          .column1 {
+            display       : flex;
+            flex-direction: column;
+            color         : #f0bd0c;
+            font-size     : 24px;
+          }
+
+          .column2 {
+            display       : flex;
+            flex-direction: column;
+            color         : #ffffff;
+            font-size     : 24px;
+          }
+
+          span {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .hot-pot-pic {
+        display: flex;
+        width  : 48%;
+        height : 670px;
+
+        .hot-pot-left {
+          width       : 350px;
+          height      : 670px;
+          margin-right: 10px;
+
+          .hot-pot1 {
+            width           : 100%;
+            height          : 330px;
+            margin-bottom   : 10px;
+            background-image: url(./images/幸福菜單/暖心鍋物/hotpot-leftt01.jpg);
+            background-size : cover;
+
+          }
+
+          .hot-pot2 {
+            width           : 100%;
+            height          : 330px;
+            background-image: url(./images/幸福菜單/暖心鍋物/hotpot-left02.jpg);
+            background-size : cover;
+          }
+        }
+
+        .hot-pot-right {
+          width           : 350px;
+          height          : 670px;
+          background-image: url(./images/幸福菜單/暖心鍋物/hotpot-right01.jpg);
+          background-size : cover;
+        }
+      }
     }
+    //暖心鍋物菜單製作結束
 
-    .food-pic {
-      position: relative;
-      width   : 709px;
-      height  : 812px;
+    // 主廚料理菜單製作開始
+    .chef-content {
+      @include menu-content;
+      width:100%;
 
-      .small-pic {
-        position: absolute;
-        width   : 350px;
-        height  : 400px;
+      .chef-intro {
+        width: 35%;
+
+        .chef-title {
+          @include meal-title;
+
+          img {
+            @include cat-foot;
+            margin-right: 2px;
+          }
+
+          h2 {
+            @include title-font;
+          }
+        }
+      }
+
+      hr {
+        border-top   : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+        border-bottom: 0;
+      }
+
+      .meal-content {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        height         : 85px;
+        border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+        font-size      : 30px;
+
+        h3 {
+          color    : #f0bd0c;
+          font-size: 30px;
         }
 
-      .small-pic2 {
-        top: 405px;
+        span {
+          color    : #ffffff;
+          font-size: 30px;
         }
 
-      .large-pic {
-        position: absolute;
-        top     : 0;
-        left    : 355px;
-        width   : 350px;
-        height  : 805px;
+        p {
+          color    : #ffffff;
+          font-size: 24px;
+        }
+
+        .meal-title {
+          display  : flex;
+          flex-wrap: wrap;
+        }
+      }
+
+      // 主廚料理圖片
+      .chef-pic {
+        display: flex;
+        width  : 48%;
+        height : 670px;
+
+        .chef-left {
+          width       : 350px;
+          height      : 670px;
+          margin-right: 10px;
+
+          .chef1 {
+            width           : 100%;
+            height          : 330px;
+            margin-bottom   : 10px;
+            background-image: url(./images/幸福菜單/主廚料理/chef-left01.jpg);
+            background-size : cover;
+          }
+
+          .chef2 {
+            width           : 100%;
+            height          : 330px;
+            background-image: url(./images/幸福菜單/主廚料理/chef-left02.jpg);
+            background-size : cover;
+          }
+        }
+
+        .chef-right {
+          width           : 350px;
+          height          : 670px;
+          background-image: url(./images/幸福菜單/主廚料理/chef-right.jpg);
+          background-size : cover;
+        }
+      }
+    }
+    // 主廚料理菜單製作結束
+
+    // 活力輕食菜單製作開始
+    .light-content {
+      @include menu-content;
+      width: 100%;
+
+      .light-intro {
+        width : 73%;
+        height: 670px;
+
+        .light-title {
+          @include meal-title;
+
+          img {
+            @include cat-foot;
+            margin-right: 2px;
+          }
+
+          h2 {
+            @include title-font;
+          }
+        }
+
+        .row {
+          display        : flex;
+          justify-content: space-between;
+
+          .column1 {
+            width       : 512px;
+            margin-right: 50px;
+            border-top  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+
+            .meal-content1 {
+              display        : flex;
+              justify-content: space-between;
+              align-items    : center;
+              height         : 85px;
+              border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+              font-size      : 30px;
+            }
+
+          }
+
+          .column2 {
+            display       : flex;
+            flex-direction: column;
+            width         : 512px;
+            border-top    : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+
+            .img {
+
+              // 兩隻小可愛
+              .dog {
+                transform: translate(185px, 120px);
+                width    : 140px;
+                height   : 180px;
+              }
+
+              .cat {
+                transform: translate(185px, 120px);
+                width    : 160px;
+                height   : 160px;
+              }
+
+              // 兩隻小可愛
+            }
+          }
+
+          // column1與column2共同的樣式
+          h3 {
+            color    : #f0bd0c;
+            font-size: 30px;
+          }
+
+          span {
+            color    : #ffffff;
+            font-size: 30px;
+          }
+
+          p {
+            color     : #ffffff;
+            font-size : 24px;
+            margin-top: 30px;
+          }
+
+          .meal-content2 {
+            display        : flex;
+            justify-content: space-between;
+            height         : 140px;
+            border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+
+            .meal-title {
+              display        : flex;
+              flex-direction : column;
+              justify-content: center;
+            }
+          }
+
+          .meal-content3 {
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+            height         : 140px;
+            border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+            font-size      : 30px;
+          }
+
+        }
+      }
+
+      .light-pic {
+        width       : 350px;
+        height      : 670px;
+        margin-right: 10px;
+
+        .light1 {
+          width           : 100%;
+          height          : 330px;
+          margin-bottom   : 10px;
+          background-image: url(./images/幸福菜單/活力輕食/light01.jpg);
+        }
+
+        .light2 {
+          width           : 100%;
+          height          : 330px;
+          background-image: url(./images/幸福菜單/活力輕食/light02.jpg);
+        }
+      }
+
+    }
+    // 活力輕食菜單製作結束
+
+     // 好食點心菜單製作開始
+     .snack-content {
+      @include menu-content;
+      width: 100%;
+
+      .snack-intro {
+        width: 73%;
+
+        .snack-title {
+          @include meal-title;
+          width: 500px;
+
+          img {
+            @include cat-foot;
+            margin-right: 2px;
+          }
+
+          h2 {
+            @include title-font;
+          }
+        }
+
+        .row {
+          display: flex;
+          width  : 100%;
+
+          .column1,
+          .column2 {
+            width       : 50%;
+            margin-right: 40px;
+            border-top  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+
+            .meal-content {
+              display        : flex;
+              justify-content: space-between;
+              align-items    : center;
+              height         : 85px;
+              border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+              font-size      : 30px;
+
+              h3 {
+                color    : #f0bd0c;
+                font-size: 30px;
+              }
+
+              span {
+                color    : #ffffff;
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+
+      .snack-pic {
+        width           : 350px;
+        height          : 670px;
+        background-image: url(./images/幸福菜單/好食點心/fries01.jpg);
+        background-size : cover;
+
+        // 兩隻小可愛
+        .dog {
+          transform: translate(-340px, 483px);
+          width    : 140px;
+          height   : 180px;
+        }
+
+        .cat {
+          transform: translate(-340px, 483px);
+          width    : 160px;
+          height   : 160px;
+        }
+
+        // 兩隻小可愛
+      }
+    }
+    // 好食點心菜單製作结束
+
+
+    // 好食飲品菜單製作開始
+    .drink-content {
+      @include menu-content;
+      width: 100%;
+
+      .drink-intro {
+        width: 73%;
+
+        .drink-title {
+          @include meal-title;
+          width: 500px;
+
+          img {
+            @include cat-foot;
+            margin-right: 2px;
+          }
+
+          h2 {
+            @include title-font;
+          }
+        }
+
+        .row {
+          display: flex;
+          width  : 100%;
+
+          .column1,
+          .column2,
+          .column3 {
+            width       : 33.3%;
+            margin-right: 40px;
+            border-top  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+
+            .meal-content {
+              display        : flex;
+              justify-content: space-between;
+              align-items    : center;
+              height         : 85px;
+              border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+              font-size      : 30px;
+
+              h3 {
+                color    : #f0bd0c;
+                font-size: 30px;
+              }
+
+              span {
+                color    : #ffffff;
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+
+      .drink-pic {
+        width           : 350px;
+        height          : 670px;
+        background-image: url(./images/幸福菜單/好食飲品/drink01.jpg);
+        background-size : cover;
+      }
+    }
+    //好食飲品菜單製作结束
+
+
+    // 寵物鮮食菜單製作開始
+    .pet-food-content {
+      @include menu-content;
+      width: 100%;
+
+      .pet-food-intro {
+        width: 35%;
+
+        .pet-food-title {
+          @include meal-title;
+
+          img {
+            @include cat-foot;
+            margin-right: 2px;
+          }
+
+          h2 {
+            @include title-font;
+          }
+        }
+      }
+
+      hr {
+        border-top   : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+        border-bottom: 0;
+      }
+
+      .meal-content {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        height         : 85px;
+        border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+        font-size      : 30px;
+
+        h3 {
+          color    : #f0bd0c;
+          font-size: 30px;
+        }
+
+        span {
+          color    : #ffffff;
+          font-size: 30px;
+        }
+
+        p {
+          color: #ffffff;
+        }
+      }
+
+      //兩隻小可愛
+      .dog {
+        transform: translate(-78px, 485px);
+        width    : 140px;
+        height   : 180px;
+      }
+
+      .cat {
+        transform: translate(-78px, 505px);
+        width    : 160px;
+        height   : 160px;
+      }
+
+      // 寵物鮮食圖片
+      .pet-food-pic {
+        display: flex;
+        width  : 48%;
+        height : 670px;
+
+        .pet-food-left {
+          width       : 350px;
+          height      : 670px;
+          margin-right: 10px;
+
+          .pet-food1 {
+            width           : 100%;
+            height          : 330px;
+            margin-bottom   : 10px;
+            background-image: url(./images/幸福菜單/寵物鮮食/petfood-left01.jpg);
+            background-size : cover;
+
+          }
+
+          .pet-food2 {
+            width           : 100%;
+            height          : 330px;
+            background-image: url(./images/幸福菜單/寵物鮮食/petfood-left02.jpg);
+            background-size : cover;
+          }
+        }
+
+        .pet-food-right {
+          width           : 350px;
+          height          : 670px;
+          background-image: url(./images/幸福菜單/寵物鮮食/petfood-right.jpg);
+          background-size : cover;
+        }
       }
     }
   }
-
-
-    // 寵物鮮食菜單製作結束
+  // 寵物鮮食菜單製作結束
 
 
   // 幸福菜單區塊結束
@@ -623,7 +1307,7 @@ main {
       }
     }
 
-    .content {
+    .dialog {
       width           : 1321px;
       height          : 783px;
       border-radius   : 20px;

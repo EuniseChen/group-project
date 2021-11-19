@@ -99,7 +99,7 @@ main #banner .nav .nav-items .nav-item {
 }
 
 main #banner .nav .nav-items .nav-item:hover > .nav-link {
-  color: #f5c20c;
+  color: #f0bd0c;
 }
 
 main #banner .nav .nav-items .nav-item .nav-link {
@@ -154,7 +154,9 @@ main #concept {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 130px 0 55px 0;
+  padding-top: 130px;
+  width: 100%;
+  height: 1280px;
   background-color: #fff;
 }
 
@@ -220,7 +222,7 @@ main #environment {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  padding-bottom: 45px;
+  height: 980px;
   background-color: #ffffff;
 }
 
@@ -242,7 +244,7 @@ main #environment .environment-img h1 {
   left: 50px;
   width: 240px;
   height: 95px;
-  background-color: #f5c20c;
+  background-color: #f0bd0c;
   font-size: 48px;
   text-align: center;
   line-height: 100px;
@@ -418,8 +420,9 @@ main #food-card {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding-bottom: 85px;
-  background-color: #f5c20c;
+  position: relative;
+  height: 980px;
+  background-color: #f0bd0c;
 }
 
 main #food-card h1 {
@@ -434,8 +437,10 @@ main #food-card .row {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 68.7%;
-  margin: 0 0 0px;
+  margin: 0 0 -30px -30px;
 }
 
 main #food-card .row .column {
@@ -443,7 +448,7 @@ main #food-card .row .column {
   height: 360px;
   -webkit-perspective: 700px;
           perspective: 700px;
-  margin: 0 0 30px 30px;
+  padding: 0 0 30px 30px;
 }
 
 main #food-card .row .column .food-img {
@@ -587,6 +592,14 @@ main #food-card .row .column .food-img .back p {
   font-size: 24px;
 }
 
+main #food-card .dog-shadow {
+  position: absolute;
+  right: 190px;
+  bottom: 25px;
+  width: 210px;
+  height: 245px;
+}
+
 main #menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -599,21 +612,22 @@ main #menu {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  height: 980px;
   background-color: #000000;
 }
 
-main #menu .menu-nav {
+main #menu .menu-type {
   width: 80%;
   text-align: center;
 }
 
-main #menu .menu-nav h1 {
+main #menu .menu-type h1 {
   font-size: 48px;
   margin: 70px 0 30px 0;
   color: #f0bd0c;
 }
 
-main #menu .menu-nav .menu-items {
+main #menu .menu-type .menu-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,73 +638,916 @@ main #menu .menu-nav .menu-items {
           align-items: center;
   width: 100%;
   height: 64px;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-main #menu .menu-nav .menu-items .menu-item {
+main #menu .menu-type .menu-items .menu-item {
   list-style-type: none;
   text-decoration: none;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 36px;
-  font-weight: 800;
   width: 14%;
+  cursor: pointer;
 }
 
-main #menu .meal {
+main #menu .menu-type .menu-items .menu-item:hover {
+  color: #dc8b40;
+  font-weight: 600;
+}
+
+main #menu .menu-type .menu-items .active {
+  position: relative;
+  color: #dc8b40;
+}
+
+main #menu .menu-type .menu-items .active::before {
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  content: '';
+  width: 23px;
+  height: 23px;
+  margin-right: 2px;
+  background-image: url(./images/幸福菜單/icons/foot-print.svg);
+}
+
+main #menu .content {
+  display: none;
+  width: 77%;
+}
+
+main #menu .now {
+  display: block;
+}
+
+main #menu .pasta-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 52px;
-  width: 1310px;
-  height: 810px;
+  margin-top: 30px;
+  width: 77%;
+  height: 665px;
+  width: 100%;
 }
 
-main #menu .meal .meal-intro .meal-title {
+main #menu .pasta-content .pasta-intro {
+  width: 73%;
+}
+
+main #menu .pasta-content .pasta-intro .pasta-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid #ffffff;
+  height: 85px;
+  width: 500px;
 }
 
-main #menu .meal .meal-intro .meal-title img {
+main #menu .pasta-content .pasta-intro .pasta-title img {
   width: 23px;
   height: 23px;
   margin-right: 2px;
 }
 
-main #menu .meal .meal-intro .meal-title h2 {
-  color: #dc8b40;
+main #menu .pasta-content .pasta-intro .pasta-title h2 {
+  color: #E19040;
+  font-size: 36px;
 }
 
-main #menu .food-pic {
-  position: relative;
-  width: 709px;
-  height: 812px;
+main #menu .pasta-content .pasta-intro .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
-main #menu .food-pic .small-pic {
-  position: absolute;
+main #menu .pasta-content .pasta-intro .row .column1,
+main #menu .pasta-content .pasta-intro .row .column2 {
+  width: 50%;
+  margin-right: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+main #menu .pasta-content .pasta-intro .row .column1 .meal-content,
+main #menu .pasta-content .pasta-intro .row .column2 .meal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+}
+
+main #menu .pasta-content .pasta-intro .row .column1 .meal-content h3,
+main #menu .pasta-content .pasta-intro .row .column2 .meal-content h3 {
+  color: #f0bd0c;
+  font-size: 30px;
+}
+
+main #menu .pasta-content .pasta-intro .row .column1 .meal-content span,
+main #menu .pasta-content .pasta-intro .row .column2 .meal-content span {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main #menu .pasta-content .pasta-pic {
   width: 350px;
-  height: 400px;
+  height: 670px;
+  background-image: url(./images/幸福菜單/義大利麵/pasta01.jpg);
+  background-size: cover;
 }
 
-main #menu .food-pic .small-pic2 {
-  top: 405px;
+main #menu .pasta-content .pasta-pic .dog {
+  -webkit-transform: translate(-340px, 483px);
+          transform: translate(-340px, 483px);
+  width: 140px;
+  height: 180px;
 }
 
-main #menu .food-pic .large-pic {
-  position: absolute;
-  top: 0;
-  left: 355px;
+main #menu .pasta-content .pasta-pic .cat {
+  -webkit-transform: translate(-340px, 483px);
+          transform: translate(-340px, 483px);
+  width: 160px;
+  height: 160px;
+}
+
+main #menu .hot-pot-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  width: 77%;
+  height: 665px;
+  width: 100%;
+}
+
+main #menu .hot-pot-content .hot-pot-intro {
+  width: 35%;
+}
+
+main #menu .hot-pot-content .hot-pot-intro .hot-pot-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+}
+
+main #menu .hot-pot-content .hot-pot-intro .hot-pot-title img {
+  width: 23px;
+  height: 23px;
+  margin-right: 2px;
+}
+
+main #menu .hot-pot-content .hot-pot-intro .hot-pot-title h2 {
+  color: #E19040;
+  font-size: 36px;
+}
+
+main #menu .hot-pot-content .meal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 30px;
+}
+
+main #menu .hot-pot-content .meal-content .meal-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  height: 144px;
+}
+
+main #menu .hot-pot-content .meal-content .meal-description .meal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #menu .hot-pot-content .meal-content .meal-description .meal-title h3 {
+  color: #f0bd0c;
+  margin-bottom: 25px;
+  font-size: 30px;
+}
+
+main #menu .hot-pot-content .meal-content .meal-description .meal-title span {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main #menu .hot-pot-content .meal-content .meal-description p {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+main #menu .hot-pot-content .meal-content .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+main #menu .hot-pot-content .meal-content .row .column1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #f0bd0c;
+  font-size: 24px;
+}
+
+main #menu .hot-pot-content .meal-content .row .column2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+main #menu .hot-pot-content .meal-content .row span {
+  margin-bottom: 20px;
+}
+
+main #menu .hot-pot-content .hot-pot-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 48%;
+  height: 670px;
+}
+
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-left {
   width: 350px;
-  height: 805px;
+  height: 670px;
+  margin-right: 10px;
+}
+
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .hot-pot1 {
+  width: 100%;
+  height: 330px;
+  margin-bottom: 10px;
+  background-image: url(./images/幸福菜單/暖心鍋物/hotpot-leftt01.jpg);
+  background-size: cover;
+}
+
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .hot-pot2 {
+  width: 100%;
+  height: 330px;
+  background-image: url(./images/幸福菜單/暖心鍋物/hotpot-left02.jpg);
+  background-size: cover;
+}
+
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-right {
+  width: 350px;
+  height: 670px;
+  background-image: url(./images/幸福菜單/暖心鍋物/hotpot-right01.jpg);
+  background-size: cover;
+}
+
+main #menu .chef-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  width: 77%;
+  height: 665px;
+  width: 100%;
+}
+
+main #menu .chef-content .chef-intro {
+  width: 35%;
+}
+
+main #menu .chef-content .chef-intro .chef-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+}
+
+main #menu .chef-content .chef-intro .chef-title img {
+  width: 23px;
+  height: 23px;
+  margin-right: 2px;
+}
+
+main #menu .chef-content .chef-intro .chef-title h2 {
+  color: #E19040;
+  font-size: 36px;
+}
+
+main #menu .chef-content hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 0;
+}
+
+main #menu .chef-content .meal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+}
+
+main #menu .chef-content .meal-content h3 {
+  color: #f0bd0c;
+  font-size: 30px;
+}
+
+main #menu .chef-content .meal-content span {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main #menu .chef-content .meal-content p {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+main #menu .chef-content .meal-content .meal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main #menu .chef-content .chef-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 48%;
+  height: 670px;
+}
+
+main #menu .chef-content .chef-pic .chef-left {
+  width: 350px;
+  height: 670px;
+  margin-right: 10px;
+}
+
+main #menu .chef-content .chef-pic .chef-left .chef1 {
+  width: 100%;
+  height: 330px;
+  margin-bottom: 10px;
+  background-image: url(./images/幸福菜單/主廚料理/chef-left01.jpg);
+  background-size: cover;
+}
+
+main #menu .chef-content .chef-pic .chef-left .chef2 {
+  width: 100%;
+  height: 330px;
+  background-image: url(./images/幸福菜單/主廚料理/chef-left02.jpg);
+  background-size: cover;
+}
+
+main #menu .chef-content .chef-pic .chef-right {
+  width: 350px;
+  height: 670px;
+  background-image: url(./images/幸福菜單/主廚料理/chef-right.jpg);
+  background-size: cover;
+}
+
+main #menu .light-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  width: 77%;
+  height: 665px;
+  width: 100%;
+}
+
+main #menu .light-content .light-intro {
+  width: 73%;
+  height: 670px;
+}
+
+main #menu .light-content .light-intro .light-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+}
+
+main #menu .light-content .light-intro .light-title img {
+  width: 23px;
+  height: 23px;
+  margin-right: 2px;
+}
+
+main #menu .light-content .light-intro .light-title h2 {
+  color: #E19040;
+  font-size: 36px;
+}
+
+main #menu .light-content .light-intro .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #menu .light-content .light-intro .row .column1 {
+  width: 512px;
+  margin-right: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+main #menu .light-content .light-intro .row .column1 .meal-content1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+}
+
+main #menu .light-content .light-intro .row .column2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 512px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+main #menu .light-content .light-intro .row .column2 .img .dog {
+  -webkit-transform: translate(185px, 120px);
+          transform: translate(185px, 120px);
+  width: 140px;
+  height: 180px;
+}
+
+main #menu .light-content .light-intro .row .column2 .img .cat {
+  -webkit-transform: translate(185px, 120px);
+          transform: translate(185px, 120px);
+  width: 160px;
+  height: 160px;
+}
+
+main #menu .light-content .light-intro .row h3 {
+  color: #f0bd0c;
+  font-size: 30px;
+}
+
+main #menu .light-content .light-intro .row span {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main #menu .light-content .light-intro .row p {
+  color: #ffffff;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+main #menu .light-content .light-intro .row .meal-content2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 140px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+main #menu .light-content .light-intro .row .meal-content2 .meal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #menu .light-content .light-intro .row .meal-content3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 140px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+}
+
+main #menu .light-content .light-pic {
+  width: 350px;
+  height: 670px;
+  margin-right: 10px;
+}
+
+main #menu .light-content .light-pic .light1 {
+  width: 100%;
+  height: 330px;
+  margin-bottom: 10px;
+  background-image: url(./images/幸福菜單/活力輕食/light01.jpg);
+}
+
+main #menu .light-content .light-pic .light2 {
+  width: 100%;
+  height: 330px;
+  background-image: url(./images/幸福菜單/活力輕食/light02.jpg);
+}
+
+main #menu .snack-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  width: 77%;
+  height: 665px;
+  width: 100%;
+}
+
+main #menu .snack-content .snack-intro {
+  width: 73%;
+}
+
+main #menu .snack-content .snack-intro .snack-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  width: 500px;
+}
+
+main #menu .snack-content .snack-intro .snack-title img {
+  width: 23px;
+  height: 23px;
+  margin-right: 2px;
+}
+
+main #menu .snack-content .snack-intro .snack-title h2 {
+  color: #E19040;
+  font-size: 36px;
+}
+
+main #menu .snack-content .snack-intro .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main #menu .snack-content .snack-intro .row .column1,
+main #menu .snack-content .snack-intro .row .column2 {
+  width: 50%;
+  margin-right: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+main #menu .snack-content .snack-intro .row .column1 .meal-content,
+main #menu .snack-content .snack-intro .row .column2 .meal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+}
+
+main #menu .snack-content .snack-intro .row .column1 .meal-content h3,
+main #menu .snack-content .snack-intro .row .column2 .meal-content h3 {
+  color: #f0bd0c;
+  font-size: 30px;
+}
+
+main #menu .snack-content .snack-intro .row .column1 .meal-content span,
+main #menu .snack-content .snack-intro .row .column2 .meal-content span {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main #menu .snack-content .snack-pic {
+  width: 350px;
+  height: 670px;
+  background-image: url(./images/幸福菜單/好食點心/fries01.jpg);
+  background-size: cover;
+}
+
+main #menu .snack-content .snack-pic .dog {
+  -webkit-transform: translate(-340px, 483px);
+          transform: translate(-340px, 483px);
+  width: 140px;
+  height: 180px;
+}
+
+main #menu .snack-content .snack-pic .cat {
+  -webkit-transform: translate(-340px, 483px);
+          transform: translate(-340px, 483px);
+  width: 160px;
+  height: 160px;
+}
+
+main #menu .drink-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  width: 77%;
+  height: 665px;
+  width: 100%;
+}
+
+main #menu .drink-content .drink-intro {
+  width: 73%;
+}
+
+main #menu .drink-content .drink-intro .drink-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  width: 500px;
+}
+
+main #menu .drink-content .drink-intro .drink-title img {
+  width: 23px;
+  height: 23px;
+  margin-right: 2px;
+}
+
+main #menu .drink-content .drink-intro .drink-title h2 {
+  color: #E19040;
+  font-size: 36px;
+}
+
+main #menu .drink-content .drink-intro .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+main #menu .drink-content .drink-intro .row .column1,
+main #menu .drink-content .drink-intro .row .column2,
+main #menu .drink-content .drink-intro .row .column3 {
+  width: 33.3%;
+  margin-right: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+main #menu .drink-content .drink-intro .row .column1 .meal-content,
+main #menu .drink-content .drink-intro .row .column2 .meal-content,
+main #menu .drink-content .drink-intro .row .column3 .meal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+}
+
+main #menu .drink-content .drink-intro .row .column1 .meal-content h3,
+main #menu .drink-content .drink-intro .row .column2 .meal-content h3,
+main #menu .drink-content .drink-intro .row .column3 .meal-content h3 {
+  color: #f0bd0c;
+  font-size: 30px;
+}
+
+main #menu .drink-content .drink-intro .row .column1 .meal-content span,
+main #menu .drink-content .drink-intro .row .column2 .meal-content span,
+main #menu .drink-content .drink-intro .row .column3 .meal-content span {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main #menu .drink-content .drink-pic {
+  width: 350px;
+  height: 670px;
+  background-image: url(./images/幸福菜單/好食飲品/drink01.jpg);
+  background-size: cover;
+}
+
+main #menu .pet-food-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+  width: 77%;
+  height: 665px;
+  width: 100%;
+}
+
+main #menu .pet-food-content .pet-food-intro {
+  width: 35%;
+}
+
+main #menu .pet-food-content .pet-food-intro .pet-food-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+}
+
+main #menu .pet-food-content .pet-food-intro .pet-food-title img {
+  width: 23px;
+  height: 23px;
+  margin-right: 2px;
+}
+
+main #menu .pet-food-content .pet-food-intro .pet-food-title h2 {
+  color: #E19040;
+  font-size: 36px;
+}
+
+main #menu .pet-food-content hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 0;
+}
+
+main #menu .pet-food-content .meal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 85px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 30px;
+}
+
+main #menu .pet-food-content .meal-content h3 {
+  color: #f0bd0c;
+  font-size: 30px;
+}
+
+main #menu .pet-food-content .meal-content span {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+main #menu .pet-food-content .meal-content p {
+  color: #ffffff;
+}
+
+main #menu .pet-food-content .dog {
+  -webkit-transform: translate(-78px, 485px);
+          transform: translate(-78px, 485px);
+  width: 140px;
+  height: 180px;
+}
+
+main #menu .pet-food-content .cat {
+  -webkit-transform: translate(-78px, 505px);
+          transform: translate(-78px, 505px);
+  width: 160px;
+  height: 160px;
+}
+
+main #menu .pet-food-content .pet-food-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 48%;
+  height: 670px;
+}
+
+main #menu .pet-food-content .pet-food-pic .pet-food-left {
+  width: 350px;
+  height: 670px;
+  margin-right: 10px;
+}
+
+main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food1 {
+  width: 100%;
+  height: 330px;
+  margin-bottom: 10px;
+  background-image: url(./images/幸福菜單/寵物鮮食/petfood-left01.jpg);
+  background-size: cover;
+}
+
+main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food2 {
+  width: 100%;
+  height: 330px;
+  background-image: url(./images/幸福菜單/寵物鮮食/petfood-left02.jpg);
+  background-size: cover;
+}
+
+main #menu .pet-food-content .pet-food-pic .pet-food-right {
+  width: 350px;
+  height: 670px;
+  background-image: url(./images/幸福菜單/寵物鮮食/petfood-right.jpg);
+  background-size: cover;
 }
 
 main #adoption-info {
@@ -735,7 +1592,7 @@ main #adoption-info .nav-items .nav-item .nav-link {
   color: white;
 }
 
-main #adoption-info .content {
+main #adoption-info .dialog {
   width: 1321px;
   height: 783px;
   border-radius: 20px;

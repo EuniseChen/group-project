@@ -22,8 +22,9 @@
   <!--這個頁面會覆蓋掉整個body  -->
 
   <main>
-    <!-- banner開始 -->
+
     <section id="banner">
+      <!-- banner開始 -->
       <!-- 導航列開始 -->
       <div class="nav">
         <ul class="nav-items">
@@ -73,10 +74,10 @@
         </li>
       </ul>
       <!-- 店家連結結束 -->
-    </section>
-    <!-- banner結束 -->
-    <!-- 店家理念區塊開始 -->
+    </section> <!-- banner結束 -->
+
     <section id="concept">
+      <!-- 店家理念區塊開始 -->
       <article>
         <div class="text">
           <h2 class="concept-title">店家理念</h2>
@@ -97,13 +98,10 @@
           <img class="cat-img" src="./images/店家理念/HandDraw-Cat-01.png" alt="">
         </div>
       </article>
-    </section>
-    <!-- 店家理念區塊結束 -->
-    <!-- 店家環境區塊開始 -->
+    </section> <!-- 店家理念區塊結束 -->
+
     <section id="environment">
-      <!-- <div class="full-screen">
-        <div class="images"></div>
-      </div> -->
+      <!-- 店家環境區塊開始 -->
       <div class="environment-img">
         <h1>店內環境</h1>
         <div class="large-img">
@@ -124,11 +122,11 @@
         </div>
       </div>
       <img class="cat-shadow" src="./images/店家環境/Shadow-Cat-01.png" alt="">
-      <img class="dialog-img" src="./images/店家環境/dialog-img.svg" alt="">
-    </section>
-    <!-- 店家環境區塊結束 -->
-    <!-- 好食餐點區塊開始 -->
+      <img class="dialog-img" src="./images/店家環境/dialog-box.svg" alt="">
+    </section> <!-- 店家環境區塊結束 -->
+
     <section id="food-card">
+      <!-- 好食餐點區塊開始 -->
       <h1>好食餐點</h1>
       <!-- 全部有兩個row，每個row有三個column，每個column分為前面與後面兩張圖 -->
       <!-- The first row -->
@@ -186,9 +184,6 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- The second row -->
-      <div class="row">
         <div class="column">
           <div class="food-img">
             <div class="front">
@@ -241,11 +236,12 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- 好食餐點區塊結束 -->
-    <!-- 幸福菜單區塊開始 -->
+      <img class="dog-shadow" src="./images/好食餐點/Shadow-Dog-01.png" alt="">
+    </section> <!-- 好食餐點區塊結束 -->
+
     <section id="menu">
-      <div class="menu-nav">
+      <!-- 幸福菜單區塊開始 -->
+      <div class="menu-type">
         <h1>幸福菜單</h1>
         <!--菜單導航-->
         <ul class="menu-items">
@@ -255,33 +251,430 @@
           <li class="menu-item item4">活力輕食</li>
           <li class="menu-item item5">好食點心</li>
           <li class="menu-item item6">好食飲品</li>
-          <li class="menu-item item7">寵物鮮食</li>
+          <li class="menu-item item7 active">寵物鮮食</li>
         </ul>
       </div>
       <!-- 每個分類的詳細菜單 -->
 
-      <!-- 寵物鮮食 -->
-      <div class="meal pet-food">
-        <div class="meal-intro">
-          <div class="meal-title">
-            <img src="./images/幸福菜單/icons/foot-print.svg" alt="">
-            <h2>寵物鮮食</h2>
+      <div class="content">
+        <div class="pasta-content">
+          <!-- 義大利麵 -->
+          <div class="pasta-intro">
+            <!--文字部分-->
+            <div class="pasta-title">
+              <img src="./images/幸福菜單/icons/foot-print.svg" alt="">
+              <h2>義大利麵</h2>
+            </div>
+            <div class="row">
+              <div class="column1">
+                <div class="meal-content">
+                  <h3>清炒蒜辣義大利麵</h3>
+                  <span>$250</span>
+                </div>
+                <div class="meal-content">
+                  <h3>白酒蛤蠣意大利麵</h3>
+                  <span>$250</span>
+                </div>
+                <div class="meal-content">
+                  <h3>野菇鮮蔬義大利麵</h3>
+                  <span>$250</span>
+                </div>
+                <div class="meal-content">
+                  <h3>經典番茄肉醬義大利麵</h3>
+                  <span>$250</span>
+                </div>
+                <div class="meal-content">
+                  <h3>明太子海油培根義大利麵</h3>
+                  <span>$250</span>
+                </div>
+                <div class="meal-content">
+                  <h3>地中海白醬海鮮義大利麵</h3>
+                  <span>$260</span>
+                </div>
+              </div>
+              <div class="column2">
+                <div class="meal-content">
+                  <h3>塔香青醬海鮮義大利麵</h3>
+                  <span>$260</span>
+                </div>
+                <div class="meal-content">
+                  <h3>韓式泡菜海鮮義大利麵</h3>
+                  <span>$260</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="meal-content">
-            <h3>毛孩A餐</h3>
-            <span>$99</span>
+          <!--文字部分-->
+          <div class="pasta-pic">
+            <!--圖片部分-->
+            <img class="dog" src="./images/幸福菜單/icons/dog.svg" alt="">
+            <img class="cat" src="./images/幸福菜單/icons/cat.svg" alt="">
           </div>
-        </div>
-        <div class="food-pic">
-          <img class="small-pic small-pic1" src="./images/example/example.jpg" alt="">
-          <img class="small-pic small-pic2" src="./images/example/example.jpg" alt="">
-          <img class="large-pic" src="./images/example/example.jpg" alt="">
+          <!--圖片部分-->
         </div>
       </div>
-    </section>
-    <!-- 幸福菜單區塊結束 -->
-    <!-- 寵物認養區塊開始-->
+      <div class="content">
+        <div class="hot-pot-content">
+          <!-- 暖心鍋物 -->
+          <div class="hot-pot-intro">
+            <!--文字部分-->
+            <div class="hot-pot-title">
+              <img src="./images/幸福菜單/icons/foot-print.svg" alt="">
+              <h2>暖心鍋物</h2>
+            </div>
+            <div class="meal-content">
+              <div class="meal-description">
+                <div class="meal-title">
+                  <h3>剝皮辣椒雞湯鍋</h3>
+                  <span>$360</span>
+                </div>
+                <p>白飯／冬粉／寬粉／科學麵 （附餐擇一）</p>
+              </div>
+              <div class="row">
+                <div class="column1">
+                  <span>雞蛋</span>
+                  <span>白飯</span>
+                  <span>冬粉</span>
+                  <span>寬粉</span>
+                  <span>科學麵</span>
+                  <span>豆皮</span>
+                  <span>金針菇</span>
+                  <span>高麗菜</span>
+                </div>
+                <div class="column2">
+                  <span>$10</span>
+                  <span>$15</span>
+                  <span>$15</span>
+                  <span>$15</span>
+                  <span>$15</span>
+                  <span>$50</span>
+                  <span>$40</span>
+                  <span>$50</span>
+                </div>
+                <div class="column1">
+                  <span>綜合蔬菜</span>
+                  <span>菇類拼盤</span>
+                  <span>蛤蠣</span>
+                  <span>白蝦</span>
+                  <span>鯛魚片</span>
+                  <span>豬肉片</span>
+                  <span>海鮮盤</span>
+                </div>
+                <div class="column2">
+                  <span>$120</span>
+                  <span>$120</span>
+                  <span>$80</span>
+                  <span>$80</span>
+                  <span>$80</span>
+                  <span>$120</span>
+                  <span>$120</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--文字部分-->
+          <div class="hot-pot-pic">
+            <!--圖片部分-->
+            <div class="hot-pot-left">
+              <div class="hot-pot1"></div>
+              <div class="hot-pot2"></div>
+            </div>
+            <div class="hot-pot-right"></div>
+          </div>
+          <!--圖片部分-->
+        </div>
+      </div>
+      <div class="content">
+        <div class="chef-content">
+          <!-- 主廚料理 -->
+          <div class="chef-intro">
+            <div class="chef-title">
+              <img src="./images/幸福菜單/icons/foot-print.svg" alt="">
+              <h2>主廚料理</h2>
+            </div>
+            <hr>
+            <div class="meal-content">
+              <h3>香煎挪威鯖魚</h3>
+              <span>$260</span>
+            </div>
+            <div class="meal-content">
+              <h3>酥炸去骨雞腿排</h3>
+              <span>$260</span>
+            </div>
+            <div class="meal-content">
+              <h3>泰式風味椒麻雞</h3>
+              <span>$260</span>
+            </div>
+            <div class="meal-content">
+              <h3>古早味客家扣肉</h3>
+              <span>$260</span>
+            </div>
+            <div class="meal-content">
+              <div class="meal-title">
+                <h3>日式黃金炸豬排</h3>
+                <p>（蜂蜜芥末／原味番茄醬／和風醬）</p>
+              </div>
+              <span>$260</span>
+            </div>
+
+          </div>
+          <div class="chef-pic">
+            <div class="chef-left">
+              <div class="chef1"></div>
+              <div class="chef2"></div>
+            </div>
+            <div class="chef-right"></div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="light-content">
+          <!-- 活力輕食-->
+          <div class="light-intro">
+            <!--文字部分-->
+            <div class="light-title">
+              <img src="./images/幸福菜單/icons/foot-print.svg" alt="">
+              <h2>活力輕食</h2>
+            </div>
+            <div class="row">
+              <div class="column1">
+                <div class="meal-content1">
+                  <h3>香煎挪威鯖魚</h3>
+                  <span>$260</span>
+                </div>
+                <div class="meal-content1">
+                  <h3>酥炸去骨雞腿排</h3>
+                  <span>$260</span>
+                </div>
+                <div class="meal-content1">
+                  <h3>泰式風味椒麻雞</h3>
+                  <span>$260</span>
+                </div>
+                <div class="meal-content1">
+                  <h3>古早味客家扣肉</h3>
+                  <span>$260</span>
+                </div>
+                <div class="meal-content2">
+                  <div class="meal-title">
+                    <h3>日式黃金炸豬排</h3>
+                    <p>（蜂蜜芥末／原味番茄醬／和風醬）</p>
+                  </div>
+                  <span>$260</span>
+                </div>
+              </div>
+              <div class="column2">
+                <div class="meal-content3">
+                  <h3>附餐</h3>
+                  <p>高鐵地瓜／香蒜軟法／紫米御飯糰 （三選二）</p>
+                </div>
+                <div class="meal-content3">
+                  <h3>主廚沙拉</h3>
+                  <p>鮮蔬沙拉佐胡麻醬／鮮蔬沙拉佐柚子醬</p>
+                </div>
+                <div class="img">
+                  <img class="dog" src="./images/幸福菜單/icons/dog.svg" alt="">
+                  <img class="cat" src="./images/幸福菜單/icons/cat.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--文字部分-->
+
+          <div class="light-pic">
+            <!--圖片部分-->
+            <div class="light1"></div>
+            <div class="light2"></div>
+          </div>
+          <!--圖片部分-->
+        </div>
+      </div>
+      <div class="content">
+        <div class="snack-content">
+          <!-- 好食點心 -->
+          <div class="snack-intro">
+            <!--文字部分-->
+            <div class="snack-title">
+              <img src="./images/幸福菜單/icons/foot-print.svg" alt="">
+              <h2>好食點心</h2>
+            </div>
+            <div class="row">
+              <div class="column1">
+                <div class="meal-content">
+                  <h3>香蒜軟法</h3>
+                  <span>$50</span>
+                </div>
+                <div class="meal-content">
+                  <h3>美式脆薯</h3>
+                  <span>$100</span>
+                </div>
+                <div class="meal-content">
+                  <h3>麥克愛吃的雞塊</h3>
+                  <span>$100</span>
+                </div>
+                <div class="meal-content">
+                  <h3>酥炸雙菇</h3>
+                  <span>$150</span>
+                </div>
+                <div class="meal-content">
+                  <h3>香辣雞翅</h3>
+                  <span>$150</span>
+                </div>
+                <div class="meal-content">
+                  <h3>炸物拼盤</h3>
+                  <span>$300</span>
+                </div>
+              </div>
+              <div class="column2">
+                <div class="meal-content">
+                  <h3>特製椒鹽雞丁</h3>
+                  <span>$150</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--文字部分-->
+          <div class="snack-pic">
+            <!--圖片部分-->
+            <img class="dog" src="./images/幸福菜單/icons/dog.svg" alt="">
+            <img class="cat" src="./images/幸福菜單/icons/cat.svg" alt="">
+          </div>
+          <!--圖片部分-->
+        </div>
+      </div>
+      <div class="content">
+        <div class="drink-content">
+          <!-- 好食飲品 -->
+          <div class="drink-intro">
+            <!--文字部分-->
+            <div class="drink-title">
+              <img src="./images/幸福菜單/icons/foot-print.svg" alt="">
+              <h2>好食飲品</h2>
+            </div>
+            <div class="row">
+              <div class="column1">
+                <div class="meal-content">
+                  <h3>可樂</h3>
+                  <span>$90</span>
+                </div>
+                <div class="meal-content">
+                  <h3>紅茶</h3>
+                  <span>$90</span>
+                </div>
+                <div class="meal-content">
+                  <h3>鮮奶茶</h3>
+                  <span>$100</span>
+                </div>
+                <div class="meal-content">
+                  <h3>香柚茶</h3>
+                  <span>$140</span>
+                </div>
+                <div class="meal-content">
+                  <h3>水果茶</h3>
+                  <span>$150</span>
+                </div>
+                <div class="meal-content">
+                  <h3>蘋果牛奶</h3>
+                  <span>$130</span>
+                </div>
+              </div>
+              <div class="column2">
+                <div class="meal-content">
+                  <h3>可可牛奶</h3>
+                  <span>$130</span>
+                </div>
+                <div class="meal-content">
+                  <h3>抹茶拿鐵</h3>
+                  <span>$130</span>
+                </div>
+                <div class="meal-content">
+                  <h3>奇異果汁</h3>
+                  <span>$130</span>
+                </div>
+                <div class="meal-content">
+                  <h3>蘋果玫瑰茶</h3>
+                  <span>$140</span>
+                </div>
+                <div class="meal-content">
+                  <h3>奇亞籽活力鮮果飲</h3>
+                  <span>$140</span>
+                </div>
+                <div class="meal-content">
+                  <h3>膠原CC鮮果飲</h3>
+                  <span>$150</span>
+                </div>
+              </div>
+              <div class="column3">
+                <div class="meal-content">
+                  <h3>季節限定楊梅汁</h3>
+                  <span>$150</span>
+                </div>
+                <div class="meal-content">
+                  <h3>美式咖啡</h3>
+                  <span>$90</span>
+                </div>
+                <div class="meal-content">
+                  <h3>卡布奇諾</h3>
+                  <span>$110</span>
+                </div>
+                <div class="meal-content">
+                  <h3>原味拿鐵</h3>
+                  <span>$120</span>
+                </div>
+                <div class="meal-content">
+                  <h3>香草拿鐵</h3>
+                  <span>$130</span>
+                </div>
+                <div class="meal-content">
+                  <h3>焦糖拿鐵</h3>
+                  <span>$130</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--文字部分-->
+          <div class="drink-pic">
+            <!--圖片部分-->
+          </div>
+          <!--圖片部分-->
+        </div>
+      </div>
+      <div class="content now">
+        <div class="pet-food-content">
+          <!-- 寵物鮮食 -->
+          <div class="pet-food-intro">
+            <div class="pet-food-title">
+              <img src="./images/幸福菜單/icons/foot-print.svg" alt="">
+              <h2>寵物鮮食</h2>
+            </div>
+            <hr>
+            <div class="meal-content">
+              <h3>毛孩A餐</h3>
+              <span>$99</span>
+            </div>
+            <div class="meal-content">
+              <h3>毛孩B餐</h3>
+              <span>$139</span>
+            </div>
+            <div class="meal-content">
+              <h3>毛孩C餐</h3>
+              <span>$179</span>
+            </div>
+          </div>
+          <img class="dog" src="./images/幸福菜單/icons/dog.svg" alt="">
+          <img class="cat" src="./images/幸福菜單/icons/cat.svg" alt="">
+          <div class="pet-food-pic">
+            <div class="pet-food-left">
+              <div class="pet-food1"></div>
+              <div class="pet-food2"></div>
+            </div>
+            <div class="pet-food-right"></div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- 幸福菜單區塊結束 -->
+
     <section id="adoption-info">
+      <!-- 寵物認養區塊開始-->
       <h1>寵物認養</h1>
       <ul class="nav-items">
         <li class="nav-item">
@@ -294,11 +687,13 @@
           <a href="#" class="nav-link">認養須知</a>
         </li>
       </ul>
-      <div class="content"></div>
-    </section>
-    <!-- 寵物認養區塊結束-->
-    <!-- 下一站，家區塊開始 -->
+      <div class="dialog"></div>
+    </section> <!-- 寵物認養區塊結束-->
+
+
     <section id="story">
+      <!-- 下一站，家區塊開始 -->
+
       <h1>下一站，家</h1>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
@@ -313,9 +708,10 @@
           <div class="swiper-slide">Slide 9</div>
         </div>
       </div>
-    </section>
-    <!-- 下一站，家區塊結束 -->
+    </section> <!-- 下一站，家區塊結束 -->
+
   </main>
+
   <!-- footer開始 -->
   <footer>
     <div class="business-hours">
@@ -407,6 +803,7 @@
 
   </footer>
   <!-- footer結束 -->
+
   <!-- javascript 區塊 -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./index.js"></script>
