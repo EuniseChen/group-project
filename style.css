@@ -584,7 +584,7 @@ main #food-card .row .column .food-img .back p {
 }
 
 main #food-card .row .column .food-img .back h2 {
-  font-size: 36px;
+  font-size: 2vw;
   margin-bottom: 15px;
 }
 
@@ -646,7 +646,7 @@ main #menu .menu-type .menu-items .menu-item {
   list-style-type: none;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
-  font-size: 36px;
+  font-size: 2vw;
   width: 14%;
   cursor: pointer;
 }
@@ -663,12 +663,13 @@ main #menu .menu-type .menu-items .active {
 
 main #menu .menu-type .menu-items .active::before {
   position: absolute;
-  top: 13px;
-  left: 10px;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   content: '';
-  width: 23px;
-  height: 23px;
-  margin-right: 2px;
+  width: 1.2vw;
+  height: 1.2vw;
   background-image: url(./images/幸福菜單/icons/foot-print.svg);
 }
 
@@ -710,14 +711,14 @@ main #menu .pasta-content .pasta-intro .pasta-title {
 }
 
 main #menu .pasta-content .pasta-intro .pasta-title img {
-  width: 23px;
-  height: 23px;
+  width: 1.2vw;
+  height: 1.2vw;
   margin-right: 2px;
 }
 
 main #menu .pasta-content .pasta-intro .pasta-title h2 {
   color: #E19040;
-  font-size: 36px;
+  font-size: 2vw;
 }
 
 main #menu .pasta-content .pasta-intro .row {
@@ -753,13 +754,13 @@ main #menu .pasta-content .pasta-intro .row .column2 .meal-content {
 main #menu .pasta-content .pasta-intro .row .column1 .meal-content h3,
 main #menu .pasta-content .pasta-intro .row .column2 .meal-content h3 {
   color: #f0bd0c;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .pasta-content .pasta-intro .row .column1 .meal-content span,
 main #menu .pasta-content .pasta-intro .row .column2 .meal-content span {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .pasta-content .pasta-pic {
@@ -811,14 +812,14 @@ main #menu .hot-pot-content .hot-pot-intro .hot-pot-title {
 }
 
 main #menu .hot-pot-content .hot-pot-intro .hot-pot-title img {
-  width: 23px;
-  height: 23px;
+  width: 1.2vw;
+  height: 1.2vw;
   margin-right: 2px;
 }
 
 main #menu .hot-pot-content .hot-pot-intro .hot-pot-title h2 {
   color: #E19040;
-  font-size: 36px;
+  font-size: 2vw;
 }
 
 main #menu .hot-pot-content .meal-content {
@@ -829,7 +830,7 @@ main #menu .hot-pot-content .meal-content {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .hot-pot-content .meal-content .meal-description {
@@ -860,12 +861,12 @@ main #menu .hot-pot-content .meal-content .meal-description .meal-title {
 main #menu .hot-pot-content .meal-content .meal-description .meal-title h3 {
   color: #f0bd0c;
   margin-bottom: 25px;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .hot-pot-content .meal-content .meal-description .meal-title span {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .hot-pot-content .meal-content .meal-description p {
@@ -892,7 +893,7 @@ main #menu .hot-pot-content .meal-content .row .column1 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #f0bd0c;
-  font-size: 24px;
+  font-size: 1.3vw;
 }
 
 main #menu .hot-pot-content .meal-content .row .column2 {
@@ -904,7 +905,7 @@ main #menu .hot-pot-content .meal-content .row .column2 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 1.3vw;
 }
 
 main #menu .hot-pot-content .meal-content .row span {
@@ -975,14 +976,14 @@ main #menu .chef-content .chef-intro .chef-title {
 }
 
 main #menu .chef-content .chef-intro .chef-title img {
-  width: 23px;
-  height: 23px;
+  width: 1.2vw;
+  height: 1.2vw;
   margin-right: 2px;
 }
 
 main #menu .chef-content .chef-intro .chef-title h2 {
   color: #E19040;
-  font-size: 36px;
+  font-size: 2vw;
 }
 
 main #menu .chef-content hr {
@@ -1002,22 +1003,22 @@ main #menu .chef-content .meal-content {
           align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .chef-content .meal-content h3 {
   color: #f0bd0c;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .chef-content .meal-content span {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .chef-content .meal-content p {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 1.3vw;
 }
 
 main #menu .chef-content .meal-content .meal-title {
@@ -1093,14 +1094,14 @@ main #menu .light-content .light-intro .light-title {
 }
 
 main #menu .light-content .light-intro .light-title img {
-  width: 23px;
-  height: 23px;
+  width: 1.2vw;
+  height: 1.2vw;
   margin-right: 2px;
 }
 
 main #menu .light-content .light-intro .light-title h2 {
   color: #E19040;
-  font-size: 36px;
+  font-size: 2vw;
 }
 
 main #menu .light-content .light-intro .row {
@@ -1130,7 +1131,7 @@ main #menu .light-content .light-intro .row .column1 .meal-content1 {
           align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .light-content .light-intro .row .column2 {
@@ -1161,12 +1162,12 @@ main #menu .light-content .light-intro .row .column2 .img .cat {
 
 main #menu .light-content .light-intro .row h3 {
   color: #f0bd0c;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .light-content .light-intro .row span {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .light-content .light-intro .row p {
@@ -1212,7 +1213,7 @@ main #menu .light-content .light-intro .row .meal-content3 {
           justify-content: center;
   height: 140px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .light-content .light-pic {
@@ -1263,14 +1264,14 @@ main #menu .snack-content .snack-intro .snack-title {
 }
 
 main #menu .snack-content .snack-intro .snack-title img {
-  width: 23px;
-  height: 23px;
+  width: 1.2vw;
+  height: 1.2vw;
   margin-right: 2px;
 }
 
 main #menu .snack-content .snack-intro .snack-title h2 {
   color: #E19040;
-  font-size: 36px;
+  font-size: 2vw;
 }
 
 main #menu .snack-content .snack-intro .row {
@@ -1300,19 +1301,19 @@ main #menu .snack-content .snack-intro .row .column2 .meal-content {
           align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .snack-content .snack-intro .row .column1 .meal-content h3,
 main #menu .snack-content .snack-intro .row .column2 .meal-content h3 {
   color: #f0bd0c;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .snack-content .snack-intro .row .column1 .meal-content span,
 main #menu .snack-content .snack-intro .row .column2 .meal-content span {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .snack-content .snack-pic {
@@ -1365,14 +1366,14 @@ main #menu .drink-content .drink-intro .drink-title {
 }
 
 main #menu .drink-content .drink-intro .drink-title img {
-  width: 23px;
-  height: 23px;
+  width: 1.2vw;
+  height: 1.2vw;
   margin-right: 2px;
 }
 
 main #menu .drink-content .drink-intro .drink-title h2 {
   color: #E19040;
-  font-size: 36px;
+  font-size: 2vw;
 }
 
 main #menu .drink-content .drink-intro .row {
@@ -1404,21 +1405,21 @@ main #menu .drink-content .drink-intro .row .column3 .meal-content {
           align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .drink-content .drink-intro .row .column1 .meal-content h3,
 main #menu .drink-content .drink-intro .row .column2 .meal-content h3,
 main #menu .drink-content .drink-intro .row .column3 .meal-content h3 {
   color: #f0bd0c;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .drink-content .drink-intro .row .column1 .meal-content span,
 main #menu .drink-content .drink-intro .row .column2 .meal-content span,
 main #menu .drink-content .drink-intro .row .column3 .meal-content span {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .drink-content .drink-pic {
@@ -1456,14 +1457,14 @@ main #menu .pet-food-content .pet-food-intro .pet-food-title {
 }
 
 main #menu .pet-food-content .pet-food-intro .pet-food-title img {
-  width: 23px;
-  height: 23px;
+  width: 1.2vw;
+  height: 1.2vw;
   margin-right: 2px;
 }
 
 main #menu .pet-food-content .pet-food-intro .pet-food-title h2 {
   color: #E19040;
-  font-size: 36px;
+  font-size: 2vw;
 }
 
 main #menu .pet-food-content hr {
@@ -1483,17 +1484,17 @@ main #menu .pet-food-content .meal-content {
           align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .pet-food-content .meal-content h3 {
   color: #f0bd0c;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .pet-food-content .meal-content span {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 1.6vw;
 }
 
 main #menu .pet-food-content .meal-content p {

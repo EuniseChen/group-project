@@ -32,13 +32,13 @@
 // 菜單小標題的字體樣式
 @mixin title-font {
   color    : #E19040;
-  font-size: 36px;
+  font-size: 2vw;
 }
 
 // 貓腳印樣式
 @mixin cat-foot {
-  width : 23px;
-  height: 23px;
+  width : 1.2vw;
+  height: 1.2vw;
 }
 
 // 每個菜單內頁的樣式
@@ -517,7 +517,7 @@ main {
             }
 
             h2 {
-              font-size    : 36px;
+              font-size    : 2vw;
               margin-bottom: 15px;
             }
 
@@ -571,7 +571,7 @@ main {
           list-style-type: none;
           text-decoration: none;
           color          : rgba($color:#ffffff, $alpha: 0.5);
-          font-size      : 36px;
+          font-size      : 2vw;
           width          : 14%;
           cursor         : pointer;
 
@@ -587,11 +587,11 @@ main {
 
           &::before {
             position: absolute;
-            top: 13px;
-            left: 10px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
             content: '';
             @include cat-foot;
-            margin-right: 2px;
             background-image: url(./images/幸福菜單/icons/foot-print.svg);
           }
         }
@@ -649,12 +649,12 @@ main {
 
               h3 {
                 color    : #f0bd0c;
-                font-size: 30px;
+                font-size: 1.6vw;
               }
 
               span {
                 color    : #ffffff;
-                font-size: 30px;
+                font-size: 1.6vw;
               }
             }
           }
@@ -711,7 +711,7 @@ main {
       .meal-content {
         display       : flex;
         flex-direction: column;
-        font-size     : 30px;
+        font-size     : 1.6vw;
 
         .meal-description {
           display        : flex;
@@ -728,12 +728,12 @@ main {
             h3 {
               color        : #f0bd0c;
               margin-bottom: 25px;
-              font-size    : 30px;
+              font-size    : 1.6vw;
             }
 
             span {
               color    : #ffffff;
-              font-size: 30px;
+              font-size: 1.6vw;
             }
           }
 
@@ -752,14 +752,14 @@ main {
             display       : flex;
             flex-direction: column;
             color         : #f0bd0c;
-            font-size     : 24px;
+            font-size     : 1.3vw;
           }
 
           .column2 {
             display       : flex;
             flex-direction: column;
             color         : #ffffff;
-            font-size     : 24px;
+            font-size     : 1.3vw;
           }
 
           span {
@@ -838,21 +838,21 @@ main {
         align-items    : center;
         height         : 85px;
         border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-        font-size      : 30px;
+        font-size      : 1.6vw;
 
         h3 {
           color    : #f0bd0c;
-          font-size: 30px;
+          font-size: 1.6vw;
         }
 
         span {
           color    : #ffffff;
-          font-size: 30px;
+          font-size: 1.6vw;
         }
 
         p {
           color    : #ffffff;
-          font-size: 24px;
+          font-size: 1.3vw;
         }
 
         .meal-title {
@@ -935,7 +935,7 @@ main {
               align-items    : center;
               height         : 85px;
               border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-              font-size      : 30px;
+              font-size      : 1.6vw;
             }
 
           }
@@ -947,7 +947,6 @@ main {
             border-top    : 1px solid rgba($color:#ffffff, $alpha: 0.5);
 
             .img {
-
               // 兩隻小可愛
               .dog {
                 transform: translate(185px, 120px);
@@ -968,12 +967,12 @@ main {
           // column1與column2共同的樣式
           h3 {
             color    : #f0bd0c;
-            font-size: 30px;
+            font-size: 1.6vw;
           }
 
           span {
             color    : #ffffff;
-            font-size: 30px;
+            font-size: 1.6vw;
           }
 
           p {
@@ -1001,7 +1000,7 @@ main {
             justify-content: center;
             height         : 140px;
             border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-            font-size      : 30px;
+            font-size      : 1.6vw;
           }
 
         }
@@ -1067,16 +1066,16 @@ main {
               align-items    : center;
               height         : 85px;
               border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-              font-size      : 30px;
+              font-size      : 1.6vw;
 
               h3 {
                 color    : #f0bd0c;
-                font-size: 30px;
+                font-size: 1.6vw;
               }
 
               span {
                 color    : #ffffff;
-                font-size: 30px;
+                font-size: 1.6vw;
               }
             }
           }
@@ -1147,16 +1146,16 @@ main {
               align-items    : center;
               height         : 85px;
               border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-              font-size      : 30px;
+              font-size      : 1.6vw;
 
               h3 {
                 color    : #f0bd0c;
-                font-size: 30px;
+                font-size: 1.6vw;
               }
 
               span {
                 color    : #ffffff;
-                font-size: 30px;
+                font-size: 1.6vw;
               }
             }
           }
@@ -1206,16 +1205,16 @@ main {
         align-items    : center;
         height         : 85px;
         border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-        font-size      : 30px;
+        font-size      : 1.6vw;
 
         h3 {
           color    : #f0bd0c;
-          font-size: 30px;
+          font-size: 1.6vw;
         }
 
         span {
           color    : #ffffff;
-          font-size: 30px;
+          font-size: 1.6vw;
         }
 
         p {
