@@ -86,6 +86,10 @@
     font-size: 50px;
   }
 }
+// 讓 nav 平滑滾動
+html {
+  scroll-behavior: smooth;
+}
 
 main {
 
@@ -1364,10 +1368,22 @@ footer {
   @include section-setting;
   padding         : 110px 320px;
   align-items     : flex-start;
-  background-color: gray;
+  background-color: black;
+  color: white;
 
+  h1 {
+    color: #f5c20c;
+    margin-bottom: 25px;
+  }
   .business-hours {
+    .title {
+      display: flex;
+      justify-content: center;
+    }
     width: 100%;
+    .weekdays-title {
+      color: #e19040;
+    }
 
     .row {
       display        : flex;

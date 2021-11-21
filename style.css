@@ -2,13 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: '微軟正黑體';
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
+  font-family: "微軟正黑體";
+  box-sizing: border-box;
 }
 
 #mask {
@@ -21,15 +16,9 @@ html {
 }
 
 #modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: flex-end;
+  align-items: flex-start;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -38,81 +27,60 @@ html {
   height: 80vh;
   background-image: none;
   background-size: cover;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   opacity: 0;
 }
-
 #modal .close-btn {
   font-size: 50px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main #banner {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding: 70px 0 180px 0;
   background: url(./images/banner/Banner.jpg) no-repeat;
   background-size: cover;
   background-position: bottom;
 }
-
 main #banner .nav {
   position: fixed;
   top: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 200px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   z-index: 900;
 }
-
 main #banner .nav .nav-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
   height: 24px;
 }
-
 main #banner .nav .nav-items .logo-item {
   width: 50px;
   height: 34px;
   margin-right: 365px;
 }
-
 main #banner .nav .nav-items .nav-item {
   margin-left: 60px;
 }
-
 main #banner .nav .nav-items .nav-item:hover > .nav-link {
   color: #f0bd0c;
 }
-
 main #banner .nav .nav-items .nav-item .nav-link {
   font-weight: 600;
   font-size: 21px;
   color: white;
   text-decoration: none;
 }
-
 main #banner .logo {
   margin: 215px 0 70px 0;
   width: 280px;
@@ -120,128 +88,89 @@ main #banner .logo {
   background: url(./images/banner/logo/logo.svg) no-repeat;
   background-size: contain;
 }
-
 main #banner .logo-text {
   font-size: 40px;
   color: white;
 }
-
 main #banner .slogan {
   margin: 25px 0 75px 0;
   font-size: 21px;
   color: white;
 }
-
 main #banner .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   list-style: none;
   width: 290px;
   height: 50px;
 }
-
 main #banner .icons .icon img {
   width: 50px;
   height: 50px;
 }
-
 main #concept {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
   padding-top: 130px;
   width: 100%;
   height: 1280px;
   background-color: #fff;
 }
-
 main #concept article {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   width: 70%;
   height: 470px;
   margin-bottom: 75px;
 }
-
 main #concept article .text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 40%;
 }
-
 main #concept article .text .concept-title {
   font-size: 2.5vw;
   margin-bottom: 20px;
 }
-
 main #concept article .text .dog-img {
   width: 55px;
   height: 70px;
   margin-left: 30px;
 }
-
 main #concept article .text .cat-img {
   width: 60px;
   height: 60px;
   margin-left: 470px;
 }
-
 main #concept article .text .concept-text {
   font-size: 1.3vw;
   line-height: 2.6vw;
 }
-
 main #concept article .concept-img {
   width: 660px;
   height: 470px;
 }
-
 main #environment {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 980px;
   background-color: #ffffff;
 }
-
 main #environment .environment-img {
   position: relative;
   width: 1700px;
   height: 885px;
 }
-
 main #environment .environment-img .full-screen-1,
 main #environment .environment-img .full-screen-2,
 main #environment .environment-img .full-screen-3 {
   cursor: pointer;
 }
-
 main #environment .environment-img h1 {
   position: absolute;
   top: 50px;
@@ -254,7 +183,6 @@ main #environment .environment-img h1 {
   line-height: 5vw;
   z-index: 2;
 }
-
 main #environment .environment-img .large-img {
   position: absolute;
   top: 0;
@@ -267,23 +195,14 @@ main #environment .environment-img .large-img {
   background-image: url(./images/店家環境/shop03.JPG);
   background-size: cover;
 }
-
 main #environment .environment-img .large-img:hover > .filter1 {
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   opacity: 1;
 }
-
 main #environment .environment-img .large-img .filter1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
@@ -295,12 +214,10 @@ main #environment .environment-img .large-img .filter1 {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
 }
-
 main #environment .environment-img .large-img .filter1 i {
   font-size: 50px;
   color: white;
 }
-
 main #environment .environment-img .small-img1 {
   position: absolute;
   bottom: 0;
@@ -314,23 +231,14 @@ main #environment .environment-img .small-img1 {
           clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
   border-radius: 10px;
 }
-
 main #environment .environment-img .small-img1:hover > .filter2 {
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   opacity: 1;
 }
-
 main #environment .environment-img .small-img1 .filter2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
@@ -342,12 +250,10 @@ main #environment .environment-img .small-img1 .filter2 {
   -webkit-clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
           clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
 }
-
 main #environment .environment-img .small-img1 .filter2 i {
   font-size: 50px;
   color: white;
 }
-
 main #environment .environment-img .small-img2 {
   position: absolute;
   right: 0px;
@@ -361,23 +267,14 @@ main #environment .environment-img .small-img2 {
           clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
   border-radius: 10px;
 }
-
 main #environment .environment-img .small-img2:hover > .filter3 {
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   opacity: 1;
 }
-
 main #environment .environment-img .small-img2 .filter3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
@@ -389,12 +286,10 @@ main #environment .environment-img .small-img2 .filter3 {
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
           clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
 }
-
 main #environment .environment-img .small-img2 .filter3 i {
   font-size: 50px;
   color: white;
 }
-
 main #environment .cat-shadow {
   position: absolute;
   bottom: 10px;
@@ -403,7 +298,6 @@ main #environment .cat-shadow {
   height: 300px;
   opacity: 0.8;
 }
-
 main #environment .dialog-img {
   position: absolute;
   top: 200px;
@@ -411,191 +305,127 @@ main #environment .dialog-img {
   width: 32vw;
   height: 14vw;
 }
-
 main #food-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   position: relative;
   height: 980px;
   background-color: #f0bd0c;
 }
-
 main #food-card h1 {
   font-size: 2.5vw;
   margin: 70px 0 30px 0;
 }
-
 main #food-card .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 68.7%;
   margin: 0 0 -30px -30px;
 }
-
 main #food-card .row .column {
   width: 33.3%;
   height: 360px;
-  -webkit-perspective: 700px;
-          perspective: 700px;
+  perspective: 700px;
   padding: 0 0 30px 30px;
 }
-
 main #food-card .row .column .food-img {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 main #food-card .row .column .food-img:hover > .front {
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
 }
-
 main #food-card .row .column .food-img:hover > .back {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
-
 main #food-card .row .column .food-img .front,
 main #food-card .row .column .food-img .back {
   position: absolute;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55), -webkit-transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   width: 100%;
   height: 100%;
 }
-
 main #food-card .row .column .food-img .front {
   z-index: 2;
 }
-
 main #food-card .row .column .food-img .front .front-img {
   width: 100%;
   height: 100%;
 }
-
 main #food-card .row .column .food-img .front .front-img .cover {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 3;
 }
-
 main #food-card .row .column .food-img .front .front-img .cover span {
   color: white;
   font-size: 1.9vw;
   font-weight: 600;
 }
-
 main #food-card .row .column .food-img .front .front-img1 {
   background-image: url(./images/好食餐點/beef.jpg);
   background-size: cover;
   background-position: -37px 0;
 }
-
 main #food-card .row .column .food-img .front .front-img2 {
   background-image: url(./images/好食餐點/pork.jpg);
   background-size: cover;
   background-position: -40px 0;
 }
-
 main #food-card .row .column .food-img .front .front-img3 {
   background-image: url(./images/好食餐點/cook.jpg);
   background-size: cover;
 }
-
 main #food-card .row .column .food-img .front .front-img4 {
   background-image: url(./images/好食餐點/fruit-tea.jpg);
   background-size: cover;
 }
-
 main #food-card .row .column .food-img .front .front-img5 {
   background-image: url(./images/好食餐點/covid-fight.jpg);
   background-size: cover;
 }
-
 main #food-card .row .column .food-img .front .front-img6 {
   background-image: url(./images/好食餐點/pet-food.jpg);
   background-size: cover;
 }
-
 main #food-card .row .column .food-img .back {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
   background-color: black;
 }
-
 main #food-card .row .column .food-img .back img {
   width: 131px;
 }
-
 main #food-card .row .column .food-img .back img,
 main #food-card .row .column .food-img .back h2,
 main #food-card .row .column .food-img .back p {
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transform: translateZ(95px) scale(0.81);
-          transform: translateZ(95px) scale(0.81);
+  perspective: 1000px;
+  transform: translateZ(95px) scale(0.81);
   font-weight: 600;
   color: white;
 }
-
 main #food-card .row .column .food-img .back h2 {
   font-size: 2vw;
   margin-bottom: 15px;
 }
-
 main #food-card .row .column .food-img .back p {
   font-size: 24px;
 }
-
 main #food-card .dog-shadow {
   position: absolute;
   right: 190px;
@@ -603,49 +433,32 @@ main #food-card .dog-shadow {
   width: 210px;
   height: 245px;
 }
-
 main #menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 980px;
   background-color: #000000;
 }
-
 main #menu .menu-type {
   width: 80%;
   text-align: center;
 }
-
 main #menu .menu-type h1 {
   font-size: 2.5vw;
   margin: 70px 0 30px 0;
   color: #f0bd0c;
 }
-
 main #menu .menu-type .menu-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 64px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 main #menu .menu-type .menu-items .menu-item {
   list-style-type: none;
   text-decoration: none;
@@ -654,282 +467,187 @@ main #menu .menu-type .menu-items .menu-item {
   width: 14%;
   cursor: pointer;
 }
-
 main #menu .menu-type .menu-items .menu-item:hover {
   color: #dc8b40;
   font-weight: 600;
 }
-
 main #menu .menu-type .menu-items .active {
   position: relative;
   color: #dc8b40;
 }
-
 main #menu .menu-type .menu-items .active::before {
   position: absolute;
   top: 50%;
   left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  content: '';
+  transform: translateY(-50%);
+  content: "";
   width: 1.2vw;
   height: 1.2vw;
   background-image: url(./images/幸福菜單/icons/foot-print.svg);
 }
-
 main #menu .content {
   display: none;
   width: 77%;
 }
-
 main #menu .now {
   display: block;
 }
-
 main #menu .pasta-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 30px;
   width: 77%;
   height: 665px;
   width: 100%;
 }
-
 main #menu .pasta-content .pasta-intro {
   width: 73%;
 }
-
 main #menu .pasta-content .pasta-intro .pasta-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 85px;
   width: 500px;
 }
-
 main #menu .pasta-content .pasta-intro .pasta-title img {
   width: 1.2vw;
   height: 1.2vw;
   margin-right: 2px;
 }
-
 main #menu .pasta-content .pasta-intro .pasta-title h2 {
   color: #E19040;
   font-size: 2vw;
 }
-
 main #menu .pasta-content .pasta-intro .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-
 main #menu .pasta-content .pasta-intro .row .column1,
 main #menu .pasta-content .pasta-intro .row .column2 {
   width: 50%;
   margin-right: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 main #menu .pasta-content .pasta-intro .row .column1 .meal-content,
 main #menu .pasta-content .pasta-intro .row .column2 .meal-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 30px;
 }
-
 main #menu .pasta-content .pasta-intro .row .column1 .meal-content h3,
 main #menu .pasta-content .pasta-intro .row .column2 .meal-content h3 {
   color: #f0bd0c;
   font-size: 1.6vw;
 }
-
 main #menu .pasta-content .pasta-intro .row .column1 .meal-content span,
 main #menu .pasta-content .pasta-intro .row .column2 .meal-content span {
   color: #ffffff;
   font-size: 1.6vw;
 }
-
 main #menu .pasta-content .pasta-pic {
   width: 350px;
   height: 670px;
   background-image: url(./images/幸福菜單/義大利麵/pasta01.jpg);
   background-size: cover;
 }
-
 main #menu .pasta-content .pasta-pic .dog {
-  -webkit-transform: translate(-340px, 483px);
-          transform: translate(-340px, 483px);
+  transform: translate(-340px, 483px);
   width: 140px;
   height: 180px;
 }
-
 main #menu .pasta-content .pasta-pic .cat {
-  -webkit-transform: translate(-340px, 483px);
-          transform: translate(-340px, 483px);
+  transform: translate(-340px, 483px);
   width: 160px;
   height: 160px;
 }
-
 main #menu .hot-pot-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 30px;
   width: 77%;
   height: 665px;
   width: 100%;
 }
-
 main #menu .hot-pot-content .hot-pot-intro {
   width: 35%;
 }
-
 main #menu .hot-pot-content .hot-pot-intro .hot-pot-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 85px;
 }
-
 main #menu .hot-pot-content .hot-pot-intro .hot-pot-title img {
   width: 1.2vw;
   height: 1.2vw;
   margin-right: 2px;
 }
-
 main #menu .hot-pot-content .hot-pot-intro .hot-pot-title h2 {
   color: #E19040;
   font-size: 2vw;
 }
-
 main #menu .hot-pot-content .meal-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-size: 1.6vw;
 }
-
 main #menu .hot-pot-content .meal-content .meal-description {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   height: 144px;
 }
-
 main #menu .hot-pot-content .meal-content .meal-description .meal-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 main #menu .hot-pot-content .meal-content .meal-description .meal-title h3 {
   color: #f0bd0c;
   margin-bottom: 25px;
   font-size: 1.6vw;
 }
-
 main #menu .hot-pot-content .meal-content .meal-description .meal-title span {
   color: #ffffff;
   font-size: 1.6vw;
 }
-
 main #menu .hot-pot-content .meal-content .meal-description p {
   color: #ffffff;
   font-size: 24px;
 }
-
 main #menu .hot-pot-content .meal-content .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 30px;
 }
-
 main #menu .hot-pot-content .meal-content .row .column1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #f0bd0c;
   font-size: 1.3vw;
 }
-
 main #menu .hot-pot-content .meal-content .row .column2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #ffffff;
   font-size: 1.3vw;
 }
-
 main #menu .hot-pot-content .meal-content .row span {
   margin-bottom: 20px;
 }
-
 main #menu .hot-pot-content .hot-pot-pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 48%;
   height: 670px;
 }
-
 main #menu .hot-pot-content .hot-pot-pic .hot-pot-left {
   width: 350px;
   height: 670px;
   margin-right: 10px;
 }
-
 main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .hot-pot1 {
   width: 100%;
   height: 330px;
@@ -937,116 +655,81 @@ main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .hot-pot1 {
   background-image: url(./images/幸福菜單/暖心鍋物/hotpot-leftt01.jpg);
   background-size: cover;
 }
-
 main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .hot-pot2 {
   width: 100%;
   height: 330px;
   background-image: url(./images/幸福菜單/暖心鍋物/hotpot-left02.jpg);
   background-size: cover;
 }
-
 main #menu .hot-pot-content .hot-pot-pic .hot-pot-right {
   width: 350px;
   height: 670px;
   background-image: url(./images/幸福菜單/暖心鍋物/hotpot-right01.jpg);
   background-size: cover;
 }
-
 main #menu .chef-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 30px;
   width: 77%;
   height: 665px;
   width: 100%;
 }
-
 main #menu .chef-content .chef-intro {
   width: 35%;
 }
-
 main #menu .chef-content .chef-intro .chef-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 85px;
 }
-
 main #menu .chef-content .chef-intro .chef-title img {
   width: 1.2vw;
   height: 1.2vw;
   margin-right: 2px;
 }
-
 main #menu .chef-content .chef-intro .chef-title h2 {
   color: #E19040;
   font-size: 2vw;
 }
-
 main #menu .chef-content hr {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 0;
 }
-
 main #menu .chef-content .meal-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 1.6vw;
 }
-
 main #menu .chef-content .meal-content h3 {
   color: #f0bd0c;
   font-size: 1.6vw;
 }
-
 main #menu .chef-content .meal-content span {
   color: #ffffff;
   font-size: 1.6vw;
 }
-
 main #menu .chef-content .meal-content p {
   color: #ffffff;
   font-size: 1.3vw;
 }
-
 main #menu .chef-content .meal-content .meal-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 main #menu .chef-content .chef-pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 48%;
   height: 670px;
 }
-
 main #menu .chef-content .chef-pic .chef-left {
   width: 350px;
   height: 670px;
   margin-right: 10px;
 }
-
 main #menu .chef-content .chef-pic .chef-left .chef1 {
   width: 100%;
   height: 330px;
@@ -1054,339 +737,226 @@ main #menu .chef-content .chef-pic .chef-left .chef1 {
   background-image: url(./images/幸福菜單/主廚料理/chef-left01.jpg);
   background-size: cover;
 }
-
 main #menu .chef-content .chef-pic .chef-left .chef2 {
   width: 100%;
   height: 330px;
   background-image: url(./images/幸福菜單/主廚料理/chef-left02.jpg);
   background-size: cover;
 }
-
 main #menu .chef-content .chef-pic .chef-right {
   width: 350px;
   height: 670px;
   background-image: url(./images/幸福菜單/主廚料理/chef-right.jpg);
   background-size: cover;
 }
-
 main #menu .light-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 30px;
   width: 77%;
   height: 665px;
   width: 100%;
 }
-
 main #menu .light-content .light-intro {
   width: 73%;
   height: 670px;
 }
-
 main #menu .light-content .light-intro .light-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 85px;
 }
-
 main #menu .light-content .light-intro .light-title img {
   width: 1.2vw;
   height: 1.2vw;
   margin-right: 2px;
 }
-
 main #menu .light-content .light-intro .light-title h2 {
   color: #E19040;
   font-size: 2vw;
 }
-
 main #menu .light-content .light-intro .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 main #menu .light-content .light-intro .row .column1 {
   width: 512px;
   margin-right: 50px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 main #menu .light-content .light-intro .row .column1 .meal-content1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 1.6vw;
 }
-
 main #menu .light-content .light-intro .row .column2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 512px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 main #menu .light-content .light-intro .row .column2 .img .dog {
-  -webkit-transform: translate(185px, 120px);
-          transform: translate(185px, 120px);
+  transform: translate(185px, 120px);
   width: 140px;
   height: 180px;
 }
-
 main #menu .light-content .light-intro .row .column2 .img .cat {
-  -webkit-transform: translate(185px, 120px);
-          transform: translate(185px, 120px);
+  transform: translate(185px, 120px);
   width: 160px;
   height: 160px;
 }
-
 main #menu .light-content .light-intro .row h3 {
   color: #f0bd0c;
   font-size: 1.6vw;
 }
-
 main #menu .light-content .light-intro .row span {
   color: #ffffff;
   font-size: 1.6vw;
 }
-
 main #menu .light-content .light-intro .row p {
   color: #ffffff;
   font-size: 24px;
   margin-top: 30px;
 }
-
 main #menu .light-content .light-intro .row .meal-content2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   height: 140px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 main #menu .light-content .light-intro .row .meal-content2 .meal-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
 main #menu .light-content .light-intro .row .meal-content3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   height: 140px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 1.6vw;
 }
-
 main #menu .light-content .light-pic {
   width: 350px;
   height: 670px;
   margin-right: 10px;
 }
-
 main #menu .light-content .light-pic .light1 {
   width: 100%;
   height: 330px;
   margin-bottom: 10px;
   background-image: url(./images/幸福菜單/活力輕食/light01.jpg);
 }
-
 main #menu .light-content .light-pic .light2 {
   width: 100%;
   height: 330px;
   background-image: url(./images/幸福菜單/活力輕食/light02.jpg);
 }
-
 main #menu .snack-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 30px;
   width: 77%;
   height: 665px;
   width: 100%;
 }
-
 main #menu .snack-content .snack-intro {
   width: 73%;
 }
-
 main #menu .snack-content .snack-intro .snack-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 85px;
   width: 500px;
 }
-
 main #menu .snack-content .snack-intro .snack-title img {
   width: 1.2vw;
   height: 1.2vw;
   margin-right: 2px;
 }
-
 main #menu .snack-content .snack-intro .snack-title h2 {
   color: #E19040;
   font-size: 2vw;
 }
-
 main #menu .snack-content .snack-intro .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-
 main #menu .snack-content .snack-intro .row .column1,
 main #menu .snack-content .snack-intro .row .column2 {
   width: 50%;
   margin-right: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 main #menu .snack-content .snack-intro .row .column1 .meal-content,
 main #menu .snack-content .snack-intro .row .column2 .meal-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 1.6vw;
 }
-
 main #menu .snack-content .snack-intro .row .column1 .meal-content h3,
 main #menu .snack-content .snack-intro .row .column2 .meal-content h3 {
   color: #f0bd0c;
   font-size: 1.6vw;
 }
-
 main #menu .snack-content .snack-intro .row .column1 .meal-content span,
 main #menu .snack-content .snack-intro .row .column2 .meal-content span {
   color: #ffffff;
   font-size: 1.6vw;
 }
-
 main #menu .snack-content .snack-pic {
   width: 350px;
   height: 670px;
   background-image: url(./images/幸福菜單/好食點心/fries01.jpg);
   background-size: cover;
 }
-
 main #menu .snack-content .snack-pic .dog {
-  -webkit-transform: translate(-340px, 483px);
-          transform: translate(-340px, 483px);
+  transform: translate(-340px, 483px);
   width: 140px;
   height: 180px;
 }
-
 main #menu .snack-content .snack-pic .cat {
-  -webkit-transform: translate(-340px, 483px);
-          transform: translate(-340px, 483px);
+  transform: translate(-340px, 483px);
   width: 160px;
   height: 160px;
 }
-
 main #menu .drink-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 30px;
   width: 77%;
   height: 665px;
   width: 100%;
 }
-
 main #menu .drink-content .drink-intro {
   width: 73%;
 }
-
 main #menu .drink-content .drink-intro .drink-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 85px;
   width: 500px;
 }
-
 main #menu .drink-content .drink-intro .drink-title img {
   width: 1.2vw;
   height: 1.2vw;
   margin-right: 2px;
 }
-
 main #menu .drink-content .drink-intro .drink-title h2 {
   color: #E19040;
   font-size: 2vw;
 }
-
 main #menu .drink-content .drink-intro .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-
 main #menu .drink-content .drink-intro .row .column1,
 main #menu .drink-content .drink-intro .row .column2,
 main #menu .drink-content .drink-intro .row .column3 {
@@ -1394,145 +964,102 @@ main #menu .drink-content .drink-intro .row .column3 {
   margin-right: 40px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 main #menu .drink-content .drink-intro .row .column1 .meal-content,
 main #menu .drink-content .drink-intro .row .column2 .meal-content,
 main #menu .drink-content .drink-intro .row .column3 .meal-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 1.6vw;
 }
-
 main #menu .drink-content .drink-intro .row .column1 .meal-content h3,
 main #menu .drink-content .drink-intro .row .column2 .meal-content h3,
 main #menu .drink-content .drink-intro .row .column3 .meal-content h3 {
   color: #f0bd0c;
   font-size: 1.6vw;
 }
-
 main #menu .drink-content .drink-intro .row .column1 .meal-content span,
 main #menu .drink-content .drink-intro .row .column2 .meal-content span,
 main #menu .drink-content .drink-intro .row .column3 .meal-content span {
   color: #ffffff;
   font-size: 1.6vw;
 }
-
 main #menu .drink-content .drink-pic {
   width: 350px;
   height: 670px;
   background-image: url(./images/幸福菜單/好食飲品/drink01.jpg);
   background-size: cover;
 }
-
 main #menu .pet-food-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 30px;
   width: 77%;
   height: 665px;
   width: 100%;
 }
-
 main #menu .pet-food-content .pet-food-intro {
   width: 35%;
 }
-
 main #menu .pet-food-content .pet-food-intro .pet-food-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   height: 85px;
 }
-
 main #menu .pet-food-content .pet-food-intro .pet-food-title img {
   width: 1.2vw;
   height: 1.2vw;
   margin-right: 2px;
 }
-
 main #menu .pet-food-content .pet-food-intro .pet-food-title h2 {
   color: #E19040;
   font-size: 2vw;
 }
-
 main #menu .pet-food-content hr {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 0;
 }
-
 main #menu .pet-food-content .meal-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   height: 85px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 1.6vw;
 }
-
 main #menu .pet-food-content .meal-content h3 {
   color: #f0bd0c;
   font-size: 1.6vw;
 }
-
 main #menu .pet-food-content .meal-content span {
   color: #ffffff;
   font-size: 1.6vw;
 }
-
 main #menu .pet-food-content .meal-content p {
   color: #ffffff;
 }
-
 main #menu .pet-food-content .dog {
-  -webkit-transform: translate(-78px, 485px);
-          transform: translate(-78px, 485px);
+  transform: translate(-78px, 485px);
   width: 140px;
   height: 180px;
 }
-
 main #menu .pet-food-content .cat {
-  -webkit-transform: translate(-78px, 505px);
-          transform: translate(-78px, 505px);
+  transform: translate(-78px, 505px);
   width: 160px;
   height: 160px;
 }
-
 main #menu .pet-food-content .pet-food-pic {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 48%;
   height: 670px;
 }
-
 main #menu .pet-food-content .pet-food-pic .pet-food-left {
   width: 350px;
   height: 670px;
   margin-right: 10px;
 }
-
 main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food1 {
   width: 100%;
   height: 330px;
@@ -1540,47 +1067,32 @@ main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food1 {
   background-image: url(./images/幸福菜單/寵物鮮食/petfood-left01.jpg);
   background-size: cover;
 }
-
 main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food2 {
   width: 100%;
   height: 330px;
   background-image: url(./images/幸福菜單/寵物鮮食/petfood-left02.jpg);
   background-size: cover;
 }
-
 main #menu .pet-food-content .pet-food-pic .pet-food-right {
   width: 350px;
   height: 670px;
   background-image: url(./images/幸福菜單/寵物鮮食/petfood-right.jpg);
   background-size: cover;
 }
-
 main #adoption-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   background-color: #fff;
 }
-
 main #adoption-info h1 {
   font-size: 2.5vw;
   margin: 70px 0 30px 0;
 }
-
 main #adoption-info .nav-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 main #adoption-info .nav-items .nav-item {
   list-style: none;
   text-align: center;
@@ -1590,62 +1102,42 @@ main #adoption-info .nav-items .nav-item {
   margin: 0 0 24px 12px;
   background-color: gray;
 }
-
 main #adoption-info .nav-items .nav-item .nav-link {
   text-decoration: none;
   font-size: 36px;
   color: white;
 }
-
 main #adoption-info .dialog {
   width: 1321px;
   height: 783px;
   border-radius: 20px;
   background-color: gray;
 }
-
 main #story {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100vh;
   background-color: #fff;
 }
-
 main #story h1 {
   font-size: 2.5vw;
   margin: 70px 0 30px 0;
 }
-
 main #story .swiper {
   width: 100%;
   height: 100%;
 }
-
 main #story .swiper .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
   /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
-
 main #story .swiper .swiper-slide img {
   display: block;
   width: 100%;
@@ -1655,54 +1147,43 @@ main #story .swiper .swiper-slide img {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   padding: 110px 320px;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  background-color: gray;
+  align-items: flex-start;
+  background-color: black;
+  color: white;
 }
-
+footer h1 {
+  color: #f5c20c;
+  margin-bottom: 25px;
+}
 footer .business-hours {
   width: 100%;
 }
-
-footer .business-hours .row {
-  display: -webkit-box;
-  display: -ms-flexbox;
+footer .business-hours .title {
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: center;
 }
-
+footer .business-hours .weekdays-title {
+  color: #e19040;
+}
+footer .business-hours .row {
+  display: flex;
+  justify-content: space-between;
+}
 footer .business-hours .line-break {
   width: 100%;
   height: 30px;
 }
-
 footer .contact-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 footer .line {
   width: 100%;
   padding: 45px 0;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
