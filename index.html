@@ -23,14 +23,13 @@
   <!--這個頁面會覆蓋掉整個body  -->
 
   <main>
-
     <section id="banner">
       <!-- banner開始 -->
       <!-- 導航列開始 -->
       <div class="nav">
         <ul class="nav-items">
           <li class="logo-item">
-            <img src="./images/banner/logo/small-logo.svg" alt="">
+            <a href="#"><img src="./images/banner/logo/small-logo.svg" alt=""></a>
           </li>
           <li class="nav-item">
             <a href="#concept" class="nav-link">店家理念</a>
@@ -52,7 +51,6 @@
           </li>
         </ul>
       </div>
-
 
       <!-- 導航列結束 -->
       <!-- 店家的logo與slogan開始 -->
@@ -736,26 +734,20 @@
         <div class="logo-pic"></div>
     </section> <!-- 寵物認養區塊結束-->
 
-
     <section id="story">
       <!-- 下一站，家區塊開始 -->
 
       <h1>下一站，家</h1>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><img src="./images/dog+cat/cat-1.jpg"></div>
-          <div class="swiper-slide"><img src="./images/dog+cat/cat-2.jpg"></div>
-          <div class="swiper-slide"><img src="./images/dog+cat/cat-3.jpg"></div>
-          <div class="swiper-slide"><img src="./images/dog+cat/cat-4.jpg"></div>
-          <div class="swiper-slide"><img src="./images/dog+cat/cat-5.jpg"></div>
-          <div class="swiper-slide"><img src="./images/dog+cat/dog-1.jpg"></div>
-          <div class="swiper-slide"><img src="./images/dog+cat/dog-2.jpg"></div>
-          <div class="swiper-slide"><img src="./images/dog+cat/dog-3.jpg"></div>
-          <div class="swiper-slide"><img src="./images/dog+cat/dog-4.jpg"></div>
+          <div class="swiper-slide slide1"><img src="./images/下一站家/下一站家-01.jpg"></div>
+          <div class="swiper-slide slide2"><img src="./images/下一站家/下一站家-02.jpg"></div>
+          <div class="swiper-slide slide3"><img src="./images/下一站家/下一站家-03.jpg"></div>
+          <div class="swiper-slide slide4"><img src="./images/下一站家/下一站家-04.jpg"></div>
+          <div class="swiper-slide slide5"><img src="./images/下一站家/下一站家-05.jpg"></div>
         </div>
       </div>
     </section> <!-- 下一站，家區塊結束 -->
-
   </main>
 
   <!-- footer開始 -->
@@ -766,19 +758,19 @@
       </div>
       <div class="row">
         <div class="column">
-          <h2 class="weekdays-title">週一</h2>
+          <h2>週一</h2>
           <div class="line-break"></div>
           <h2>休息</h2>
         </div>
 
         <div class="column">
-          <h2 class="weekdays-title">週二</h2>
+          <h2>週二</h2>
           <div class="line-break"></div>
           <h2>休息</h2>
         </div>
 
         <div class="column">
-          <h2 class="weekdays-title">週三</h2>
+          <h2>週三</h2>
           <div class="line-break"></div>
           <h2>12:00 ~ 15:00</h2>
           <div class="line-break"></div>
@@ -786,28 +778,28 @@
         </div>
 
         <div class="column">
-          <h2 class="weekdays-title">週四</h2>
+          <h2>週四</h2>
           <div class="line-break"></div>
           <h2>12:00 ~ 15:00</h2>
           <div class="line-break"></div>
           <h2>17:00 ~ 21:00</h2>
         </div>
         <div class="column">
-          <h2 class="weekdays-title">週五</h2>
+          <h2>週五</h2>
           <div class="line-break"></div>
           <h2>12:00 ~ 15:00</h2>
           <div class="line-break"></div>
           <h2>17:00 ~ 21:00</h2>
         </div>
         <div class="column">
-          <h2 class="weekdays-title">週六</h2>
+          <h2>週六</h2>
           <div class="line-break"></div>
           <h2>12:00 ~ 15:00</h2>
           <div class="line-break"></div>
           <h2>17:00 ~ 21:00</h2>
         </div>
         <div class="column">
-          <h2 class="weekdays-title">週日</h2>
+          <h2>週日</h2>
           <div class="line-break"></div>
           <h2>12:00 ~ 15:00</h2>
           <div class="line-break"></div>
@@ -841,7 +833,7 @@
     </div>
 
     <div class="related-groups">
-      <h1>相關公益團體</h1>
+      <h2>相關公益團體</h2>
     </div>
     <div class="copyright">
       <span>© Homecafe. All rights reserved.</span>
@@ -853,22 +845,6 @@
   <!-- javascript 區塊 -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init()
-  </script>
   <script src="./index.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script>
 </body>
-
 </html>
