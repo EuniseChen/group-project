@@ -1,6 +1,13 @@
+// 字體的函數
+$baseSize: 12px;
+
+@function font($level: 1) {
+  @return $baseSize *$level;
+}
+
 // 主要標題h1的統一設定
 @mixin main-heading {
-  font-size: 2.5vw;
+  font-size: font(4);
   margin   : 70px 0 30px 0;
 }
 
@@ -20,6 +27,7 @@
   border-radius   : 10px;
   background-color: rgba(0, 0, 0, 0.7);
   opacity         : 0;
+  transition      : all .3s ease-out;
 }
 
 // 菜單小標題的樣式
@@ -75,10 +83,10 @@
   top             : 50%;
   left            : 50%;
   z-index         : 999;
-  width           : 80%;
+  width           : 50%;
   height          : 80vh;
   background-image: none;
-  background-size : cover;
+  background-size : contain;
   transform       : translate(-50%, -50%);
   opacity         : 0;
 
@@ -111,13 +119,14 @@ main {
 
       .nav-items {
         display   : flex;
+        justify-content: space-around;
         list-style: none;
         height    : 24px;
 
         .logo-item {
+          display     : none;
           width       : 50px;
           height      : 34px;
-          margin-right: 365px;
         }
 
         .nav-item {
@@ -136,8 +145,8 @@ main {
         }
       }
     }
-
     // 導航欄製作結束
+
     .logo {
       margin         : 215px 0 70px 0;
       width          : 280px;
@@ -147,13 +156,13 @@ main {
     }
 
     .logo-text {
-      font-size: 40px;
+      font-size: font(3.33);
       color    : white;
     }
 
     .slogan {
       margin   : 25px 0 75px 0;
-      font-size: 21px;
+      font-size: font(1.75);
       color    : white;
     }
 
@@ -174,6 +183,27 @@ main {
   }
 
   // 大banner區結束
+  @media screen and (max-width : 920px){
+   #banner {
+    .nav {
+      display: none;
+      width: 68px;
+      height: 60px;
+      background-image: url(./images/banner/icons/nav-icon.svg);
+      background-size: contain;
+    }
+
+    .logo {
+      width: 230px;
+      height: 200px;
+      .logo-text {
+        font-size: font(2);
+      }
+    }
+   }
+  }
+
+
 
   // 店家理念區塊開始
   #concept {
@@ -199,7 +229,7 @@ main {
         width    : 40%;
 
         .concept-title {
-          font-size    : 2.5vw;
+          font-size    : font(4);
           margin-bottom: 20px;
         }
 
@@ -212,7 +242,7 @@ main {
         .cat-img {
           width      : 60px;
           height     : 60px;
-          margin-left: 470px;
+          margin-left: 15vw;
         }
 
         .concept-text {
@@ -222,8 +252,8 @@ main {
       }
 
       .concept-img {
-        width : 660px;
-        height: 470px;
+        width : 34.4vw;
+        height: 24.5vw;
       }
     }
   }
@@ -259,22 +289,23 @@ main {
         width           : 12.5vw;
         height          : 5vw;
         background-color: #f0bd0c;
-        font-size       : 2.5vw;
+        font-size       : font(4);
         text-align      : center;
         line-height     : 5vw;
         z-index         : 2;
       }
 
       .large-img {
-        position        : absolute;
-        top             : 0;
-        left            : 0;
-        width           : 100%;
-        height          : 530px;
-        clip-path       : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
-        border-radius   : 10px;
-        background-image: url(./images/店家環境/shop03.JPG);
-        background-size : cover;
+        position           : absolute;
+        top                : 0;
+        left               : 0;
+        width              : 100%;
+        height             : 535px;
+        clip-path          : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+        border-radius      : 10px;
+        background-image   : url(./images/店家環境/shop01.jpg);
+        background-size    : cover;
+        background-position: 0px -216px;
 
         // 當游標在圖片上，出現filter1
         &:hover>.filter1 {
@@ -458,7 +489,6 @@ main {
                   font-size  : 1.9vw;
                   font-weight: 600;
                 }
-
               }
             }
 
@@ -545,7 +575,7 @@ main {
   // 幸福菜單區塊開始
   #menu {
     @include section-setting;
-    height: 980px;
+    height          : 980px;
     background-color: #000000;
 
     // 菜單導航
@@ -583,14 +613,14 @@ main {
 
         .active {
           position: relative;
-          color: #dc8b40;
+          color   : #dc8b40;
 
           &::before {
-            position: absolute;
-            top: 50%;
-            left: 0;
+            position : absolute;
+            top      : 50%;
+            left     : 0;
             transform: translateY(-50%);
-            content: '';
+            content  : '';
             @include cat-foot;
             background-image: url(./images/幸福菜單/icons/foot-print.svg);
           }
@@ -600,7 +630,7 @@ main {
 
     .content {
       display: none;
-      width: 77%;
+      width  : 77%;
     }
 
     .now {
@@ -657,32 +687,47 @@ main {
                 font-size: 1.6vw;
               }
             }
+
+            .img {
+              display: flex;
+              width  : 300px;
+              height : 180px;
+
+              // 兩隻小可愛
+              .dog {
+                transform: translate(180px, 230px);
+                width    : 140px;
+                height   : 180px;
+              }
+
+              .cat {
+                transform: translate(180px, 250px);
+                width    : 160px;
+                height   : 160px;
+              }
+
+              // 兩隻小可愛
+            }
           }
         }
       }
 
       .pasta-pic {
-        width           : 350px;
-        height          : 670px;
-        background-image: url(./images/幸福菜單/義大利麵/pasta01.jpg);
-        background-size : cover;
+        overflow: hidden;
 
-        // 兩隻小可愛
-        .dog {
-          transform: translate(-340px, 483px);
-          width    : 140px;
-          height   : 180px;
+        img {
+          width     : 100%;
+          height    : 100%;
+          transform : scale(1);
+          transition: all .5s ease-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
         }
-
-        .cat {
-          transform: translate(-340px, 483px);
-          width    : 160px;
-          height   : 160px;
-        }
-
-        // 兩隻小可愛
       }
     }
+
     // 義大利麵菜單製作结束
 
     // 暖心鍋物菜單製作開始
@@ -704,7 +749,6 @@ main {
           h2 {
             @include title-font;
           }
-
         }
       }
 
@@ -774,41 +818,68 @@ main {
         height : 670px;
 
         .hot-pot-left {
-          width       : 350px;
-          height      : 670px;
-          margin-right: 10px;
+          display        : flex;
+          flex-direction : column;
+          justify-content: space-between;
+          width          : 350px;
+          height         : 670px;
+          margin-right   : 10px;
 
-          .hot-pot1 {
-            width           : 100%;
-            height          : 330px;
-            margin-bottom   : 10px;
-            background-image: url(./images/幸福菜單/暖心鍋物/hotpot-leftt01.jpg);
-            background-size : cover;
+          .left1 {
+            overflow: hidden;
 
+            img {
+              width     : 100%;
+              height    : 100%;
+              transform : scale(1);
+              transition: all .5s ease-out;
+
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
           }
 
-          .hot-pot2 {
-            width           : 100%;
-            height          : 330px;
-            background-image: url(./images/幸福菜單/暖心鍋物/hotpot-left02.jpg);
-            background-size : cover;
+          .left2 {
+            overflow  : hidden;
+            margin-top: 10px;
+
+            img {
+              width     : 100%;
+              height    : 100%;
+              transform : scale(1);
+              transition: all .5s ease-out;
+
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
           }
         }
 
         .hot-pot-right {
-          width           : 350px;
-          height          : 670px;
-          background-image: url(./images/幸福菜單/暖心鍋物/hotpot-right01.jpg);
-          background-size : cover;
+          overflow: hidden;
+
+          img {
+            width     : 100%;
+            height    : 100%;
+            transform : scale(1);
+            transition: all .5s ease-out;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
         }
       }
     }
+
     //暖心鍋物菜單製作結束
 
     // 主廚料理菜單製作開始
     .chef-content {
       @include menu-content;
-      width:100%;
+      width: 100%;
 
       .chef-intro {
         width: 35%;
@@ -868,34 +939,61 @@ main {
         height : 670px;
 
         .chef-left {
-          width       : 350px;
-          height      : 670px;
-          margin-right: 10px;
+          display        : flex;
+          flex-direction : column;
+          justify-content: space-between;
+          width          : 350px;
+          height         : 670px;
+          margin-right   : 10px;
 
           .chef1 {
-            width           : 100%;
-            height          : 330px;
-            margin-bottom   : 10px;
-            background-image: url(./images/幸福菜單/主廚料理/chef-left01.jpg);
-            background-size : cover;
+            overflow: hidden;
+
+            img {
+              width     : 100%;
+              height    : 100%;
+              transform : scale(1);
+              transition: all .5s ease-out;
+
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
           }
 
           .chef2 {
-            width           : 100%;
-            height          : 330px;
-            background-image: url(./images/幸福菜單/主廚料理/chef-left02.jpg);
-            background-size : cover;
+            overflow: hidden;
+
+            img {
+              width     : 100%;
+              height    : 100%;
+              transform : scale(1);
+              transition: all .5s ease-out;
+
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
           }
         }
 
         .chef-right {
-          width           : 350px;
-          height          : 670px;
-          background-image: url(./images/幸福菜單/主廚料理/chef-right.jpg);
-          background-size : cover;
+          overflow: hidden;
+
+          img {
+            width     : 100%;
+            height    : 100%;
+            transform : scale(1);
+            transition: all .5s ease-out;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
         }
       }
     }
+
     // 主廚料理菜單製作結束
 
     // 活力輕食菜單製作開始
@@ -937,7 +1035,6 @@ main {
               border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
               font-size      : 1.6vw;
             }
-
           }
 
           .column2 {
@@ -947,6 +1044,7 @@ main {
             border-top    : 1px solid rgba($color:#ffffff, $alpha: 0.5);
 
             .img {
+
               // 兩隻小可愛
               .dog {
                 transform: translate(185px, 120px);
@@ -1002,34 +1100,56 @@ main {
             border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
             font-size      : 1.6vw;
           }
-
         }
       }
 
       .light-pic {
-        width       : 350px;
-        height      : 670px;
-        margin-right: 10px;
+        display        : flex;
+        flex-direction : column;
+        justify-content: space-between;
+        width          : 350px;
+        height         : 670px;
 
         .light1 {
-          width           : 100%;
-          height          : 330px;
-          margin-bottom   : 10px;
-          background-image: url(./images/幸福菜單/活力輕食/light01.jpg);
+          width   : 350px;
+          height  : 330px;
+          overflow: hidden;
+
+          img {
+            width     : 100%;
+            height    : 100%;
+            transform : scale(1);
+            transition: all .5s ease-out;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
         }
 
         .light2 {
-          width           : 100%;
-          height          : 330px;
-          background-image: url(./images/幸福菜單/活力輕食/light02.jpg);
+          width   : 350px;
+          height  : 330px;
+          overflow: hidden;
+
+          img {
+            width     : 100%;
+            height    : 100%;
+            transform : scale(1);
+            transition: all .5s ease-out;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
         }
       }
-
     }
+
     // 活力輕食菜單製作結束
 
-     // 好食點心菜單製作開始
-     .snack-content {
+    // 好食點心菜單製作開始
+    .snack-content {
       @include menu-content;
       width: 100%;
 
@@ -1079,33 +1199,49 @@ main {
               }
             }
           }
+
+          .img {
+            display: flex;
+            width  : 300px;
+            height : 180px;
+
+            // 兩隻小可愛
+            .dog {
+              transform: translate(180px, 310px);
+              width    : 140px;
+              height   : 180px;
+            }
+
+            .cat {
+              transform: translate(180px, 330px);
+              width    : 160px;
+              height   : 160px;
+            }
+
+            // 兩隻小可愛
+          }
         }
       }
 
       .snack-pic {
-        width           : 350px;
-        height          : 670px;
-        background-image: url(./images/幸福菜單/好食點心/fries01.jpg);
-        background-size : cover;
+        width   : 350px;
+        height  : 670px;
+        overflow: hidden;
 
-        // 兩隻小可愛
-        .dog {
-          transform: translate(-340px, 483px);
-          width    : 140px;
-          height   : 180px;
+        img {
+          width     : 100%;
+          height    : 100%;
+          transform : scale(1);
+          transition: all .5s ease-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
         }
-
-        .cat {
-          transform: translate(-340px, 483px);
-          width    : 160px;
-          height   : 160px;
-        }
-
-        // 兩隻小可愛
       }
     }
-    // 好食點心菜單製作结束
 
+    // 好食點心菜單製作结束
 
     // 好食飲品菜單製作開始
     .drink-content {
@@ -1163,12 +1299,23 @@ main {
       }
 
       .drink-pic {
-        width           : 350px;
-        height          : 670px;
-        background-image: url(./images/幸福菜單/好食飲品/drink01.jpg);
-        background-size : cover;
+        width   : 350px;
+        height  : 670px;
+        overflow: hidden;
+
+        img {
+          width     : 100%;
+          height    : 100%;
+          transform : scale(1);
+          transition: all .5s ease-out;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
       }
     }
+
     //好食飲品菜單製作结束
 
 
@@ -1247,31 +1394,61 @@ main {
           margin-right: 10px;
 
           .pet-food1 {
-            width           : 100%;
-            height          : 330px;
-            margin-bottom   : 10px;
-            background-image: url(./images/幸福菜單/寵物鮮食/petfood-left01.jpg);
-            background-size : cover;
+            width        : 100%;
+            height       : 330px;
+            margin-bottom: 10px;
+            overflow     : hidden;
 
+            img {
+              width     : 100%;
+              height    : 100%;
+              transform : scale(1);
+              transition: all .5s ease-out;
+
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
           }
 
           .pet-food2 {
-            width           : 100%;
-            height          : 330px;
-            background-image: url(./images/幸福菜單/寵物鮮食/petfood-left02.jpg);
-            background-size : cover;
+            width   : 100%;
+            height  : 330px;
+            overflow: hidden;
+
+            img {
+              width     : 100%;
+              height    : 100%;
+              transform : scale(1);
+              transition: all .5s ease-out;
+
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
           }
         }
 
         .pet-food-right {
-          width           : 350px;
-          height          : 670px;
-          background-image: url(./images/幸福菜單/寵物鮮食/petfood-right.jpg);
-          background-size : cover;
+          width   : 350px;
+          height  : 670px;
+          overflow: hidden;
+
+          img {
+            width     : 100%;
+            height    : 100%;
+            transform : scale(1);
+            transition: all .5s ease-out;
+
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
         }
       }
     }
   }
+
   // 寵物鮮食菜單製作結束
 
 
@@ -1281,36 +1458,173 @@ main {
   #adoption-info {
     @include section-setting;
     background-color: #fff;
+    height          : 980px;
 
     h1 {
       @include main-heading;
     }
 
-    .nav-items {
+    .questions {
       display: flex;
 
-      .nav-item {
+
+      .question {
+        position        : relative;
         list-style      : none;
         text-align      : center;
-        width           : 350px;
-        height          : 100px;
-        line-height     : 100px;
-        margin          : 0 0 24px 12px;
-        background-color: gray;
+        width           : 18vw;
+        height          : 5vw;
+        line-height     : 5vw;
+        margin          : 0 0 30px 12px;
+        background-color: #dc8b40;
+        font-size       : 1.9vw;
+        font-weight     : 600;
+        color           : #000000;
+        cursor          : pointer;
+        transition      : all .3s ease-out;
 
-        .nav-link {
-          text-decoration: none;
-          font-size      : 36px;
-          color          : white;
+        &:hover {
+          background-color: #000000;
+          color           : #f0bd0c;
+        }
+      }
+
+      .radio {
+        display: none;
+      }
+
+      #q1:checked+label,
+      #q2:checked+label,
+      #q3:checked+label {
+        background-color: #000000;
+        color           : #f0bd0c;
+        transform       : rotate(-10deg);
+        transition      : all .3s ease-out;
+
+        &::before {
+          content         : '';
+          position        : absolute;
+          bottom          : 0;
+          left            : 50%;
+          width           : 0;
+          height          : 0;
+          border          : 20px solid transparent;
+          border-top-color: #000000;
+          border-bottom   : 0;
+          margin-left     : -10px;
+          margin-bottom   : -20px;
+        }
+      }
+
+      #q1:checked+label {
+        &::after {
+          content: '';
+          position: absolute;
+          top: -90px;
+          left: -75px;
+          width: 7vw;
+          height: 7vw;
+          background-image: url(./images/寵物認養/cat-dialog.svg);
+          background-size: cover;
         }
       }
     }
 
     .dialog {
-      width           : 1321px;
-      height          : 783px;
+      display         : flex;
+      position        : relative;
+      width           : 69vw;
+      height          : 630px;
+      padding         : 50px;
       border-radius   : 20px;
-      background-color: gray;
+      background-color: #f0bd0c;
+
+      .profile-pic {
+        width           : 102px;
+        height          : 102px;
+        border-radius   : 50%;
+        margin-right    : 30px;
+        background-image: url(./images/寵物認養/profile-pic.svg);
+        background-size : cover;
+      }
+
+      .message {
+        width        : 49vw;
+        height       : 26vw;
+        border-radius: 6px;
+
+        .from-customers {
+          position        : relative;
+          text-align      : center;
+          margin-bottom   : 40px;
+          width           : 35vw;
+          line-height     : 87px;
+          background-color: #ffffff;
+          font-size       : 1.5vw;
+          border-radius   : 20px;
+
+          &::after {
+            content           : '';
+            position          : absolute;
+            left              : 0;
+            top               : 50%;
+            width             : 0;
+            height            : 0;
+            border            : 34px solid transparent;
+            border-right-color: #ffffff;
+            border-left       : 0;
+            border-top        : 0;
+            margin-top        : 8px;
+            margin-left       : -15px;
+          }
+        }
+
+        p {
+          background-color: #ffffff;
+          margin-bottom   : 10px;
+          font-size       : 1.5vw;
+          border-radius   : 20px;
+          box-shadow      : 0 0 10px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .from-us-1,
+        .from-us-2 {
+          position       : relative;
+          display        : flex;
+          align-items    : center;
+          justify-content: flex-start;
+          width          : 50vw;
+          padding        : 30px;
+          margin-bottom  : 20px;
+
+          &::after {
+            content          : '';
+            position         : absolute;
+            right            : 0;
+            bottom           : 0;
+            width            : 0;
+            height           : 0;
+            border           : 34px solid transparent;
+            border-left-color: #ffffff;
+            border-right     : 0;
+            border-top       : 0;
+            margin-top       : 140px;
+            margin-right     : -15px;
+          }
+        }
+      }
+
+      .logo-pic {
+        position        : absolute;
+        right           : 20px;
+        bottom          : 50px;
+        width           : 102px;
+        height          : 102px;
+        border-radius   : 50%;
+        margin-right    : 30px;
+        background-image: url(./images/寵物認養/logo.svg);
+        background-size : cover;
+      }
     }
   }
 
@@ -1353,11 +1667,15 @@ main {
         height    : 100%;
         object-fit: cover;
       }
-
     }
-
   }
 
+  .swiper-slide img {
+    display   : block;
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+  }
 }
 
 footer {
@@ -1384,7 +1702,6 @@ footer {
     display        : flex;
     width          : 100%;
     justify-content: space-between;
-
   }
 
   .line {
