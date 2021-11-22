@@ -2045,13 +2045,19 @@ footer {
   background-color: black;
   color: white;
 
+  .footer-title {
+    display: flex;
+    align-items: center;
+    img {
+      width: 3vw;
+      padding-right: 10px;
+    }
+  }
+
   h1 {
     color: #f5c20c;
   }
   .business-hours {
-    .title {
-      display: flex;
-    }
     width: 100%;
     .weekdays-title {
       color: #e19040;
