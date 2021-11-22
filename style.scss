@@ -2,67 +2,67 @@
 $baseSize: 12px;
 
 @function font($level: 1) {
-  @return $baseSize *$level;
+  @return $baseSize * $level;
 }
 
 // 主要標題h1的統一設定
 @mixin main-heading {
-  font-size: 2.5vw;
-  margin   : 70px 0 30px 0;
+  font-size: font(4);
+  margin: 70px 0 30px 0;
 }
 
 // 每個區塊的共同設定
 @mixin section-setting {
-  display       : flex;
+  display: flex;
   flex-direction: column;
-  align-items   : center;
-  width         : 100%;
+  align-items: center;
+  width: 100%;
 }
 
 // 店內環境區塊濾鏡的設定
 @mixin filter {
-  display         : flex;
-  align-items     : center;
-  justify-content : center;
-  border-radius   : 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
-  opacity         : 0;
-  transition      : all .3s ease-out;
+  opacity: 0;
+  transition: all 0.3s ease-out;
 }
 
 // 菜單小標題的樣式
 @mixin meal-title {
-  display    : flex;
+  display: flex;
   align-items: center;
-  height     : 85px;
+  height: 85px;
 }
 
 // 菜單小標題的字體樣式
 @mixin title-font {
-  color    : #E19040;
+  color: #e19040;
   font-size: 2vw;
 }
 
 // 貓腳印樣式
 @mixin cat-foot {
-  width : 1.2vw;
+  width: 1.2vw;
   height: 1.2vw;
 }
 
 // 每個菜單內頁的樣式
 @mixin menu-content {
-  display        : flex;
+  display: flex;
   justify-content: space-between;
-  margin-top     : 30px;
-  width          : 77%;
-  height         : 665px;
+  margin-top: 30px;
+  width: 77%;
+  height: 665px;
 }
 
 * {
-  margin     : 0;
-  padding    : 0;
-  font-family: '微軟正黑體';
-  box-sizing : border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "微軟正黑體";
+  box-sizing: border-box;
 }
 
 // 讓 nav 平滑滾動
@@ -70,38 +70,30 @@ html {
   scroll-behavior: smooth;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 // full-screen頁面的製作
 #mask {
-  display         : none;
-  position        : fixed;
-  z-index         : 998;
-  width           : 100%;
-  height          : 100vh;
+  display: none;
+  position: fixed;
+  z-index: 998;
+  width: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 #modal {
-  display         : flex;
-  justify-content : flex-end;
-  align-items     : flex-start;
-  position        : fixed;
-  top             : 50%;
-  left            : 50%;
-  z-index         : 999;
-  width           : 50%;
-  height          : 80vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  width: 50%;
+  height: 80vh;
   background-image: none;
-  background-size : contain;
-  transform       : translate(-50%, -50%);
-  opacity         : 0;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 
   .close-btn {
     font-size: 50px;
@@ -109,53 +101,52 @@ a {
 }
 
 main {
-
   // 大banner區開始
   #banner {
     @include section-setting;
-    padding            : 70px 0 180px 0;
-    background         : url(./images/banner/Banner.jpg) no-repeat;
-    background-size    : cover;
+    padding: 70px 0 180px 0;
+    background: url(./images/banner/Banner.jpg) no-repeat;
+    background-size: cover;
     background-position: bottom;
 
     // 導航欄製作開始
     .nav {
-      position       : fixed;
-      top            : 0px;
-      display        : flex;
-      align-items    : center;
+      position: fixed;
+      top: 0px;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      width          : 100%;
-      height         : 200px;
-      transition     : all .3s ease-in-out;
-      z-index        : 900;
+      width: 100%;
+      height: 200px;
+      transition: all 0.3s ease-in-out;
+      z-index: 900;
 
       .nav-items {
-        display        : flex;
+        display: flex;
         justify-content: space-around;
-        list-style     : none;
-        height         : 24px;
+        list-style: none;
+        height: 24px;
 
         .logo-item {
           display: none;
-          width  : 50px;
-          height : 34px;
-          cursor : pointer;
+          width: 50px;
+          height: 34px;
+          cursor: pointer;
         }
 
         .nav-item {
           margin-left: 60px;
 
-          &:hover>.nav-link {
+          &:hover > .nav-link {
             color: #f0bd0c;
           }
 
           .nav-link {
-            font-weight    : 600;
-            font-size      : 21px;
-            color          : white;
+            font-weight: 600;
+            font-size: 21px;
+            color: white;
             text-decoration: none;
-            cursor         : pointer;
+            cursor: pointer;
           }
         }
       }
@@ -164,34 +155,34 @@ main {
     // 導航欄製作結束
 
     .logo {
-      margin         : 215px 0 70px 0;
-      width          : 280px;
-      height         : 240px;
-      background     : url(./images/banner/logo/logo.svg) no-repeat;
+      margin: 215px 0 70px 0;
+      width: 280px;
+      height: 240px;
+      background: url(./images/banner/logo/logo.svg) no-repeat;
       background-size: contain;
     }
 
     .logo-text {
       font-size: font(3.33);
-      color    : white;
+      color: white;
     }
 
     .slogan {
-      margin   : 25px 0 75px 0;
+      margin: 25px 0 75px 0;
       font-size: font(1.75);
-      color    : white;
+      color: white;
     }
 
     .icons {
-      display        : flex;
+      display: flex;
       justify-content: space-between;
-      list-style     : none;
-      width          : 290px;
-      height         : 50px;
+      list-style: none;
+      width: 290px;
+      height: 50px;
 
       .icon {
         img {
-          width : 50px;
+          width: 50px;
           height: 50px;
         }
       }
@@ -199,96 +190,60 @@ main {
   }
 
   // 大banner區結束
-  @media screen and (max-width : 920px) {
-    #banner {
-      // 導航欄製作開始
-      .nav {
-       display: none;
-      }
-
-      // 導航欄製作結束
-
-      .logo {
-        width          : 200px;
-        height         : 170px;
-      }
-
-      .logo-text {
-        font-size: font(2.75);
-      }
-
-      .slogan {
-        font-size: font(1.5);
-        color    : white;
-      }
-    }
-
-    .nav-mobile {
-      display: block;
-
-      .logo-mobile {
-        position: absolute;
-        top     : 10px;
-        right   : 30px;
-        z-index : 999;
-        width   : 60px;
-        height  : 60px;
-
-        &:active {
-          transform: scale(.9);
-        }
-      }
+  @media screen and (max-width: 920px) {
+    #banner .nav {
+      display: none;
     }
   }
 
   // 店家理念區塊開始
   #concept {
-    display         : flex;
-    justify-content : center;
-    flex-wrap       : wrap;
-    padding-top     : 100px;
-    width           : 100%;
-    height          : 1280px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 130px;
+    width: 100%;
+    height: 1280px;
     background-color: #fff;
 
     article {
-      display        : flex;
+      display: flex;
       justify-content: space-between;
-      align-items    : center;
-      width          : 70%;
-      height         : 470px;
-      margin-bottom  : 75px;
+      align-items: center;
+      width: 70%;
+      height: 470px;
+      margin-bottom: 75px;
 
       .text {
-        display  : flex;
+        display: flex;
         flex-wrap: wrap;
-        width    : 40%;
+        width: 40%;
 
         .concept-title {
-          font-size    : 2.5vw;
+          font-size: font(4);
           margin-bottom: 20px;
         }
 
         .dog-img {
-          width      : 2.9vw;
-          height     : 3.6vw;
-          margin-left: 1.6vw;
+          width: 55px;
+          height: 70px;
+          margin-left: 30px;
         }
 
         .cat-img {
-          width      : 3vw;
-          height     : 3vw;
+          width: 60px;
+          height: 60px;
           margin-left: 15vw;
         }
 
         .concept-text {
-          font-size  : font(2);
-          line-height: font(4);
+          font-size: 1.3vw;
+          line-height: 2.6vw;
         }
       }
 
       .concept-img {
-        width : 34.4vw;
+        width: 34.4vw;
         height: 24.5vw;
       }
     }
@@ -296,81 +251,20 @@ main {
 
   // 店家理念區塊結束
 
-  @media screen and (max-width : 1200px) {
-    #concept {
-      article {
-        width          : 80%;
-        height         : 400px;
-        margin-bottom  : 0px;
-
-        .text {
-          width    : 50%;
-
-          .concept-title {
-            font-size    : font(2.5);
-            margin-bottom: 10px;
-          }
-
-          .concept-text {
-            font-size  : font(1.75);
-            line-height: font(3.75);
-          }
-        }
-
-        .concept-img {
-          width : 413px;
-          height: 294px;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width : 920px) {
-    #concept {
-      height: 1910px;
-      article {
-        justify-content: center;
-        flex-wrap: wrap;
-        width          : 100%;
-        height         : 800px;
-        padding:0 64px 0 64px;
-
-        .text {
-          width    : 100%;
-
-          .concept-title {
-            font-size    : font(2.5);
-            margin-bottom: 10px;
-          }
-
-          .concept-text {
-            font-size  : font(2);
-            line-height: font(3.75);
-          }
-        }
-
-        .concept-img {
-          width : 580px;
-          height: 410px;
-        }
-      }
-    }
-  }
-
   // 店內環境區塊開始
   #environment {
-    position        : relative;
-    display         : flex;
-    justify-content : center;
-    flex-wrap       : wrap;
-    width           : 100%;
-    height          : 980px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 980px;
     background-color: #ffffff;
 
     .environment-img {
       position: relative;
-      width   : 1700px;
-      height  : 885px;
+      width: 1700px;
+      height: 885px;
 
       // 當滑鼠放到放大鏡的時候，游標變成小手指
       .full-screen-1,
@@ -380,117 +274,117 @@ main {
       }
 
       h1 {
-        position        : absolute;
-        top             : 50px;
-        left            : 50px;
-        width           : 12.5vw;
-        height          : 5vw;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 12.5vw;
+        height: 5vw;
         background-color: #f0bd0c;
-        font-size       : 2.5vw;
-        text-align      : center;
-        line-height     : 5vw;
-        z-index         : 2;
+        font-size: font(4);
+        text-align: center;
+        line-height: 5vw;
+        z-index: 2;
       }
 
       .large-img {
-        position           : absolute;
-        top                : 0;
-        left               : 0;
-        width              : 100%;
-        height             : 535px;
-        clip-path          : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
-        border-radius      : 10px;
-        background   : url(./images/店家環境/shop01.jpg) no-repeat;
-        background-size    : cover;
-        background-position: 0px -100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 535px;
+        clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+        border-radius: 10px;
+        background-image: url(./images/店家環境/shop01.jpg);
+        background-size: cover;
+        background-position: 0px -216px;
 
         // 當游標在圖片上，出現filter1
-        &:hover>.filter1 {
+        &:hover > .filter1 {
           transition: all 0.4s ease-in-out;
-          opacity   : 1;
+          opacity: 1;
         }
 
         // 濾鏡1
         .filter1 {
           @include filter;
-          position : absolute;
-          top      : 0;
-          left     : 0;
-          width    : 100%;
-          height   : 530px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 530px;
           clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
 
           i {
             font-size: 50px;
-            color    : white;
+            color: white;
           }
         }
       }
 
       .small-img1 {
-        position           : absolute;
-        bottom             : 0;
-        left               : 0;
-        width              : 60%;
-        height             : 430px;
-        background-image   : url(./images/店家環境/shop02.JPG);
-        background-size    : cover;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60%;
+        height: 430px;
+        background-image: url(./images/店家環境/shop02.JPG);
+        background-size: cover;
         background-position: right;
-        clip-path          : polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
-        border-radius      : 10px;
+        clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
+        border-radius: 10px;
 
         // 當游標在圖片上，出現filter2
-        &:hover>.filter2 {
+        &:hover > .filter2 {
           transition: all 0.4s ease-in-out;
-          opacity   : 1;
+          opacity: 1;
         }
 
         .filter2 {
           @include filter;
-          position : absolute;
-          bottom   : 0;
-          left     : 0;
-          width    : 100%;
-          height   : 430px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 430px;
           clip-path: polygon(0 22%, 91% 0, 100% 100%, 0% 100%);
 
           i {
             font-size: 50px;
-            color    : white;
+            color: white;
           }
         }
       }
 
       .small-img2 {
-        position           : absolute;
-        right              : 0px;
-        bottom             : 0px;
-        width              : 44%;
-        height             : 510px;
-        background-image   : url(./images/店家環境/shop03.JPG);
-        background-size    : cover;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        width: 44%;
+        height: 510px;
+        background-image: url(./images/店家環境/shop03.JPG);
+        background-size: cover;
         background-position: left;
-        clip-path          : polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
-        border-radius      : 10px;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
+        border-radius: 10px;
 
         // 當游標在圖片上，出現filter3
-        &:hover>.filter3 {
+        &:hover > .filter3 {
           transition: all 0.4s ease-in-out;
-          opacity   : 1;
+          opacity: 1;
         }
 
         .filter3 {
           @include filter;
-          position : absolute;
-          bottom   : 0;
-          left     : 0;
-          width    : 100%;
-          height   : 510px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 510px;
           clip-path: polygon(0 15%, 100% 0, 100% 100%, 12% 100%);
 
           i {
             font-size: 50px;
-            color    : white;
+            color: white;
           }
         }
       }
@@ -498,19 +392,19 @@ main {
 
     .cat-shadow {
       position: absolute;
-      bottom  : 10px;
-      left    : 100px;
-      width   : 155px;
-      height  : 300px;
-      opacity : 0.8;
+      bottom: 10px;
+      left: 100px;
+      width: 155px;
+      height: 300px;
+      opacity: 0.8;
     }
 
     .dialog-img {
       position: absolute;
-      top     : 200px;
-      right   : 100px;
-      width   : 32vw;
-      height  : 14vw;
+      top: 200px;
+      right: 100px;
+      width: 32vw;
+      height: 14vw;
     }
   }
 
@@ -519,8 +413,8 @@ main {
   // 好食餐點區塊開始
   #food-card {
     @include section-setting;
-    position        : relative;
-    height          : 980px;
+    position: relative;
+    height: 980px;
     background-color: #f0bd0c;
 
     h1 {
@@ -528,106 +422,106 @@ main {
     }
 
     .row {
-      display        : flex;
+      display: flex;
       justify-content: space-between;
-      flex-wrap      : wrap;
-      width          : 68.7%;
-      margin         : 0 0 -30px -30px;
+      flex-wrap: wrap;
+      width: 68.7%;
+      margin: 0 0 -30px -30px;
 
       .column {
-        width      : 33.3%;
-        height     : 360px;
+        width: 33.3%;
+        height: 360px;
         perspective: 700px;
-        padding    : 0 0 30px 30px;
+        padding: 0 0 30px 30px;
 
         // 翻轉效果製作開始
         .food-img {
           position: relative;
-          width   : 100%;
-          height  : 100%;
+          width: 100%;
+          height: 100%;
 
-          &:hover>.front {
+          &:hover > .front {
             transform: rotateY(-180deg);
           }
 
-          &:hover>.back {
+          &:hover > .back {
             transform: rotateY(0deg);
           }
 
           .front,
           .back {
-            position           : absolute;
-            transform-style    : preserve-3d;
+            position: absolute;
+            transform-style: preserve-3d;
             backface-visibility: hidden;
-            transition         : transform .9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            width              : 100%;
-            height             : 100%;
+            transition: transform 0.9s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            width: 100%;
+            height: 100%;
           }
 
           .front {
             z-index: 2;
 
             .front-img {
-              width : 100%;
+              width: 100%;
               height: 100%;
 
               .cover {
-                display         : flex;
-                flex-direction  : column;
-                align-items     : center;
-                justify-content : center;
-                width           : 100%;
-                height          : 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
                 background-color: rgba(0, 0, 0, 0.3);
-                z-index         : 3;
+                z-index: 3;
 
                 span {
-                  color      : white;
-                  font-size  : 1.9vw;
+                  color: white;
+                  font-size: 1.9vw;
                   font-weight: 600;
                 }
               }
             }
 
             .front-img1 {
-              background-image   : url(./images/好食餐點/beef.jpg);
-              background-size    : cover;
+              background-image: url(./images/好食餐點/beef.jpg);
+              background-size: cover;
               background-position: -37px 0;
             }
 
             .front-img2 {
-              background-image   : url(./images/好食餐點/pork.jpg);
-              background-size    : cover;
+              background-image: url(./images/好食餐點/pork.jpg);
+              background-size: cover;
               background-position: -40px 0;
             }
 
             .front-img3 {
               background-image: url(./images/好食餐點/cook.jpg);
-              background-size : cover;
+              background-size: cover;
             }
 
             .front-img4 {
               background-image: url(./images/好食餐點/fruit-tea.jpg);
-              background-size : cover;
+              background-size: cover;
             }
 
             .front-img5 {
               background-image: url(./images/好食餐點/covid-fight.jpg);
-              background-size : cover;
+              background-size: cover;
             }
 
             .front-img6 {
               background-image: url(./images/好食餐點/pet-food.jpg);
-              background-size : cover;
+              background-size: cover;
             }
           }
 
           .back {
-            display         : flex;
-            flex-direction  : column;
-            align-items     : center;
-            justify-content : center;
-            transform       : rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: rotateY(180deg);
             background-color: black;
 
             img {
@@ -638,13 +532,13 @@ main {
             h2,
             p {
               perspective: 1000px;
-              transform  : translateZ(95px) scale(0.81);
+              transform: translateZ(95px) scale(0.81);
               font-weight: 600;
-              color      : white;
+              color: white;
             }
 
             h2 {
-              font-size    : 2vw;
+              font-size: 2vw;
               margin-bottom: 15px;
             }
 
@@ -660,34 +554,24 @@ main {
 
     .dog-shadow {
       position: absolute;
-      right   : 190px;
-      bottom  : 25px;
-      width   : 210px;
-      height  : 245px;
+      right: 190px;
+      bottom: 25px;
+      width: 210px;
+      height: 245px;
     }
   }
-
-  @media screen and (max-width : 920px) {
-    .column {
-      width: 50%;
-    }
-    .dog-shadow {
-      display: none
-    }
-  }
-  
 
   // 好食餐點區塊結束
 
   // 幸福菜單區塊開始
   #menu {
     @include section-setting;
-    height          : 980px;
+    height: 980px;
     background-color: #000000;
 
     // 菜單導航
     .menu-type {
-      width     : 80%;
+      width: 80%;
       text-align: center;
 
       h1 {
@@ -696,38 +580,38 @@ main {
       }
 
       .menu-items {
-        display        : flex;
+        display: flex;
         justify-content: space-around;
-        align-items    : center;
-        width          : 100%;
-        height         : 64px;
-        border-top     : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-        border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+        align-items: center;
+        width: 100%;
+        height: 64px;
+        border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+        border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 
         .menu-item {
           list-style-type: none;
           text-decoration: none;
-          color          : rgba($color:#ffffff, $alpha: 0.5);
-          font-size      : 2vw;
-          width          : 14%;
-          cursor         : pointer;
+          color: rgba($color: #ffffff, $alpha: 0.5);
+          font-size: 2vw;
+          width: 14%;
+          cursor: pointer;
 
           &:hover {
-            color      : #dc8b40;
+            color: #dc8b40;
             font-weight: 600;
           }
         }
 
         .active {
           position: relative;
-          color   : #dc8b40;
+          color: #dc8b40;
 
           &::before {
-            position : absolute;
-            top      : 50%;
-            left     : 0;
+            position: absolute;
+            top: 50%;
+            left: 0;
             transform: translateY(-50%);
-            content  : '';
+            content: "";
             @include cat-foot;
             background-image: url(./images/幸福菜單/icons/foot-print.svg);
           }
@@ -737,7 +621,7 @@ main {
 
     .content {
       display: none;
-      width  : 77%;
+      width: 77%;
     }
 
     .now {
@@ -768,49 +652,49 @@ main {
 
         .row {
           display: flex;
-          width  : 100%;
+          width: 100%;
 
           .column1,
           .column2 {
-            width       : 50%;
+            width: 50%;
             margin-right: 40px;
-            border-top  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 
             .meal-content {
-              display        : flex;
+              display: flex;
               justify-content: space-between;
-              align-items    : center;
-              height         : 85px;
-              border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-              font-size      : 30px;
+              align-items: center;
+              height: 85px;
+              border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+              font-size: 30px;
 
               h3 {
-                color    : #f0bd0c;
+                color: #f0bd0c;
                 font-size: 1.6vw;
               }
 
               span {
-                color    : #ffffff;
+                color: #ffffff;
                 font-size: 1.6vw;
               }
             }
 
             .img {
               display: flex;
-              width  : 300px;
-              height : 180px;
+              width: 300px;
+              height: 180px;
 
               // 兩隻小可愛
               .dog {
                 transform: translate(180px, 230px);
-                width    : 140px;
-                height   : 180px;
+                width: 140px;
+                height: 180px;
               }
 
               .cat {
                 transform: translate(180px, 250px);
-                width    : 160px;
-                height   : 160px;
+                width: 160px;
+                height: 160px;
               }
 
               // 兩隻小可愛
@@ -823,10 +707,10 @@ main {
         overflow: hidden;
 
         img {
-          width     : 100%;
-          height    : 100%;
-          transform : scale(1);
-          transition: all .5s ease-out;
+          width: 100%;
+          height: 100%;
+          transform: scale(1);
+          transition: all 0.5s ease-out;
 
           &:hover {
             transform: scale(1.2);
@@ -860,57 +744,57 @@ main {
       }
 
       .meal-content {
-        display       : flex;
+        display: flex;
         flex-direction: column;
-        font-size     : 1.6vw;
+        font-size: 1.6vw;
 
         .meal-description {
-          display        : flex;
-          flex-direction : column;
+          display: flex;
+          flex-direction: column;
           justify-content: center;
-          border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-          border-top     : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-          height         : 144px;
+          border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+          border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+          height: 144px;
 
           .meal-title {
-            display        : flex;
+            display: flex;
             justify-content: space-between;
 
             h3 {
-              color        : #f0bd0c;
+              color: #f0bd0c;
               margin-bottom: 25px;
-              font-size    : 1.6vw;
+              font-size: 1.6vw;
             }
 
             span {
-              color    : #ffffff;
+              color: #ffffff;
               font-size: 1.6vw;
             }
           }
 
           p {
-            color    : #ffffff;
+            color: #ffffff;
             font-size: 24px;
           }
         }
 
         .row {
-          display        : flex;
+          display: flex;
           justify-content: space-between;
-          margin-top     : 30px;
+          margin-top: 30px;
 
           .column1 {
-            display       : flex;
+            display: flex;
             flex-direction: column;
-            color         : #f0bd0c;
-            font-size     : 1.3vw;
+            color: #f0bd0c;
+            font-size: 1.3vw;
           }
 
           .column2 {
-            display       : flex;
+            display: flex;
             flex-direction: column;
-            color         : #ffffff;
-            font-size     : 1.3vw;
+            color: #ffffff;
+            font-size: 1.3vw;
           }
 
           span {
@@ -921,25 +805,25 @@ main {
 
       .hot-pot-pic {
         display: flex;
-        width  : 48%;
-        height : 670px;
+        width: 48%;
+        height: 670px;
 
         .hot-pot-left {
-          display        : flex;
-          flex-direction : column;
+          display: flex;
+          flex-direction: column;
           justify-content: space-between;
-          width          : 350px;
-          height         : 670px;
-          margin-right   : 10px;
+          width: 350px;
+          height: 670px;
+          margin-right: 10px;
 
           .left1 {
             overflow: hidden;
 
             img {
-              width     : 100%;
-              height    : 100%;
-              transform : scale(1);
-              transition: all .5s ease-out;
+              width: 100%;
+              height: 100%;
+              transform: scale(1);
+              transition: all 0.5s ease-out;
 
               &:hover {
                 transform: scale(1.2);
@@ -948,14 +832,14 @@ main {
           }
 
           .left2 {
-            overflow  : hidden;
+            overflow: hidden;
             margin-top: 10px;
 
             img {
-              width     : 100%;
-              height    : 100%;
-              transform : scale(1);
-              transition: all .5s ease-out;
+              width: 100%;
+              height: 100%;
+              transform: scale(1);
+              transition: all 0.5s ease-out;
 
               &:hover {
                 transform: scale(1.2);
@@ -968,10 +852,10 @@ main {
           overflow: hidden;
 
           img {
-            width     : 100%;
-            height    : 100%;
-            transform : scale(1);
-            transition: all .5s ease-out;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: all 0.5s ease-out;
 
             &:hover {
               transform: scale(1.2);
@@ -1006,35 +890,35 @@ main {
       }
 
       hr {
-        border-top   : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+        border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
         border-bottom: 0;
       }
 
       .meal-content {
-        display        : flex;
+        display: flex;
         justify-content: space-between;
-        align-items    : center;
-        height         : 85px;
-        border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-        font-size      : 1.6vw;
+        align-items: center;
+        height: 85px;
+        border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+        font-size: 1.6vw;
 
         h3 {
-          color    : #f0bd0c;
+          color: #f0bd0c;
           font-size: 1.6vw;
         }
 
         span {
-          color    : #ffffff;
+          color: #ffffff;
           font-size: 1.6vw;
         }
 
         p {
-          color    : #ffffff;
+          color: #ffffff;
           font-size: 1.3vw;
         }
 
         .meal-title {
-          display  : flex;
+          display: flex;
           flex-wrap: wrap;
         }
       }
@@ -1042,25 +926,25 @@ main {
       // 主廚料理圖片
       .chef-pic {
         display: flex;
-        width  : 48%;
-        height : 670px;
+        width: 48%;
+        height: 670px;
 
         .chef-left {
-          display        : flex;
-          flex-direction : column;
+          display: flex;
+          flex-direction: column;
           justify-content: space-between;
-          width          : 350px;
-          height         : 670px;
-          margin-right   : 10px;
+          width: 350px;
+          height: 670px;
+          margin-right: 10px;
 
           .chef1 {
             overflow: hidden;
 
             img {
-              width     : 100%;
-              height    : 100%;
-              transform : scale(1);
-              transition: all .5s ease-out;
+              width: 100%;
+              height: 100%;
+              transform: scale(1);
+              transition: all 0.5s ease-out;
 
               &:hover {
                 transform: scale(1.2);
@@ -1072,10 +956,10 @@ main {
             overflow: hidden;
 
             img {
-              width     : 100%;
-              height    : 100%;
-              transform : scale(1);
-              transition: all .5s ease-out;
+              width: 100%;
+              height: 100%;
+              transform: scale(1);
+              transition: all 0.5s ease-out;
 
               &:hover {
                 transform: scale(1.2);
@@ -1088,10 +972,10 @@ main {
           overflow: hidden;
 
           img {
-            width     : 100%;
-            height    : 100%;
-            transform : scale(1);
-            transition: all .5s ease-out;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: all 0.5s ease-out;
 
             &:hover {
               transform: scale(1.2);
@@ -1109,7 +993,7 @@ main {
       width: 100%;
 
       .light-intro {
-        width : 73%;
+        width: 73%;
         height: 670px;
 
         .light-title {
@@ -1126,43 +1010,42 @@ main {
         }
 
         .row {
-          display        : flex;
+          display: flex;
           justify-content: space-between;
 
           .column1 {
-            width       : 512px;
+            width: 512px;
             margin-right: 50px;
-            border-top  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 
             .meal-content1 {
-              display        : flex;
+              display: flex;
               justify-content: space-between;
-              align-items    : center;
-              height         : 85px;
-              border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-              font-size      : 1.6vw;
+              align-items: center;
+              height: 85px;
+              border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+              font-size: 1.6vw;
             }
           }
 
           .column2 {
-            display       : flex;
+            display: flex;
             flex-direction: column;
-            width         : 512px;
-            border-top    : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+            width: 512px;
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 
             .img {
-
               // 兩隻小可愛
               .dog {
                 transform: translate(185px, 120px);
-                width    : 140px;
-                height   : 180px;
+                width: 140px;
+                height: 180px;
               }
 
               .cat {
                 transform: translate(185px, 120px);
-                width    : 160px;
-                height   : 160px;
+                width: 160px;
+                height: 160px;
               }
 
               // 兩隻小可愛
@@ -1171,62 +1054,62 @@ main {
 
           // column1與column2共同的樣式
           h3 {
-            color    : #f0bd0c;
+            color: #f0bd0c;
             font-size: 1.6vw;
           }
 
           span {
-            color    : #ffffff;
+            color: #ffffff;
             font-size: 1.6vw;
           }
 
           p {
-            color     : #ffffff;
-            font-size : 24px;
+            color: #ffffff;
+            font-size: 24px;
             margin-top: 30px;
           }
 
           .meal-content2 {
-            display        : flex;
+            display: flex;
             justify-content: space-between;
-            height         : 140px;
-            border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+            height: 140px;
+            border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 
             .meal-title {
-              display        : flex;
-              flex-direction : column;
+              display: flex;
+              flex-direction: column;
               justify-content: center;
             }
           }
 
           .meal-content3 {
-            display        : flex;
-            flex-direction : column;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            height         : 140px;
-            border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-            font-size      : 1.6vw;
+            height: 140px;
+            border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+            font-size: 1.6vw;
           }
         }
       }
 
       .light-pic {
-        display        : flex;
-        flex-direction : column;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        width          : 350px;
-        height         : 670px;
+        width: 350px;
+        height: 670px;
 
         .light1 {
-          width   : 350px;
-          height  : 330px;
+          width: 350px;
+          height: 330px;
           overflow: hidden;
 
           img {
-            width     : 100%;
-            height    : 100%;
-            transform : scale(1);
-            transition: all .5s ease-out;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: all 0.5s ease-out;
 
             &:hover {
               transform: scale(1.2);
@@ -1235,15 +1118,15 @@ main {
         }
 
         .light2 {
-          width   : 350px;
-          height  : 330px;
+          width: 350px;
+          height: 330px;
           overflow: hidden;
 
           img {
-            width     : 100%;
-            height    : 100%;
-            transform : scale(1);
-            transition: all .5s ease-out;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: all 0.5s ease-out;
 
             &:hover {
               transform: scale(1.2);
@@ -1279,29 +1162,29 @@ main {
 
         .row {
           display: flex;
-          width  : 100%;
+          width: 100%;
 
           .column1,
           .column2 {
-            width       : 50%;
+            width: 50%;
             margin-right: 40px;
-            border-top  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 
             .meal-content {
-              display        : flex;
+              display: flex;
               justify-content: space-between;
-              align-items    : center;
-              height         : 85px;
-              border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-              font-size      : 1.6vw;
+              align-items: center;
+              height: 85px;
+              border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+              font-size: 1.6vw;
 
               h3 {
-                color    : #f0bd0c;
+                color: #f0bd0c;
                 font-size: 1.6vw;
               }
 
               span {
-                color    : #ffffff;
+                color: #ffffff;
                 font-size: 1.6vw;
               }
             }
@@ -1309,20 +1192,20 @@ main {
 
           .img {
             display: flex;
-            width  : 300px;
-            height : 180px;
+            width: 300px;
+            height: 180px;
 
             // 兩隻小可愛
             .dog {
               transform: translate(180px, 310px);
-              width    : 140px;
-              height   : 180px;
+              width: 140px;
+              height: 180px;
             }
 
             .cat {
               transform: translate(180px, 330px);
-              width    : 160px;
-              height   : 160px;
+              width: 160px;
+              height: 160px;
             }
 
             // 兩隻小可愛
@@ -1331,15 +1214,15 @@ main {
       }
 
       .snack-pic {
-        width   : 350px;
-        height  : 670px;
+        width: 350px;
+        height: 670px;
         overflow: hidden;
 
         img {
-          width     : 100%;
-          height    : 100%;
-          transform : scale(1);
-          transition: all .5s ease-out;
+          width: 100%;
+          height: 100%;
+          transform: scale(1);
+          transition: all 0.5s ease-out;
 
           &:hover {
             transform: scale(1.2);
@@ -1374,30 +1257,30 @@ main {
 
         .row {
           display: flex;
-          width  : 100%;
+          width: 100%;
 
           .column1,
           .column2,
           .column3 {
-            width       : 33.3%;
+            width: 33.3%;
             margin-right: 40px;
-            border-top  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
 
             .meal-content {
-              display        : flex;
+              display: flex;
               justify-content: space-between;
-              align-items    : center;
-              height         : 85px;
-              border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-              font-size      : 1.6vw;
+              align-items: center;
+              height: 85px;
+              border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+              font-size: 1.6vw;
 
               h3 {
-                color    : #f0bd0c;
+                color: #f0bd0c;
                 font-size: 1.6vw;
               }
 
               span {
-                color    : #ffffff;
+                color: #ffffff;
                 font-size: 1.6vw;
               }
             }
@@ -1406,15 +1289,15 @@ main {
       }
 
       .drink-pic {
-        width   : 350px;
-        height  : 670px;
+        width: 350px;
+        height: 670px;
         overflow: hidden;
 
         img {
-          width     : 100%;
-          height    : 100%;
-          transform : scale(1);
-          transition: all .5s ease-out;
+          width: 100%;
+          height: 100%;
+          transform: scale(1);
+          transition: all 0.5s ease-out;
 
           &:hover {
             transform: scale(1.2);
@@ -1424,7 +1307,6 @@ main {
     }
 
     //好食飲品菜單製作结束
-
 
     // 寵物鮮食菜單製作開始
     .pet-food-content {
@@ -1449,25 +1331,25 @@ main {
       }
 
       hr {
-        border-top   : 1px solid rgba($color:#ffffff, $alpha: 0.5);
+        border-top: 1px solid rgba($color: #ffffff, $alpha: 0.5);
         border-bottom: 0;
       }
 
       .meal-content {
-        display        : flex;
+        display: flex;
         justify-content: space-between;
-        align-items    : center;
-        height         : 85px;
-        border-bottom  : 1px solid rgba($color:#ffffff, $alpha: 0.5);
-        font-size      : 1.6vw;
+        align-items: center;
+        height: 85px;
+        border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.5);
+        font-size: 1.6vw;
 
         h3 {
-          color    : #f0bd0c;
+          color: #f0bd0c;
           font-size: 1.6vw;
         }
 
         span {
-          color    : #ffffff;
+          color: #ffffff;
           font-size: 1.6vw;
         }
 
@@ -1479,38 +1361,38 @@ main {
       //兩隻小可愛
       .dog {
         transform: translate(-78px, 485px);
-        width    : 140px;
-        height   : 180px;
+        width: 140px;
+        height: 180px;
       }
 
       .cat {
         transform: translate(-78px, 505px);
-        width    : 160px;
-        height   : 160px;
+        width: 160px;
+        height: 160px;
       }
 
       // 寵物鮮食圖片
       .pet-food-pic {
         display: flex;
-        width  : 48%;
-        height : 670px;
+        width: 48%;
+        height: 670px;
 
         .pet-food-left {
-          width       : 350px;
-          height      : 670px;
+          width: 350px;
+          height: 670px;
           margin-right: 10px;
 
           .pet-food1 {
-            width        : 100%;
-            height       : 330px;
+            width: 100%;
+            height: 330px;
             margin-bottom: 10px;
-            overflow     : hidden;
+            overflow: hidden;
 
             img {
-              width     : 100%;
-              height    : 100%;
-              transform : scale(1);
-              transition: all .5s ease-out;
+              width: 100%;
+              height: 100%;
+              transform: scale(1);
+              transition: all 0.5s ease-out;
 
               &:hover {
                 transform: scale(1.2);
@@ -1519,15 +1401,15 @@ main {
           }
 
           .pet-food2 {
-            width   : 100%;
-            height  : 330px;
+            width: 100%;
+            height: 330px;
             overflow: hidden;
 
             img {
-              width     : 100%;
-              height    : 100%;
-              transform : scale(1);
-              transition: all .5s ease-out;
+              width: 100%;
+              height: 100%;
+              transform: scale(1);
+              transition: all 0.5s ease-out;
 
               &:hover {
                 transform: scale(1.2);
@@ -1537,15 +1419,15 @@ main {
         }
 
         .pet-food-right {
-          width   : 350px;
-          height  : 670px;
+          width: 350px;
+          height: 670px;
           overflow: hidden;
 
           img {
-            width     : 100%;
-            height    : 100%;
-            transform : scale(1);
-            transition: all .5s ease-out;
+            width: 100%;
+            height: 100%;
+            transform: scale(1);
+            transition: all 0.5s ease-out;
 
             &:hover {
               transform: scale(1.2);
@@ -1558,14 +1440,13 @@ main {
 
   // 寵物鮮食菜單製作結束
 
-
   // 幸福菜單區塊結束
 
   // 寵物認養區塊開始
   #adoption-info {
     @include section-setting;
     background-color: #fff;
-    height          : 980px;
+    height: 980px;
 
     h1 {
       @include main-heading;
@@ -1574,25 +1455,24 @@ main {
     .questions {
       display: flex;
 
-
       .question {
-        position        : relative;
-        list-style      : none;
-        text-align      : center;
-        width           : 18vw;
-        height          : 5vw;
-        line-height     : 5vw;
-        margin          : 0 0 30px 12px;
+        position: relative;
+        list-style: none;
+        text-align: center;
+        width: 18vw;
+        height: 5vw;
+        line-height: 5vw;
+        margin: 0 0 30px 12px;
         background-color: #dc8b40;
-        font-size       : 1.9vw;
-        font-weight     : 600;
-        color           : #000000;
-        cursor          : pointer;
-        transition      : all .3s ease-out;
+        font-size: 1.9vw;
+        font-weight: 600;
+        color: #000000;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
 
         &:hover {
           background-color: #000000;
-          color           : #f0bd0c;
+          color: #f0bd0c;
         }
       }
 
@@ -1600,259 +1480,259 @@ main {
         display: none;
       }
 
-      #q1:checked+label,
-      #q2:checked+label,
-      #q3:checked+label {
+      #q1:checked + label,
+      #q2:checked + label,
+      #q3:checked + label {
         background-color: #000000;
-        color           : #f0bd0c;
-        transform       : rotate(-10deg);
-        transition      : all .3s ease-out;
+        color: #f0bd0c;
+        transform: rotate(-10deg);
+        transition: all 0.3s ease-out;
 
         &::before {
-          content         : '';
-          position        : absolute;
-          bottom          : 0;
-          left            : 50%;
-          width           : 0;
-          height          : 0;
-          border          : 20px solid transparent;
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 0;
+          border: 20px solid transparent;
           border-top-color: #000000;
-          border-bottom   : 0;
-          margin-left     : -10px;
-          margin-bottom   : -20px;
+          border-bottom: 0;
+          margin-left: -10px;
+          margin-bottom: -20px;
         }
       }
 
-      #q1:checked+label {
+      #q1:checked + label {
         &::after {
-          content         : '';
-          position        : absolute;
-          top             : -90px;
-          left            : -75px;
-          width           : 7vw;
-          height          : 7vw;
+          content: "";
+          position: absolute;
+          top: -90px;
+          left: -75px;
+          width: 7vw;
+          height: 7vw;
           background-image: url(./images/寵物認養/cat-dialog.svg);
-          background-size : cover;
+          background-size: cover;
         }
       }
     }
 
     .dialog {
-      display         : flex;
-      position        : relative;
-      width           : 69vw;
-      height          : 630px;
-      padding         : 50px;
-      border-radius   : 20px;
+      display: flex;
+      position: relative;
+      width: 69vw;
+      height: 630px;
+      padding: 50px;
+      border-radius: 20px;
       background-color: #f0bd0c;
 
       .profile-pic {
-        width           : 102px;
-        height          : 102px;
-        border-radius   : 50%;
-        margin-right    : 30px;
+        width: 102px;
+        height: 102px;
+        border-radius: 50%;
+        margin-right: 30px;
         background-image: url(./images/寵物認養/profile-pic.svg);
-        background-size : cover;
+        background-size: cover;
       }
 
       .message {
-        width        : 49vw;
-        height       : 26vw;
+        width: 49vw;
+        height: 26vw;
         border-radius: 6px;
 
         .from-customers {
-          position        : relative;
-          text-align      : center;
-          margin-bottom   : 40px;
-          width           : 35vw;
-          line-height     : 87px;
+          position: relative;
+          text-align: center;
+          margin-bottom: 40px;
+          width: 35vw;
+          line-height: 87px;
           background-color: #ffffff;
-          font-size       : 1.5vw;
-          border-radius   : 20px;
+          font-size: 1.5vw;
+          border-radius: 20px;
 
           &::after {
-            content           : '';
-            position          : absolute;
-            left              : 0;
-            top               : 50%;
-            width             : 0;
-            height            : 0;
-            border            : 34px solid transparent;
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 0;
+            height: 0;
+            border: 34px solid transparent;
             border-right-color: #ffffff;
-            border-left       : 0;
-            border-top        : 0;
-            margin-top        : 8px;
-            margin-left       : -15px;
+            border-left: 0;
+            border-top: 0;
+            margin-top: 8px;
+            margin-left: -15px;
           }
         }
 
         p {
           background-color: #ffffff;
-          margin-bottom   : 10px;
-          font-size       : 1.5vw;
-          border-radius   : 20px;
-          box-shadow      : 0 0 10px 5px rgba(0, 0, 0, 0.2);
+          margin-bottom: 10px;
+          font-size: 1.5vw;
+          border-radius: 20px;
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
         }
 
         .from-us-1,
         .from-us-2 {
-          position       : relative;
-          display        : flex;
-          align-items    : center;
+          position: relative;
+          display: flex;
+          align-items: center;
           justify-content: flex-start;
-          width          : 50vw;
-          padding        : 30px;
-          margin-bottom  : 20px;
+          width: 50vw;
+          padding: 30px;
+          margin-bottom: 20px;
 
           &::after {
-            content          : '';
-            position         : absolute;
-            right            : 0;
-            bottom           : 0;
-            width            : 0;
-            height           : 0;
-            border           : 34px solid transparent;
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border: 34px solid transparent;
             border-left-color: #ffffff;
-            border-right     : 0;
-            border-top       : 0;
-            margin-top       : 140px;
-            margin-right     : -15px;
+            border-right: 0;
+            border-top: 0;
+            margin-top: 140px;
+            margin-right: -15px;
           }
         }
       }
 
       .logo-pic {
-        position        : absolute;
-        right           : 20px;
-        bottom          : 50px;
-        width           : 102px;
-        height          : 102px;
-        border-radius   : 50%;
-        margin-right    : 30px;
+        position: absolute;
+        right: 20px;
+        bottom: 50px;
+        width: 102px;
+        height: 102px;
+        border-radius: 50%;
+        margin-right: 30px;
         background-image: url(./images/寵物認養/logo.svg);
-        background-size : cover;
+        background-size: cover;
       }
     }
   }
 
   #story {
     @include section-setting;
-    height          : 100vh;
+    height: 100vh;
     background-color: #fff;
+   
 
     h1 {
       @include main-heading;
     }
 
     .swiper {
-      width : 100%;
+      
+      width: 100%;
       height: 100%;
-
       .swiper-slide {
+        position: relative;
         text-align: center;
-        font-size : 18px;
-        width     : 460px;
-        height    : 530px;
+        font-size: 18px;
+        width: 460px;
+        height: 530px;
         background: #fff;
+        
+        &:hover{
+          img{
+            z-index: 0;
+          }
+        }
+       
 
         /* Center slide text vertically */
-        display        : flex;
+        display: flex;
         justify-content: center;
-        align-items    : center;
+        align-items: center;
 
         img {
-          display   : block;
-          width     : 100%;
-          height    : 100%;
+          display: block;
+          width: 100%;
+          height: 100%;
           object-fit: cover;
+          z-index: 2;
+          
+        }
+        .img-words{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(58, 56, 57, 0.7);
+          z-index: 1;
+          h2{
+            margin: 25px 0px;
+            font-size: 40px;
+            color: #e19040;
+          }
+          p{
+            margin: 0px 30px 45px 30px;
+            font-size: 26px;
+            color: rgb(255, 255, 255);
+          }
+          a{
+            font-size: 24px;
+            color: #e19040;
+          }
+
         }
       }
+    }
 
       .slide-3 {
         &:hover {
           width: 100%;
           height: 100%;
-          background-image: url(./images/下一站家/dog-3@2x.png);
+          background-image: url(./i);
         }
       }
     }
   }
-}
+
 
 footer {
   @include section-setting;
-  padding         : 110px 320px;
-  align-items     : flex-start;
+  padding: 110px 320px;
+  align-items: flex-start;
   background-color: black;
-  color           : white;
+  color: white;
 
   h1 {
-    color        : #f5c20c;
+    color: #f5c20c;
     margin-bottom: 25px;
   }
-
   .business-hours {
     .title {
-      display        : flex;
+      display: flex;
       justify-content: center;
     }
-
     width: 100%;
-
     .weekdays-title {
       color: #e19040;
     }
 
     .row {
-      display        : flex;
+      display: flex;
       justify-content: space-between;
     }
 
     .line-break {
-      width : 100%;
+      width: 100%;
       height: 30px;
     }
   }
 
   .contact-details {
-    display        : flex;
-    width          : 100%;
+    display: flex;
+    width: 100%;
     justify-content: space-between;
   }
 
   .line {
-    width  : 100%;
+    width: 100%;
     padding: 45px 0;
-  }
-}
-
-.nav-mobile {
-  position: fixed;
-  z-index : 999;
-  display : none;
-  width   : 100vw;
-  height  : 100vh;
-
-  .nav-banner {
-    position        : absolute;
-    top             : 0;
-    left            : 0;
-    width           : 100%;
-    height          : 0;
-    background-color: rgba(0, 0, 0, 0.85);
-    transition      : height .5s ease;
-
-    .nav-items-mobile {
-      display   : none;
-      text-align: center;
-    }
-
-    .nav-item-mobile {
-      margin: 30px;
-    }
-
-    .nav-link-mobile {
-      color: #fff;
-    }
   }
 }
