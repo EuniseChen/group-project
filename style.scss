@@ -562,6 +562,16 @@ main {
     }
   }
 
+  @media screen and (max-width : 920px) {
+    .column {
+      width: 50%;
+    }
+    .dog-shadow {
+      display: none
+    }
+  }
+  
+
   // 好食餐點區塊結束
 
   // 幸福菜單區塊開始

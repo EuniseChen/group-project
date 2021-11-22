@@ -445,6 +445,16 @@ main #food-card {
   height: 980px;
   background-color: #f0bd0c;
 }
+@media screen and (max-width : 920px) {
+  main #food-card {
+    height: 1300px;
+  }
+}
+@media screen and (max-width : 576px) {
+  main #food-card {
+    height: 2400px;
+  }
+}
 
 main #food-card h1 {
   font-size: 48px;
@@ -470,6 +480,16 @@ main #food-card .row .column {
   -webkit-perspective: 700px;
           perspective: 700px;
   padding: 0 0 30px 30px;
+}
+@media screen and (max-width : 920px) {
+  main #food-card .row .column {
+    width: 50%;
+  }
+}
+@media screen and (max-width : 576px) {
+  main #food-card .row .column {
+    width: 100%;
+  }
 }
 
 main #food-card .row .column .food-img {
@@ -619,6 +639,11 @@ main #food-card .dog-shadow {
   bottom: 25px;
   width: 210px;
   height: 245px;
+}
+@media screen and (max-width : 1300px) {
+  .dog-shadow {
+    display: none
+  }
 }
 
 main #menu {
