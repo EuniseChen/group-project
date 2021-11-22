@@ -209,6 +209,7 @@ var swiper = new Swiper('.mySwiper', {
   }
 
 })
+//swiper寬度設定
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: "auto",
   pagination: {
@@ -217,20 +218,10 @@ var swiper = new Swiper('.swiper-container', {
     freeModeMomentum: true,
   },
 
-
 });
-
+//swiper寬度設定
 var slide = document.querySelector('.swiper-slide')
-console.log('123');
-slide.onclick = function () {
-  console.log('222222');
-  if (slide.classList.contains('none')) {
-    slide.classList.remove('none')
-  }
-  else {
-    slide.classList.add('none');
-  }
-}
+slide.style.width = "100%";
 
 
 
