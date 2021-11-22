@@ -201,20 +201,21 @@ main {
   // 大banner區結束
   @media screen and (max-width : 920px) {
     #banner {
+
       // 導航欄製作開始
       .nav {
-       display: none;
+        display: none;
       }
 
       // 導航欄製作結束
 
       .logo {
-        width          : 200px;
-        height         : 170px;
+        width : 200px;
+        height: 170px;
       }
 
       .logo-text {
-        font-size: font(2.75);
+        font-size: font(2.5);
       }
 
       .slogan {
@@ -239,6 +240,27 @@ main {
         }
       }
     }
+  }
+
+  @media screen and (max-width : 576px) {
+    #banner {
+      background-image: url(./images/banner/576banner.jpg);
+
+      .logo {
+        width : 200px;
+        height: 170px;
+      }
+
+      .logo-text {
+        font-size: font(2);
+      }
+
+      .slogan {
+        font-size: font(1.25);
+        color    : white;
+      }
+    }
+
   }
 
   // 店家理念區塊開始
@@ -299,12 +321,12 @@ main {
   @media screen and (max-width : 1200px) {
     #concept {
       article {
-        width          : 80%;
-        height         : 400px;
-        margin-bottom  : 0px;
+        width        : 80%;
+        height       : 400px;
+        margin-bottom: 0px;
 
         .text {
-          width    : 50%;
+          width: 50%;
 
           .concept-title {
             font-size    : font(2.5);
@@ -328,15 +350,17 @@ main {
   @media screen and (max-width : 920px) {
     #concept {
       height: 1910px;
+
       article {
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap      : wrap;
         width          : 100%;
         height         : 800px;
-        padding:0 64px 0 64px;
+        padding        : 0 64px 0 64px;
 
         .text {
-          width    : 100%;
+          width        : 100%;
+          margin-bottom: 20px;
 
           .concept-title {
             font-size    : font(2.5);
@@ -350,8 +374,9 @@ main {
         }
 
         .concept-img {
-          width : 580px;
-          height: 410px;
+          width        : 580px;
+          height       : 410px;
+          margin-bottom: 30px;
         }
       }
     }
@@ -371,6 +396,12 @@ main {
       position: relative;
       width   : 1700px;
       height  : 885px;
+
+      .environment-text1,
+      .environment-text2,
+      .environment-text3 {
+        display: none;
+      }
 
       // 當滑鼠放到放大鏡的時候，游標變成小手指
       .full-screen-1,
@@ -400,9 +431,9 @@ main {
         height             : 535px;
         clip-path          : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
         border-radius      : 10px;
-        background   : url(./images/店家環境/shop01.jpg) no-repeat;
+        background         : url(./images/店家環境/shop01.jpg) no-repeat;
         background-size    : cover;
-        background-position: 0px -100px;
+        background-position: left;
 
         // 當游標在圖片上，出現filter1
         &:hover>.filter1 {
@@ -515,6 +546,115 @@ main {
   }
 
   // 店內環境區塊結束
+
+  @media screen and (max-width : 1200px) {
+    #environment {
+      position   : static;
+      align-items: center;
+      flex-wrap  : wrap;
+      width      : 100%;
+      height     : 2000px;
+
+      .environment-img {
+        display       : flex;
+        flex-direction: column;
+        align-items   : center;
+        width         : 100%;
+        height        : 1600px;
+
+        .environment-text1,
+        .environment-text2,
+        .environment-text3 {
+          display         : block;
+          text-align      : center;
+          width           : 100%;
+          background-color: #E19040;
+          padding         : 50px 0;
+          z-index         : 3;
+
+          h2 {
+            font-size    : 30px;
+            margin-bottom: 15px;
+          }
+
+          p {
+            font-size: 24px;
+          }
+        }
+
+        h1 {
+          position   : absolute;
+          top        : -100px;
+          left       : 50%;
+          transform  : translateX(-50%);
+          width      : 150px;
+          height     : 70px;
+          font-size  : 30px;
+          line-height: 70px;
+        }
+
+        .large-img {
+          position              : static;
+          width                 : 80vw;
+          height                : 50vw;
+          clip-path             : none;
+          border-radius         : 0px;
+          // background-position: 0px 0px;
+
+          &:hover>.filter1 {
+            display: none;
+          }
+
+          .filter1 {
+            display: none;
+          }
+        }
+
+        .small-img1 {
+          position     : static;
+          width        : 80vw;
+          height       : 50vw;
+          clip-path    : none;
+          border-radius: 0px;
+
+          &:hover>.filter2 {
+            display: none;
+          }
+
+          .filter2 {
+            display: none;
+          }
+        }
+
+        .small-img2 {
+          position     : static;
+          width        : 80vw;
+          height       : 50vw;
+          clip-path    : none;
+          border-radius: 10px;
+          border-radius: 0px;
+
+          &:hover>.filter3 {
+            display: none;
+          }
+
+          .filter3 {
+            display: none;
+          }
+        }
+
+        .cat-shadow {
+          bottom: -300px;
+          left  : 0px;
+          bottom: 0px;
+        }
+
+        .dialog-img {
+          display: none;
+        }
+      }
+    }
+  }
 
   // 好食餐點區塊開始
   #food-card {
@@ -1617,8 +1757,8 @@ main {
         &::after {
           content         : '';
           position        : absolute;
-          top             : -90px;
-          left            : -75px;
+          top             : -4.7vw;
+          left            : -4vw;
           width           : 7vw;
           height          : 7vw;
           background-image: url(./images/寵物認養/cat-dialog.svg);
@@ -1629,6 +1769,7 @@ main {
 
     .dialog {
       display         : flex;
+      flex-wrap: wrap;
       position        : relative;
       width           : 69vw;
       height          : 630px;
@@ -1650,6 +1791,15 @@ main {
         height       : 26vw;
         border-radius: 6px;
 
+        p {
+          background-color: #ffffff;
+          margin-bottom   : 10px;
+          font-size       : font(2.5);
+          border-radius   : 20px;
+          box-shadow      : 0 0 10px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
         .from-customers {
           position        : relative;
           text-align      : center;
@@ -1657,7 +1807,6 @@ main {
           width           : 35vw;
           line-height     : 87px;
           background-color: #ffffff;
-          font-size       : 1.5vw;
           border-radius   : 20px;
 
           &::after {
@@ -1676,13 +1825,6 @@ main {
           }
         }
 
-        p {
-          background-color: #ffffff;
-          margin-bottom   : 10px;
-          font-size       : 1.5vw;
-          border-radius   : 20px;
-          box-shadow      : 0 0 10px 5px rgba(0, 0, 0, 0.2);
-        }
 
         .from-us-1,
         .from-us-2 {
@@ -1724,6 +1866,112 @@ main {
       }
     }
   }
+  // 寵物認養區塊結束
+
+  @media screen and (max-width : 1200px) {
+    #adoption-info {
+
+      .dialog {
+        display         : flex;
+        flex-wrap: wrap;
+        position        : relative;
+        width           : 80vw;
+        height          : 630px;
+        padding         : 50px;
+        border-radius   : 20px;
+        background-color: #f0bd0c;
+
+        .profile-pic {
+          width           : 102px;
+          height          : 102px;
+          border-radius   : 50%;
+          margin-right    : 30px;
+          background-image: url(./images/寵物認養/profile-pic.svg);
+          background-size : cover;
+        }
+
+        .message {
+          width        : 49vw;
+          height       : 26vw;
+          border-radius: 6px;
+
+          p {
+            background-color: #ffffff;
+            margin-bottom   : 10px;
+            font-size       : font(2.5);
+            border-radius   : 20px;
+            box-shadow      : 0 0 10px 5px rgba(0, 0, 0, 0.2);
+          }
+
+
+          .from-customers {
+            position        : relative;
+            text-align      : center;
+            margin-bottom   : 40px;
+            width           : 35vw;
+            line-height     : 87px;
+            background-color: #ffffff;
+            font-size       : font(2.5);
+            border-radius   : 20px;
+
+            &::after {
+              content           : '';
+              position          : absolute;
+              left              : 0;
+              top               : 50%;
+              width             : 0;
+              height            : 0;
+              border            : 34px solid transparent;
+              border-right-color: #ffffff;
+              border-left       : 0;
+              border-top        : 0;
+              margin-top        : 8px;
+              margin-left       : -15px;
+            }
+          }
+
+
+          .from-us-1,
+          .from-us-2 {
+            position       : relative;
+            display        : flex;
+            align-items    : center;
+            justify-content: flex-start;
+            width          : 50vw;
+            padding        : 30px;
+            margin-bottom  : 20px;
+
+            &::after {
+              content          : '';
+              position         : absolute;
+              right            : 0;
+              bottom           : 0;
+              width            : 0;
+              height           : 0;
+              border           : 34px solid transparent;
+              border-left-color: #ffffff;
+              border-right     : 0;
+              border-top       : 0;
+              margin-top       : 140px;
+              margin-right     : -15px;
+            }
+          }
+        }
+
+        .logo-pic {
+          position        : absolute;
+          right           : 20px;
+          bottom          : 50px;
+          width           : 102px;
+          height          : 102px;
+          border-radius   : 50%;
+          margin-right    : 30px;
+          background-image: url(./images/寵物認養/logo.svg);
+          background-size : cover;
+        }
+      }
+    }
+  }
 
   #story {
     @include section-setting;
@@ -1760,8 +2008,8 @@ main {
 
       .slide-3 {
         &:hover {
-          width: 100%;
-          height: 100%;
+          width           : 100%;
+          height          : 100%;
           background-image: url(./images/下一站家/dog-3@2x.png);
         }
       }

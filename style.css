@@ -165,6 +165,17 @@ main #banner .icons .icon img {
   main #banner .nav {
     display: none;
   }
+  main #banner .logo {
+    width: 200px;
+    height: 170px;
+  }
+  main #banner .logo-text {
+    font-size: 30px;
+  }
+  main #banner .slogan {
+    font-size: 18px;
+    color: white;
+  }
   main .nav-mobile {
     display: block;
   }
@@ -179,6 +190,23 @@ main #banner .icons .icon img {
   main .nav-mobile .logo-mobile:active {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  main #banner {
+    background-image: url(./images/banner/576banner.jpg);
+  }
+  main #banner .logo {
+    width: 200px;
+    height: 170px;
+  }
+  main #banner .logo-text {
+    font-size: 24px;
+  }
+  main #banner .slogan {
+    font-size: 15px;
+    color: white;
   }
 }
 
@@ -287,6 +315,7 @@ main #concept article .concept-img {
   }
   main #concept article .text {
     width: 100%;
+    margin-bottom: 20px;
   }
   main #concept article .text .concept-title {
     font-size: 30px;
@@ -299,6 +328,7 @@ main #concept article .concept-img {
   main #concept article .concept-img {
     width: 580px;
     height: 410px;
+    margin-bottom: 30px;
   }
 }
 
@@ -321,6 +351,12 @@ main #environment .environment-img {
   position: relative;
   width: 1700px;
   height: 885px;
+}
+
+main #environment .environment-img .environment-text1,
+main #environment .environment-img .environment-text2,
+main #environment .environment-img .environment-text3 {
+  display: none;
 }
 
 main #environment .environment-img .full-screen-1,
@@ -353,7 +389,7 @@ main #environment .environment-img .large-img {
   border-radius: 10px;
   background: url(./images/店家環境/shop01.jpg) no-repeat;
   background-size: cover;
-  background-position: 0px -100px;
+  background-position: left;
 }
 
 main #environment .environment-img .large-img:hover > .filter1 {
@@ -504,6 +540,116 @@ main #environment .dialog-img {
   right: 100px;
   width: 32vw;
   height: 14vw;
+}
+
+@media screen and (max-width: 1200px) {
+  main #environment {
+    position: static;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: 2000px;
+  }
+  main #environment .environment-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 1600px;
+  }
+  main #environment .environment-img .environment-text1,
+  main #environment .environment-img .environment-text2,
+  main #environment .environment-img .environment-text3 {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: #E19040;
+    padding: 50px 0;
+    z-index: 3;
+  }
+  main #environment .environment-img .environment-text1 h2,
+  main #environment .environment-img .environment-text2 h2,
+  main #environment .environment-img .environment-text3 h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  main #environment .environment-img .environment-text1 p,
+  main #environment .environment-img .environment-text2 p,
+  main #environment .environment-img .environment-text3 p {
+    font-size: 24px;
+  }
+  main #environment .environment-img h1 {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 150px;
+    height: 70px;
+    font-size: 30px;
+    line-height: 70px;
+  }
+  main #environment .environment-img .large-img {
+    position: static;
+    width: 80vw;
+    height: 50vw;
+    -webkit-clip-path: none;
+            clip-path: none;
+    border-radius: 0px;
+  }
+  main #environment .environment-img .large-img:hover > .filter1 {
+    display: none;
+  }
+  main #environment .environment-img .large-img .filter1 {
+    display: none;
+  }
+  main #environment .environment-img .small-img1 {
+    position: static;
+    width: 80vw;
+    height: 50vw;
+    -webkit-clip-path: none;
+            clip-path: none;
+    border-radius: 0px;
+  }
+  main #environment .environment-img .small-img1:hover > .filter2 {
+    display: none;
+  }
+  main #environment .environment-img .small-img1 .filter2 {
+    display: none;
+  }
+  main #environment .environment-img .small-img2 {
+    position: static;
+    width: 80vw;
+    height: 50vw;
+    -webkit-clip-path: none;
+            clip-path: none;
+    border-radius: 10px;
+    border-radius: 0px;
+  }
+  main #environment .environment-img .small-img2:hover > .filter3 {
+    display: none;
+  }
+  main #environment .environment-img .small-img2 .filter3 {
+    display: none;
+  }
+  main #environment .environment-img .cat-shadow {
+    bottom: -300px;
+    left: 0px;
+    bottom: 0px;
+  }
+  main #environment .environment-img .dialog-img {
+    display: none;
+  }
 }
 
 main #food-card {
@@ -1948,8 +2094,8 @@ main #adoption-info .questions #q3:checked + label::before {
 main #adoption-info .questions #q1:checked + label::after {
   content: '';
   position: absolute;
-  top: -90px;
-  left: -75px;
+  top: -4.7vw;
+  left: -4vw;
   width: 7vw;
   height: 7vw;
   background-image: url(./images/寵物認養/cat-dialog.svg);
@@ -1960,6 +2106,8 @@ main #adoption-info .dialog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
   width: 69vw;
   height: 630px;
@@ -1983,6 +2131,15 @@ main #adoption-info .dialog .message {
   border-radius: 6px;
 }
 
+main #adoption-info .dialog .message p {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 30px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
 main #adoption-info .dialog .message .from-customers {
   position: relative;
   text-align: center;
@@ -1990,7 +2147,6 @@ main #adoption-info .dialog .message .from-customers {
   width: 35vw;
   line-height: 87px;
   background-color: #ffffff;
-  font-size: 1.5vw;
   border-radius: 20px;
 }
 
@@ -2007,15 +2163,6 @@ main #adoption-info .dialog .message .from-customers::after {
   border-top: 0;
   margin-top: 8px;
   margin-left: -15px;
-}
-
-main #adoption-info .dialog .message p {
-  background-color: #ffffff;
-  margin-bottom: 10px;
-  font-size: 1.5vw;
-  border-radius: 20px;
-  -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 main #adoption-info .dialog .message .from-us-1,
@@ -2061,6 +2208,109 @@ main #adoption-info .dialog .logo-pic {
   margin-right: 30px;
   background-image: url(./images/寵物認養/logo.svg);
   background-size: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  main #adoption-info .dialog {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    position: relative;
+    width: 80vw;
+    height: 630px;
+    padding: 50px;
+    border-radius: 20px;
+    background-color: #f0bd0c;
+  }
+  main #adoption-info .dialog .profile-pic {
+    width: 102px;
+    height: 102px;
+    border-radius: 50%;
+    margin-right: 30px;
+    background-image: url(./images/寵物認養/profile-pic.svg);
+    background-size: cover;
+  }
+  main #adoption-info .dialog .message {
+    width: 49vw;
+    height: 26vw;
+    border-radius: 6px;
+  }
+  main #adoption-info .dialog .message p {
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 30px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  }
+  main #adoption-info .dialog .message .from-customers {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 35vw;
+    line-height: 87px;
+    background-color: #ffffff;
+    font-size: 30px;
+    border-radius: 20px;
+  }
+  main #adoption-info .dialog .message .from-customers::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 34px solid transparent;
+    border-right-color: #ffffff;
+    border-left: 0;
+    border-top: 0;
+    margin-top: 8px;
+    margin-left: -15px;
+  }
+  main #adoption-info .dialog .message .from-us-1,
+  main #adoption-info .dialog .message .from-us-2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 50vw;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+  main #adoption-info .dialog .message .from-us-1::after,
+  main #adoption-info .dialog .message .from-us-2::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border: 34px solid transparent;
+    border-left-color: #ffffff;
+    border-right: 0;
+    border-top: 0;
+    margin-top: 140px;
+    margin-right: -15px;
+  }
+  main #adoption-info .dialog .logo-pic {
+    position: absolute;
+    right: 20px;
+    bottom: 50px;
+    width: 102px;
+    height: 102px;
+    border-radius: 50%;
+    margin-right: 30px;
+    background-image: url(./images/寵物認養/logo.svg);
+    background-size: cover;
+  }
 }
 
 main #story {
