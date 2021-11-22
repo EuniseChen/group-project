@@ -2047,12 +2047,10 @@ footer {
 
   h1 {
     color: #f5c20c;
-    margin-bottom: 25px;
   }
   .business-hours {
     .title {
       display: flex;
-      justify-content: center;
     }
     width: 100%;
     .weekdays-title {
@@ -2061,7 +2059,11 @@ footer {
 
     .row {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
+      .column {
+        padding: 20px;
+      }
     }
 
     .line-break {
@@ -2114,4 +2116,42 @@ footer {
       align-self: end;
     }
   }
+
+  @media screen and (max-width : 1700px) {
+    padding: 30px 90px 130px;
+  }
+
+  @media screen and (max-width : 1300px) {
+    padding: 30px 90px 130px;
+
+    .business-hours .title {
+      justify-content: center;
+    }
+
+    .contact-details {
+      flex-direction: column;
+      height: 160px;
+    }
+
+    .related-groups {
+      height: 330px;
+      flex-direction: column;
+      align-items: center;
+
+      .related-groups-icons {
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: unset;
+        height: unset;
+        li {
+          padding: 10px;
+        }
+      }
+
+      .copyright {
+        align-self: unset;
+      }
+    }
+  }
+
 }
