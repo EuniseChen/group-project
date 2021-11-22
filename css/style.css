@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 #mask {
   display: none;
   position: fixed;
@@ -23,10 +27,10 @@
   top: 50%;
   left: 50%;
   z-index: 999;
-  width: 80%;
+  width: 50%;
   height: 80vh;
   background-image: none;
-  background-size: cover;
+  background-size: contain;
   transform: translate(-50%, -50%);
   opacity: 0;
 }
@@ -57,13 +61,15 @@ main #banner .nav {
 }
 main #banner .nav .nav-items {
   display: flex;
+  justify-content: space-around;
   list-style: none;
   height: 24px;
 }
 main #banner .nav .nav-items .logo-item {
+  display: none;
   width: 50px;
   height: 34px;
-  margin-right: 365px;
+  cursor: pointer;
 }
 main #banner .nav .nav-items .nav-item {
   margin-left: 60px;
@@ -76,6 +82,7 @@ main #banner .nav .nav-items .nav-item .nav-link {
   font-size: 21px;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 main #banner .logo {
   margin: 215px 0 70px 0;
@@ -85,7 +92,7 @@ main #banner .logo {
   background-size: contain;
 }
 main #banner .logo-text {
-  font-size: 40px;
+  font-size: 39.96px;
   color: white;
 }
 main #banner .slogan {
@@ -103,6 +110,11 @@ main #banner .icons {
 main #banner .icons .icon img {
   width: 50px;
   height: 50px;
+}
+@media screen and (max-width: 920px) {
+  main #banner .nav {
+    display: none;
+  }
 }
 main #concept {
   display: flex;
@@ -127,7 +139,7 @@ main #concept article .text {
   width: 40%;
 }
 main #concept article .text .concept-title {
-  font-size: 2.5vw;
+  font-size: 48px;
   margin-bottom: 20px;
 }
 main #concept article .text .dog-img {
@@ -138,15 +150,15 @@ main #concept article .text .dog-img {
 main #concept article .text .cat-img {
   width: 60px;
   height: 60px;
-  margin-left: 470px;
+  margin-left: 15vw;
 }
 main #concept article .text .concept-text {
   font-size: 1.3vw;
   line-height: 2.6vw;
 }
 main #concept article .concept-img {
-  width: 660px;
-  height: 470px;
+  width: 34.4vw;
+  height: 24.5vw;
 }
 main #environment {
   position: relative;
@@ -174,7 +186,7 @@ main #environment .environment-img h1 {
   width: 12.5vw;
   height: 5vw;
   background-color: #f0bd0c;
-  font-size: 2.5vw;
+  font-size: 48px;
   text-align: center;
   line-height: 5vw;
   z-index: 2;
@@ -184,12 +196,13 @@ main #environment .environment-img .large-img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 530px;
+  height: 535px;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
           clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
   border-radius: 10px;
-  background-image: url(./images/店家環境/shop03.JPG);
+  background-image: url(./images/店家環境/shop01.jpg);
   background-size: cover;
+  background-position: 0px -216px;
 }
 main #environment .environment-img .large-img:hover > .filter1 {
   transition: all 0.4s ease-in-out;
@@ -202,6 +215,7 @@ main #environment .environment-img .large-img .filter1 {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
+  transition: all 0.3s ease-out;
   position: absolute;
   top: 0;
   left: 0;
@@ -238,6 +252,7 @@ main #environment .environment-img .small-img1 .filter2 {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
+  transition: all 0.3s ease-out;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -274,6 +289,7 @@ main #environment .environment-img .small-img2 .filter3 {
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
+  transition: all 0.3s ease-out;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -311,7 +327,7 @@ main #food-card {
   background-color: #f0bd0c;
 }
 main #food-card h1 {
-  font-size: 2.5vw;
+  font-size: 48px;
   margin: 70px 0 30px 0;
 }
 main #food-card .row {
@@ -442,7 +458,7 @@ main #menu .menu-type {
   text-align: center;
 }
 main #menu .menu-type h1 {
-  font-size: 2.5vw;
+  font-size: 48px;
   margin: 70px 0 30px 0;
   color: #f0bd0c;
 }
@@ -543,21 +559,35 @@ main #menu .pasta-content .pasta-intro .row .column2 .meal-content span {
   color: #ffffff;
   font-size: 1.6vw;
 }
-main #menu .pasta-content .pasta-pic {
-  width: 350px;
-  height: 670px;
-  background-image: url(./images/幸福菜單/義大利麵/pasta01.jpg);
-  background-size: cover;
+main #menu .pasta-content .pasta-intro .row .column1 .img,
+main #menu .pasta-content .pasta-intro .row .column2 .img {
+  display: flex;
+  width: 300px;
+  height: 180px;
 }
-main #menu .pasta-content .pasta-pic .dog {
-  transform: translate(-340px, 483px);
+main #menu .pasta-content .pasta-intro .row .column1 .img .dog,
+main #menu .pasta-content .pasta-intro .row .column2 .img .dog {
+  transform: translate(180px, 230px);
   width: 140px;
   height: 180px;
 }
-main #menu .pasta-content .pasta-pic .cat {
-  transform: translate(-340px, 483px);
+main #menu .pasta-content .pasta-intro .row .column1 .img .cat,
+main #menu .pasta-content .pasta-intro .row .column2 .img .cat {
+  transform: translate(180px, 250px);
   width: 160px;
   height: 160px;
+}
+main #menu .pasta-content .pasta-pic {
+  overflow: hidden;
+}
+main #menu .pasta-content .pasta-pic img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .pasta-content .pasta-pic img:hover {
+  transform: scale(1.2);
 }
 main #menu .hot-pot-content {
   display: flex;
@@ -640,28 +670,49 @@ main #menu .hot-pot-content .hot-pot-pic {
   height: 670px;
 }
 main #menu .hot-pot-content .hot-pot-pic .hot-pot-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 350px;
   height: 670px;
   margin-right: 10px;
 }
-main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .hot-pot1 {
-  width: 100%;
-  height: 330px;
-  margin-bottom: 10px;
-  background-image: url(./images/幸福菜單/暖心鍋物/hotpot-leftt01.jpg);
-  background-size: cover;
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .left1 {
+  overflow: hidden;
 }
-main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .hot-pot2 {
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .left1 img {
   width: 100%;
-  height: 330px;
-  background-image: url(./images/幸福菜單/暖心鍋物/hotpot-left02.jpg);
-  background-size: cover;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .left1 img:hover {
+  transform: scale(1.2);
+}
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .left2 {
+  overflow: hidden;
+  margin-top: 10px;
+}
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .left2 img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-left .left2 img:hover {
+  transform: scale(1.2);
 }
 main #menu .hot-pot-content .hot-pot-pic .hot-pot-right {
-  width: 350px;
-  height: 670px;
-  background-image: url(./images/幸福菜單/暖心鍋物/hotpot-right01.jpg);
-  background-size: cover;
+  overflow: hidden;
+}
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-right img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .hot-pot-content .hot-pot-pic .hot-pot-right img:hover {
+  transform: scale(1.2);
 }
 main #menu .chef-content {
   display: flex;
@@ -722,28 +773,48 @@ main #menu .chef-content .chef-pic {
   height: 670px;
 }
 main #menu .chef-content .chef-pic .chef-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 350px;
   height: 670px;
   margin-right: 10px;
 }
 main #menu .chef-content .chef-pic .chef-left .chef1 {
+  overflow: hidden;
+}
+main #menu .chef-content .chef-pic .chef-left .chef1 img {
   width: 100%;
-  height: 330px;
-  margin-bottom: 10px;
-  background-image: url(./images/幸福菜單/主廚料理/chef-left01.jpg);
-  background-size: cover;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .chef-content .chef-pic .chef-left .chef1 img:hover {
+  transform: scale(1.2);
 }
 main #menu .chef-content .chef-pic .chef-left .chef2 {
+  overflow: hidden;
+}
+main #menu .chef-content .chef-pic .chef-left .chef2 img {
   width: 100%;
-  height: 330px;
-  background-image: url(./images/幸福菜單/主廚料理/chef-left02.jpg);
-  background-size: cover;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .chef-content .chef-pic .chef-left .chef2 img:hover {
+  transform: scale(1.2);
 }
 main #menu .chef-content .chef-pic .chef-right {
-  width: 350px;
-  height: 670px;
-  background-image: url(./images/幸福菜單/主廚料理/chef-right.jpg);
-  background-size: cover;
+  overflow: hidden;
+}
+main #menu .chef-content .chef-pic .chef-right img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .chef-content .chef-pic .chef-right img:hover {
+  transform: scale(1.2);
 }
 main #menu .light-content {
   display: flex;
@@ -837,20 +908,39 @@ main #menu .light-content .light-intro .row .meal-content3 {
   font-size: 1.6vw;
 }
 main #menu .light-content .light-pic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 350px;
   height: 670px;
-  margin-right: 10px;
 }
 main #menu .light-content .light-pic .light1 {
-  width: 100%;
+  width: 350px;
   height: 330px;
-  margin-bottom: 10px;
-  background-image: url(./images/幸福菜單/活力輕食/light01.jpg);
+  overflow: hidden;
+}
+main #menu .light-content .light-pic .light1 img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .light-content .light-pic .light1 img:hover {
+  transform: scale(1.2);
 }
 main #menu .light-content .light-pic .light2 {
-  width: 100%;
+  width: 350px;
   height: 330px;
-  background-image: url(./images/幸福菜單/活力輕食/light02.jpg);
+  overflow: hidden;
+}
+main #menu .light-content .light-pic .light2 img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .light-content .light-pic .light2 img:hover {
+  transform: scale(1.2);
 }
 main #menu .snack-content {
   display: flex;
@@ -907,21 +997,34 @@ main #menu .snack-content .snack-intro .row .column2 .meal-content span {
   color: #ffffff;
   font-size: 1.6vw;
 }
-main #menu .snack-content .snack-pic {
-  width: 350px;
-  height: 670px;
-  background-image: url(./images/幸福菜單/好食點心/fries01.jpg);
-  background-size: cover;
+main #menu .snack-content .snack-intro .row .img {
+  display: flex;
+  width: 300px;
+  height: 180px;
 }
-main #menu .snack-content .snack-pic .dog {
-  transform: translate(-340px, 483px);
+main #menu .snack-content .snack-intro .row .img .dog {
+  transform: translate(180px, 310px);
   width: 140px;
   height: 180px;
 }
-main #menu .snack-content .snack-pic .cat {
-  transform: translate(-340px, 483px);
+main #menu .snack-content .snack-intro .row .img .cat {
+  transform: translate(180px, 330px);
   width: 160px;
   height: 160px;
+}
+main #menu .snack-content .snack-pic {
+  width: 350px;
+  height: 670px;
+  overflow: hidden;
+}
+main #menu .snack-content .snack-pic img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .snack-content .snack-pic img:hover {
+  transform: scale(1.2);
 }
 main #menu .drink-content {
   display: flex;
@@ -985,8 +1088,16 @@ main #menu .drink-content .drink-intro .row .column3 .meal-content span {
 main #menu .drink-content .drink-pic {
   width: 350px;
   height: 670px;
-  background-image: url(./images/幸福菜單/好食飲品/drink01.jpg);
-  background-size: cover;
+  overflow: hidden;
+}
+main #menu .drink-content .drink-pic img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .drink-content .drink-pic img:hover {
+  transform: scale(1.2);
 }
 main #menu .pet-food-content {
   display: flex;
@@ -1060,20 +1171,44 @@ main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food1 {
   width: 100%;
   height: 330px;
   margin-bottom: 10px;
-  background-image: url(./images/幸福菜單/寵物鮮食/petfood-left01.jpg);
-  background-size: cover;
+  overflow: hidden;
+}
+main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food1 img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food1 img:hover {
+  transform: scale(1.2);
 }
 main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food2 {
   width: 100%;
   height: 330px;
-  background-image: url(./images/幸福菜單/寵物鮮食/petfood-left02.jpg);
-  background-size: cover;
+  overflow: hidden;
+}
+main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food2 img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .pet-food-content .pet-food-pic .pet-food-left .pet-food2 img:hover {
+  transform: scale(1.2);
 }
 main #menu .pet-food-content .pet-food-pic .pet-food-right {
   width: 350px;
   height: 670px;
-  background-image: url(./images/幸福菜單/寵物鮮食/petfood-right.jpg);
-  background-size: cover;
+  overflow: hidden;
+}
+main #menu .pet-food-content .pet-food-pic .pet-food-right img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  transition: all 0.5s ease-out;
+}
+main #menu .pet-food-content .pet-food-pic .pet-food-right img:hover {
+  transform: scale(1.2);
 }
 main #adoption-info {
   display: flex;
@@ -1081,33 +1216,158 @@ main #adoption-info {
   align-items: center;
   width: 100%;
   background-color: #fff;
+  height: 980px;
 }
 main #adoption-info h1 {
-  font-size: 2.5vw;
+  font-size: 48px;
   margin: 70px 0 30px 0;
 }
-main #adoption-info .nav-items {
+main #adoption-info .questions {
   display: flex;
 }
-main #adoption-info .nav-items .nav-item {
+main #adoption-info .questions .question {
+  position: relative;
   list-style: none;
   text-align: center;
-  width: 350px;
-  height: 100px;
-  line-height: 100px;
-  margin: 0 0 24px 12px;
-  background-color: gray;
+  width: 18vw;
+  height: 5vw;
+  line-height: 5vw;
+  margin: 0 0 30px 12px;
+  background-color: #dc8b40;
+  font-size: 1.9vw;
+  font-weight: 600;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
 }
-main #adoption-info .nav-items .nav-item .nav-link {
-  text-decoration: none;
-  font-size: 36px;
-  color: white;
+main #adoption-info .questions .question:hover {
+  background-color: #000000;
+  color: #f0bd0c;
+}
+main #adoption-info .questions .radio {
+  display: none;
+}
+main #adoption-info .questions #q1:checked + label,
+main #adoption-info .questions #q2:checked + label,
+main #adoption-info .questions #q3:checked + label {
+  background-color: #000000;
+  color: #f0bd0c;
+  transform: rotate(-10deg);
+  transition: all 0.3s ease-out;
+}
+main #adoption-info .questions #q1:checked + label::before,
+main #adoption-info .questions #q2:checked + label::before,
+main #adoption-info .questions #q3:checked + label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: #000000;
+  border-bottom: 0;
+  margin-left: -10px;
+  margin-bottom: -20px;
+}
+main #adoption-info .questions #q1:checked + label::after {
+  content: "";
+  position: absolute;
+  top: -90px;
+  left: -75px;
+  width: 7vw;
+  height: 7vw;
+  background-image: url(./images/寵物認養/cat-dialog.svg);
+  background-size: cover;
 }
 main #adoption-info .dialog {
-  width: 1321px;
-  height: 783px;
+  display: flex;
+  position: relative;
+  width: 69vw;
+  height: 630px;
+  padding: 50px;
   border-radius: 20px;
-  background-color: gray;
+  background-color: #f0bd0c;
+}
+main #adoption-info .dialog .profile-pic {
+  width: 102px;
+  height: 102px;
+  border-radius: 50%;
+  margin-right: 30px;
+  background-image: url(./images/寵物認養/profile-pic.svg);
+  background-size: cover;
+}
+main #adoption-info .dialog .message {
+  width: 49vw;
+  height: 26vw;
+  border-radius: 6px;
+}
+main #adoption-info .dialog .message .from-customers {
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 35vw;
+  line-height: 87px;
+  background-color: #ffffff;
+  font-size: 1.5vw;
+  border-radius: 20px;
+}
+main #adoption-info .dialog .message .from-customers::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 34px solid transparent;
+  border-right-color: #ffffff;
+  border-left: 0;
+  border-top: 0;
+  margin-top: 8px;
+  margin-left: -15px;
+}
+main #adoption-info .dialog .message p {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 1.5vw;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+main #adoption-info .dialog .message .from-us-1,
+main #adoption-info .dialog .message .from-us-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50vw;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+main #adoption-info .dialog .message .from-us-1::after,
+main #adoption-info .dialog .message .from-us-2::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border: 34px solid transparent;
+  border-left-color: #ffffff;
+  border-right: 0;
+  border-top: 0;
+  margin-top: 140px;
+  margin-right: -15px;
+}
+main #adoption-info .dialog .logo-pic {
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  width: 102px;
+  height: 102px;
+  border-radius: 50%;
+  margin-right: 30px;
+  background-image: url(./images/寵物認養/logo.svg);
+  background-size: cover;
 }
 main #story {
   display: flex;
@@ -1118,7 +1378,7 @@ main #story {
   background-color: #fff;
 }
 main #story h1 {
-  font-size: 2.5vw;
+  font-size: 48px;
   margin: 70px 0 30px 0;
 }
 main #story .swiper {
@@ -1126,13 +1386,19 @@ main #story .swiper {
   height: 100%;
 }
 main #story .swiper .swiper-slide {
+  position: relative;
   text-align: center;
   font-size: 18px;
+  width: 460px;
+  height: 530px;
   background: #fff;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+main #story .swiper .swiper-slide:hover img {
+  z-index: 0;
 }
 main #story .swiper .swiper-slide img {
   display: block;
@@ -1140,6 +1406,33 @@ main #story .swiper .swiper-slide img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 2;
+}
+main #story .swiper .swiper-slide .img-words {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(58, 56, 57, 0.7);
+  z-index: 1;
+}
+main #story .swiper .swiper-slide .img-words h2 {
+  margin: 25px 0px;
+  font-size: 40px;
+  color: #e19040;
+}
+main #story .swiper .swiper-slide .img-words p {
+  margin: 0px 30px 45px 30px;
+  font-size: 26px;
+  color: white;
+}
+main #story .swiper .swiper-slide .img-words a {
+  font-size: 24px;
+  color: #e19040;
+}
+main #story .slide-3:hover {
+  width: 100%;
+  height: 100%;
+  background-image: url(./i);
 }
 
 footer {
@@ -1149,10 +1442,22 @@ footer {
   width: 100%;
   padding: 110px 320px;
   align-items: flex-start;
-  background-color: gray;
+  background-color: black;
+  color: white;
+}
+footer h1 {
+  color: #f5c20c;
+  margin-bottom: 25px;
 }
 footer .business-hours {
   width: 100%;
+}
+footer .business-hours .title {
+  display: flex;
+  justify-content: center;
+}
+footer .business-hours .weekdays-title {
+  color: #e19040;
 }
 footer .business-hours .row {
   display: flex;
