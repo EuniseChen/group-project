@@ -4,7 +4,7 @@ let navTimer = null // timer重新開始運作
 window.addEventListener('scroll', () => {
   // 滑鼠一開始滾動，navbar的樣式就發生改變
   const nav = document.querySelector('.nav'),
-    logoItem = document.querySelector('.logo-item')
+        logoItem = document.querySelector('.logo-item')
 
   window.clearTimeout(navTimer) // clear timer
 
@@ -27,9 +27,9 @@ window.addEventListener('scroll', () => {
 
 // ----------店內環境區塊的放大效果----------------------------
 const fullScreen_1 = document.querySelector('.full-screen-1'),
-  fullScreen_2 = document.querySelector('.full-screen-2'),
-  fullScreen_3 = document.querySelector('.full-screen-3'),
-  closeBtn = document.querySelector('.close-btn')
+      fullScreen_2 = document.querySelector('.full-screen-2'),
+      fullScreen_3 = document.querySelector('.full-screen-3'),
+      closeBtn = document.querySelector('.close-btn')
 
 // 點擊圖片1/2/3,就會打開full-screen
 fullScreen_1.addEventListener('click', () => openModal(1))
@@ -39,7 +39,7 @@ fullScreen_3.addEventListener('click', () => openModal(3))
 // 打開full-screen的函數
 function openModal(img) {
   const mask = document.querySelector('#mask'),
-    modal = document.querySelector('#modal')
+        modal = document.querySelector('#modal')
 
   fadeIn(mask, modal)
 
@@ -96,14 +96,14 @@ menuItems.forEach((menuItem, index) => {
 
 // -----------寵物認養--------------
 const question_1 = document.querySelector('.btn-q1'),
-  question_2 = document.querySelector('.btn-q2'),
-  question_3 = document.querySelector('.btn-q3'),
-  customer = document.querySelector('.from-customers'),
-  us_1 = document.querySelector('.from-us-1'),
-  us_2 = document.querySelector('.from-us-2')
+      question_2 = document.querySelector('.btn-q2'),
+      question_3 = document.querySelector('.btn-q3'),
+      customer = document.querySelector('.from-customers'),
+      us_1 = document.querySelector('.from-us-1'),
+      us_2 = document.querySelector('.from-us-2')
 
 let timer_us_1 = null,
-  timer_us_2 = null
+    timer_us_2 = null
 
 us_2.style.display = 'none'
 
@@ -189,6 +189,35 @@ function typing(fromCustomer, fromUs, fromUs2) {
 
   writing()
 }
+
+const navMobile = document.querySelector('.logo-mobile'),
+      navBanner = document.querySelector('.nav-banner'),
+      navItemsMobile = document.querySelector('.nav-items-mobile'),
+      navLinkMobiles = document.querySelectorAll('.nav-link-mobile')
+
+let flag = true
+
+//Open or close the navBanner
+navMobile.addEventListener('click', () => {
+  if (flag) {
+    navBanner.style.height = `100vh`
+    navItemsMobile.style.display = 'block'
+    flag = !flag
+  } else {
+    navBanner.style.height = 0
+    navItemsMobile.style.display = 'none'
+    flag = !flag
+  }
+})
+
+//Click any navItem will close the navBanner
+navLinkMobiles.forEach(navLink => {
+  navLink.addEventListener('click', () => {
+    navBanner.style.height = 0
+    navItemsMobile.style.display = 'none'
+    flag = !flag
+  })
+})
 
 AOS.init() // AOS
 
