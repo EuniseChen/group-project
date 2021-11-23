@@ -2155,28 +2155,35 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 110px 320px;
+  padding: 110px 300px;
   align-items: flex-start;
   background-color: black;
   color: white;
 }
+footer .footer-title {
+  display: flex;
+  align-items: center;
+}
+footer .footer-title img {
+  width: 36px;
+  padding-right: 10px;
+}
 footer h1 {
   color: #f5c20c;
-  margin-bottom: 25px;
 }
 footer .business-hours {
   width: 100%;
-}
-footer .business-hours .title {
-  display: flex;
-  justify-content: center;
 }
 footer .business-hours .weekdays-title {
   color: #e19040;
 }
 footer .business-hours .row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+}
+footer .business-hours .row .column {
+  padding: 20px;
 }
 footer .business-hours .line-break {
   width: 100%;
@@ -2190,4 +2197,65 @@ footer .contact-details {
 footer .line {
   width: 100%;
   padding: 45px 0;
+}
+footer .related-groups {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .related-groups h1 {
+  align-self: center;
+  margin: 0;
+}
+footer .related-groups .related-groups-icons {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 620px;
+  height: 50px;
+}
+footer .related-groups .related-groups-icons .icon img {
+  width: 100px;
+  height: 100px;
+}
+footer .related-groups .copyright {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e19040;
+  align-self: end;
+}
+@media screen and (max-width: 1700px) {
+  footer {
+    padding: 30px 90px 130px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  footer {
+    padding: 30px 90px 130px;
+  }
+  footer .business-hours .title {
+    justify-content: center;
+  }
+  footer .contact-details {
+    flex-direction: column;
+    height: 160px;
+  }
+  footer .related-groups {
+    height: 330px;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .related-groups .related-groups-icons {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: unset;
+    height: unset;
+  }
+  footer .related-groups .related-groups-icons li {
+    padding: 10px;
+  }
+  footer .related-groups .copyright {
+    align-self: unset;
+  }
 }/*# sourceMappingURL=style.css.map */
