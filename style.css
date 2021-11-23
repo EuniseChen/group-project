@@ -1779,14 +1779,45 @@ main #menu .pet-food-content .pet-food-pic .pet-food-right img:hover {
   transform: scale(1.2);
 }
 @media screen and (max-width: 577px) {
-  main .pet-food-content {
+  main .now {
+    display: inline-block;
+    width: 100%;
+  }
+  main .now .pet-food-content {
     width: 90vw;
+    display: flex !important;
+    flex-wrap: wrap !important;
   }
-  main .pet-food-content .pet-food-intro {
-    width: 50%;
+  main .now .pet-food-content .pet-food-intro {
+    width: 100% !important;
   }
-  main .pet-food-content .pet-food-pic {
-    width: 30vw;
+  main .now .pet-food-content .pet-food-intro .pet-food-title {
+    margin-top: -30px;
+  }
+  main .now .pet-food-content .dog {
+    display: none !important;
+  }
+  main .now .pet-food-content .cat {
+    display: none !important;
+  }
+  main .now .pet-food-content .pet-food-pic {
+    margin-top: 70px;
+    width: 100% !important;
+  }
+  main .now .pet-food-content .pet-food-pic .pet-food-left {
+    width: 150% !important;
+    display: flex;
+    flex-wrap: nowrap !important;
+  }
+  main .now .pet-food-content .pet-food-pic .pet-food-left .pet-food1 {
+    height: 35% !important;
+  }
+  main .now .pet-food-content .pet-food-pic .pet-food-left .pet-food2 {
+    height: 35% !important;
+  }
+  main .now .pet-food-content .pet-food-pic .pet-food-right {
+    width: 70% !important;
+    height: 35% !important;
   }
 }
 main #adoption-info {

@@ -2053,16 +2053,48 @@ main {
   // 寵物鮮食菜單rwd製作
   //蓋不過去
   @media screen and (max-width: 577px) {
-    .pet-food-content{
-      width: 90vw;
-      .pet-food-intro{
-        width: 50%;
-      }
-      .pet-food-pic{
-        width: 30vw;
+    .now {
+      display: inline-block;
+      width: 100%;
+
+      .pet-food-content {
+        width: 90vw;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        .pet-food-intro {
+          width: 100% !important;
+          .pet-food-title{
+            margin-top: -30px;
+          }
+        }
+        .dog{
+          display: none !important;
+        }
+        .cat{
+          display: none !important;
+        }
+        .pet-food-pic {
+          margin-top:  70px;
+          width: 100% !important;
+          .pet-food-left{
+            width: 150% !important;
+            display: flex;
+            flex-wrap: nowrap !important;
+            .pet-food1{
+              height: 35% !important;
+            }
+            .pet-food2{
+              height: 35% !important;
+            }
+            
+          }
+          .pet-food-right{
+            width: 70% !important;
+            height: 35% !important;
+          }
+        }
       }
     }
-   
   }
   // 寵物鮮食菜單製作rwd结束
   // 幸福菜單區塊結束
@@ -2531,15 +2563,15 @@ footer {
     }
 
     .related-groups-icons {
-      display        : flex;
+      display: flex;
       justify-content: space-between;
-      list-style     : none;
-      width          : 620px;
-      height         : 50px;
-  
+      list-style: none;
+      width: 620px;
+      height: 50px;
+
       .icon {
         img {
-          width : 100px;
+          width: 100px;
           height: 100px;
         }
       }
@@ -2553,11 +2585,11 @@ footer {
     }
   }
 
-  @media screen and (max-width : 1700px) {
+  @media screen and (max-width: 1700px) {
     padding: 30px 90px 130px;
   }
 
-  @media screen and (max-width : 1300px) {
+  @media screen and (max-width: 1300px) {
     padding: 30px 90px 130px;
 
     .business-hours .title {
@@ -2589,5 +2621,4 @@ footer {
       }
     }
   }
-
 }
