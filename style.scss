@@ -2592,13 +2592,20 @@ footer {
   @media screen and (max-width: 1300px) {
     padding: 30px 90px 130px;
 
-    .business-hours .title {
+    .business-hours .footer-title {
       justify-content: center;
     }
 
     .contact-details {
       flex-direction: column;
       height: 160px;
+
+      .contact-detail {
+        display: flex;
+        h1 {
+          padding-right: 20px;
+        }
+      }
     }
 
     .related-groups {

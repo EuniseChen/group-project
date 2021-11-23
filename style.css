@@ -783,6 +783,7 @@ main #menu .pasta-content .pasta-pic img {
 }
 main #menu .pasta-content .pasta-pic img:hover {
   transform: scale(1.2);
+<<<<<<< Updated upstream
 }
 @media screen and (max-width: 577px) {
   main #menu .pasta-content {
@@ -838,6 +839,8 @@ main #menu .pasta-content .pasta-intro .row .column2 .cat {
     width: 100%;
     height: 100%;
   }
+=======
+>>>>>>> Stashed changes
 }
 main #menu .hot-pot-content {
   display: flex;
@@ -963,6 +966,7 @@ main #menu .hot-pot-content .hot-pot-pic .hot-pot-right img {
 }
 main #menu .hot-pot-content .hot-pot-pic .hot-pot-right img:hover {
   transform: scale(1.2);
+<<<<<<< Updated upstream
 }
 @media screen and (max-width: 577px) {
   main #menu .hot-pot-content {
@@ -1037,6 +1041,8 @@ main #menu .hot-pot-content .hot-pot-pic .hot-pot-right img:hover {
     width: 80vw;
     height: 150px;
   }
+=======
+>>>>>>> Stashed changes
 }
 main #menu .chef-content {
   display: flex;
@@ -1140,6 +1146,7 @@ main #menu .chef-content .chef-pic .chef-right img {
 main #menu .chef-content .chef-pic .chef-right img:hover {
   transform: scale(1.2);
 }
+<<<<<<< Updated upstream
 @media screen and (max-width: 577px) {
   main #menu .chef-content {
     display: flex;
@@ -1207,6 +1214,8 @@ main #menu .chef-content .chef-pic .chef-right img:hover {
     height: 150px;
   }
 }
+=======
+>>>>>>> Stashed changes
 main #menu .light-content {
   display: flex;
   justify-content: space-between;
@@ -1332,6 +1341,7 @@ main #menu .light-content .light-pic .light2 img {
 }
 main #menu .light-content .light-pic .light2 img:hover {
   transform: scale(1.2);
+<<<<<<< Updated upstream
 }
 @media screen and (max-width: 577px) {
   main #menu .light-content {
@@ -1392,6 +1402,8 @@ main #menu .light-content .light-pic .light2 img:hover {
     width: 40%;
     height: 150px;
   }
+=======
+>>>>>>> Stashed changes
 }
 main #menu .snack-content {
   display: flex;
@@ -1476,6 +1488,7 @@ main #menu .snack-content .snack-pic img {
 }
 main #menu .snack-content .snack-pic img:hover {
   transform: scale(1.2);
+<<<<<<< Updated upstream
 }
 @media screen and (max-width: 577px) {
   main #menu .snack-content {
@@ -1529,6 +1542,8 @@ main #menu .snack-content .snack-pic img:hover {
     width: 40%;
     height: 150px;
   }
+=======
+>>>>>>> Stashed changes
 }
 main #menu .drink-content {
   display: flex;
@@ -1602,6 +1617,7 @@ main #menu .drink-content .drink-pic img {
 }
 main #menu .drink-content .drink-pic img:hover {
   transform: scale(1.2);
+<<<<<<< Updated upstream
 }
 @media screen and (max-width: 577px) {
   main #menu .drink-content {
@@ -1666,6 +1682,8 @@ main #menu .drink-content .drink-pic img:hover {
   main #menu .drink-content .drink-pic {
     display: none;
   }
+=======
+>>>>>>> Stashed changes
 }
 main #menu .pet-food-content {
   display: flex;
@@ -1777,6 +1795,7 @@ main #menu .pet-food-content .pet-food-pic .pet-food-right img {
 }
 main #menu .pet-food-content .pet-food-pic .pet-food-right img:hover {
   transform: scale(1.2);
+<<<<<<< Updated upstream
 }
 @media screen and (max-width: 577px) {
   main .now {
@@ -1819,6 +1838,8 @@ main #menu .pet-food-content .pet-food-pic .pet-food-right img:hover {
     width: 70% !important;
     height: 35% !important;
   }
+=======
+>>>>>>> Stashed changes
 }
 main #adoption-info {
   display: flex;
@@ -2101,9 +2122,12 @@ main #story .swiper .swiper-slide {
 }
 main #story .swiper .swiper-slide:hover img {
   z-index: 0;
+<<<<<<< Updated upstream
 }
 main #story .swiper .swiper-slide:hover img {
   z-index: 0;
+=======
+>>>>>>> Stashed changes
 }
 main #story .swiper .swiper-slide img {
   display: block;
@@ -2118,6 +2142,10 @@ main #story .swiper .swiper-slide .img-words {
   width: 100%;
   height: 100%;
   background-color: rgba(58, 56, 57, 0.7);
+<<<<<<< Updated upstream
+=======
+  z-index: 1;
+>>>>>>> Stashed changes
 }
 main #story .swiper .swiper-slide .img-words h2 {
   margin: 25px 0px;
@@ -2126,13 +2154,18 @@ main #story .swiper .swiper-slide .img-words h2 {
 }
 main #story .swiper .swiper-slide .img-words p {
   margin: 0px 30px 45px 30px;
+<<<<<<< Updated upstream
   font-size: 24px;
+=======
+  font-size: 26px;
+>>>>>>> Stashed changes
   color: white;
 }
 main #story .swiper .swiper-slide .img-words a {
   font-size: 24px;
   color: #e19040;
 }
+<<<<<<< Updated upstream
 @media screen and (max-width: 577px) {
   main #story {
     width: 100%;
@@ -2171,9 +2204,12 @@ main #story .swiper .swiper-slide .img-words a {
   }
 }
 main .slide-3:hover {
+=======
+main #story .slide-3:hover {
+>>>>>>> Stashed changes
   width: 100%;
   height: 100%;
-  background-image: url(./i);
+  background-image: url(./images/下一站家/dog-3@2x.png);
 }
 main .slide-3:hover .slide-3:hover {
   width: 100%;
@@ -2249,6 +2285,7 @@ footer .related-groups .related-groups-icons {
 footer .related-groups .related-groups-icons .icon img {
   width: 100px;
   height: 100px;
+<<<<<<< Updated upstream
 }
 footer .related-groups .copyright {
   font-size: 18px;
@@ -2261,17 +2298,44 @@ footer .related-groups .copyright {
     padding: 30px 90px 130px;
   }
 }
+=======
+}
+footer .related-groups .copyright {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e19040;
+  align-self: end;
+}
+@media screen and (max-width: 1700px) {
+  footer {
+    padding: 30px 90px 130px;
+  }
+}
+>>>>>>> Stashed changes
 @media screen and (max-width: 1300px) {
   footer {
     padding: 30px 90px 130px;
   }
+<<<<<<< Updated upstream
   footer .business-hours .title {
+=======
+  footer .business-hours .footer-title {
+>>>>>>> Stashed changes
     justify-content: center;
   }
   footer .contact-details {
     flex-direction: column;
     height: 160px;
   }
+<<<<<<< Updated upstream
+=======
+  footer .contact-details .contact-detail {
+    display: flex;
+  }
+  footer .contact-details .contact-detail h1 {
+    padding-right: 20px;
+  }
+>>>>>>> Stashed changes
   footer .related-groups {
     height: 330px;
     flex-direction: column;
