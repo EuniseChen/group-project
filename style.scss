@@ -57,6 +57,14 @@ $baseSize: 12px;
   width: 77%;
   height: 665px;
 }
+//rwd菜單內頁的樣式
+@mixin menu-content-rwd {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 77%;
+  height: 965px;
+}
 
 * {
   margin: 0;
@@ -190,9 +198,8 @@ main {
   }
 
   // 大banner區結束
-  @media screen and (max-width : 920px) {
+  @media screen and (max-width: 920px) {
     #banner {
-
       // 導航欄製作開始
       .nav {
         display: none;
@@ -201,7 +208,7 @@ main {
       // 導航欄製作結束
 
       .logo {
-        width : 200px;
+        width: 200px;
         height: 170px;
       }
 
@@ -211,7 +218,7 @@ main {
 
       .slogan {
         font-size: font(1.5);
-        color    : white;
+        color: white;
       }
     }
 
@@ -220,25 +227,25 @@ main {
 
       .logo-mobile {
         position: absolute;
-        top     : 10px;
-        right   : 30px;
-        z-index : 999;
-        width   : 60px;
-        height  : 60px;
+        top: 10px;
+        right: 30px;
+        z-index: 999;
+        width: 60px;
+        height: 60px;
 
         &:active {
-          transform: scale(.9);
+          transform: scale(0.9);
         }
       }
     }
   }
 
-  @media screen and (max-width : 576px) {
+  @media screen and (max-width: 576px) {
     #banner {
       background-image: url(./images/banner/576banner.jpg);
 
       .logo {
-        width : 200px;
+        width: 200px;
         height: 170px;
       }
 
@@ -248,10 +255,9 @@ main {
 
       .slogan {
         font-size: font(1.25);
-        color    : white;
+        color: white;
       }
     }
-
   }
 
   // 店家理念區塊開始
@@ -309,64 +315,64 @@ main {
 
   // 店家理念區塊結束
 
-  @media screen and (max-width : 1200px) {
+  @media screen and (max-width: 1200px) {
     #concept {
       article {
-        width        : 80%;
-        height       : 400px;
+        width: 80%;
+        height: 400px;
         margin-bottom: 0px;
 
         .text {
           width: 50%;
 
           .concept-title {
-            font-size    : font(2.5);
+            font-size: font(2.5);
             margin-bottom: 10px;
           }
 
           .concept-text {
-            font-size  : font(1.75);
+            font-size: font(1.75);
             line-height: font(3.75);
           }
         }
 
         .concept-img {
-          width : 413px;
+          width: 413px;
           height: 294px;
         }
       }
     }
   }
 
-  @media screen and (max-width : 920px) {
+  @media screen and (max-width: 920px) {
     #concept {
       height: 1910px;
 
       article {
         justify-content: center;
-        flex-wrap      : wrap;
-        width          : 100%;
-        height         : 800px;
-        padding        : 0 64px 0 64px;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 800px;
+        padding: 0 64px 0 64px;
 
         .text {
-          width        : 100%;
+          width: 100%;
           margin-bottom: 20px;
 
           .concept-title {
-            font-size    : font(2.5);
+            font-size: font(2.5);
             margin-bottom: 10px;
           }
 
           .concept-text {
-            font-size  : font(2);
+            font-size: font(2);
             line-height: font(3.75);
           }
         }
 
         .concept-img {
-          width        : 580px;
-          height       : 410px;
+          width: 580px;
+          height: 410px;
           margin-bottom: 30px;
         }
       }
@@ -415,15 +421,15 @@ main {
       }
 
       .large-img {
-        position           : absolute;
-        top                : 0;
-        left               : 0;
-        width              : 100%;
-        height             : 535px;
-        clip-path          : polygon(0 0, 100% 0, 100% 66%, 0% 100%);
-        border-radius      : 10px;
-        background         : url(./images/店家環境/shop01.jpg) no-repeat;
-        background-size    : cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 535px;
+        clip-path: polygon(0 0, 100% 0, 100% 66%, 0% 100%);
+        border-radius: 10px;
+        background: url(./images/店家環境/shop01.jpg) no-repeat;
+        background-size: cover;
         background-position: left;
 
         // 當游標在圖片上，出現filter1
@@ -538,33 +544,33 @@ main {
 
   // 店內環境區塊結束
 
-  @media screen and (max-width : 1200px) {
+  @media screen and (max-width: 1200px) {
     #environment {
-      position   : static;
+      position: static;
       align-items: center;
-      flex-wrap  : wrap;
-      width      : 100%;
-      height     : 2000px;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 2000px;
 
       .environment-img {
-        display       : flex;
+        display: flex;
         flex-direction: column;
-        align-items   : center;
-        width         : 100%;
-        height        : 1600px;
+        align-items: center;
+        width: 100%;
+        height: 1600px;
 
         .environment-text1,
         .environment-text2,
         .environment-text3 {
-          display         : block;
-          text-align      : center;
-          width           : 100%;
-          background-color: #E19040;
-          padding         : 50px 0;
-          z-index         : 3;
+          display: block;
+          text-align: center;
+          width: 100%;
+          background-color: #e19040;
+          padding: 50px 0;
+          z-index: 3;
 
           h2 {
-            font-size    : 30px;
+            font-size: 30px;
             margin-bottom: 15px;
           }
 
@@ -574,25 +580,25 @@ main {
         }
 
         h1 {
-          position   : absolute;
-          top        : -100px;
-          left       : 50%;
-          transform  : translateX(-50%);
-          width      : 150px;
-          height     : 70px;
-          font-size  : 30px;
+          position: absolute;
+          top: -100px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 150px;
+          height: 70px;
+          font-size: 30px;
           line-height: 70px;
         }
 
         .large-img {
-          position              : static;
-          width                 : 80vw;
-          height                : 50vw;
-          clip-path             : none;
-          border-radius         : 0px;
+          position: static;
+          width: 80vw;
+          height: 50vw;
+          clip-path: none;
+          border-radius: 0px;
           // background-position: 0px 0px;
 
-          &:hover>.filter1 {
+          &:hover > .filter1 {
             display: none;
           }
 
@@ -602,13 +608,13 @@ main {
         }
 
         .small-img1 {
-          position     : static;
-          width        : 80vw;
-          height       : 50vw;
-          clip-path    : none;
+          position: static;
+          width: 80vw;
+          height: 50vw;
+          clip-path: none;
           border-radius: 0px;
 
-          &:hover>.filter2 {
+          &:hover > .filter2 {
             display: none;
           }
 
@@ -618,14 +624,14 @@ main {
         }
 
         .small-img2 {
-          position     : static;
-          width        : 80vw;
-          height       : 50vw;
-          clip-path    : none;
+          position: static;
+          width: 80vw;
+          height: 50vw;
+          clip-path: none;
           border-radius: 10px;
           border-radius: 0px;
 
-          &:hover>.filter3 {
+          &:hover > .filter3 {
             display: none;
           }
 
@@ -636,7 +642,7 @@ main {
 
         .cat-shadow {
           bottom: -300px;
-          left  : 0px;
+          left: 0px;
           bottom: 0px;
         }
 
@@ -867,8 +873,8 @@ main {
 
     // 義大利麵菜單製作開始
     .pasta-content {
-      @include menu-content;
-      width: 100%;
+      @include menu-content-rwd;
+      width: 110%;
 
       .pasta-intro {
         width: 73%;
@@ -955,8 +961,59 @@ main {
         }
       }
     }
-
     // 義大利麵菜單製作结束
+
+    // // 義大利麵菜單rwd製作
+    @media screen and (max-width: 577px) {
+      .pasta-content {
+        @include menu-content-rwd;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 450px;
+        .pasta-intro {
+          width: 100%;
+          height: 400px;
+          .pasta-title {
+            @include meal-title;
+            width: 100%;
+          }
+          .row {
+            width: 100%;
+            height: 400px;
+            .column1 {
+              width: 60%;
+              height: 100%;
+              .meal-content {
+                width: 100%;
+                height: 50px;
+              }
+            }
+            .column2 {
+              width: 40%;
+              .meal-content {
+                width: 100%;
+                height: 50px;
+              }
+              .dog,
+              .cat {
+                display: none;
+              }
+            }
+          }
+        }
+        .pasta-pic {
+          margin: 0 auto;
+          width: 200px;
+          height: 300px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    // 義大利麵菜單製作rwd结束
 
     // 暖心鍋物菜單製作開始
     .hot-pot-content {
@@ -1103,6 +1160,79 @@ main {
     }
 
     //暖心鍋物菜單製作結束
+    // 暖心鍋物菜單rwd製作
+    @media screen and (max-width: 577px) {
+      .hot-pot-content {
+        @include menu-content-rwd;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 450px;
+
+        .hot-pot-intro {
+          width: 100%;
+          height: 500px;
+          .hot-pot-title {
+            @include meal-title;
+            width: 100%;
+            height: 50px;
+            margin-top: -20px;
+            p {
+              font-size: 20px;
+            }
+          }
+
+          .meal-content {
+            width: 100%;
+            height: 50px;
+            .meal-description {
+              width: 100%;
+              .meal-title {
+                margin: 15px 0px -15px 0px;
+                width: 100%;
+              }
+              .words {
+                font-size: 20px;
+                margin-bottom: 15px;
+              }
+            }
+          }
+
+          .column2 {
+            width: 40%;
+            .meal-content {
+              width: 100%;
+              height: 50px;
+            }
+          }
+        }
+        .hot-pot-pic {
+          display: flex;
+          flex-wrap: nowrap;
+          margin: 0 auto;
+          width: 80vw;
+          height: 300px;
+          .hot-pot-left {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100vw;
+            height: 300px;
+            .left1 {
+              width: 80%;
+              height: 150px;
+            }
+            .left2 {
+              display: none;
+            }
+          }
+          .hot-pot-right {
+            width: 80vw;
+            height: 150px;
+          }
+        }
+      }
+    }
+    // 暖心鍋物菜單製作rwd结束
 
     // 主廚料理菜單製作開始
     .chef-content {
@@ -1223,7 +1353,69 @@ main {
     }
 
     // 主廚料理菜單製作結束
-
+    // 主廚料理菜單rwd製作
+    @media screen and (max-width: 577px) {
+      .chef-content {
+        @include menu-content-rwd;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 450px;
+        .chef-intro {
+          width: 100%;
+          height: 530px;
+          .chef-title {
+            @include meal-title;
+            width: 100%;
+            height: 60px;
+          }
+          .row {
+            width: 100%;
+            height: 400px;
+            .column1 {
+              width: 60%;
+              height: 100%;
+              .meal-content {
+                width: 100%;
+                height: 50px;
+              }
+            }
+            .column2 {
+              width: 40%;
+              .meal-content {
+                width: 100%;
+                height: 50px;
+              }
+            }
+          }
+        }
+        .chef-pic {
+          display: flex;
+          flex-wrap: nowrap;
+          margin: 0 auto;
+          width: 80vw;
+          height: 300px;
+          .chef-left {
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100vw;
+            height: 300px;
+            .chef1 {
+              width: 80%;
+              height: 150px;
+            }
+            .chef2 {
+              display: none;
+            }
+          }
+          .chef-right {
+            width: 80vw;
+            height: 150px;
+          }
+        }
+      }
+    }
+    // 主廚料理菜單製作rwd结束
     // 活力輕食菜單製作開始
     .light-content {
       @include menu-content;
@@ -1372,8 +1564,66 @@ main {
         }
       }
     }
-
     // 活力輕食菜單製作結束
+    // 活力輕食菜單rwd製作
+    @media screen and (max-width: 577px) {
+      .light-content {
+        @include menu-content-rwd;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 450px;
+        .light-intro {
+          width: 100%;
+          height: 530px;
+          .light-title {
+            @include meal-title;
+            width: 100%;
+            height: 60px;
+          }
+          .row {
+            width: 100%;
+            .column1 {
+              width: 100%;
+              .meal-content2 {
+                position: relative;
+                height: 84px;
+                .meal-title {
+                  width: 100%;
+
+                  p {
+                    display: none;
+                  }
+                }
+                .words {
+                  margin-top: 34px;
+                }
+              }
+            }
+            .column2 {
+              display: none;
+            }
+          }
+        }
+        .light-pic {
+          display: flex;
+          flex-direction: row;
+          // margin: 0 auto;
+          width: 70vw;
+          height: 300px;
+
+          .light1 {
+            width: 40%;
+            height: 150px;
+          }
+          .light2 {
+            width: 40%;
+            height: 150px;
+          }
+        }
+      }
+    }
+    // 活力輕食菜單製作rwd结束
 
     // 好食點心菜單製作開始
     .snack-content {
@@ -1469,7 +1719,57 @@ main {
     }
 
     // 好食點心菜單製作结束
+    // 好食點心菜單rwd製作
+    @media screen and (max-width: 577px) {
+      .snack-content {
+        @include menu-content-rwd;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 450px;
+        .snack-intro {
+          width: 100%;
+          height: 530px;
+          .snack-title {
+            @include meal-title;
+            width: 100%;
+            height: 60px;
+            margin-top: -30px;
+          }
+          .row {
+            width: 100%;
+            .column1 {
+              width: 100%;
+              .meal-content {
+                position: relative;
+                height: 64px;
+              }
+            }
+            .column2 {
+              display: none;
+            }
+          }
+        }
+        .snack-pic {
+          display: flex;
+          flex-direction: row;
+          // margin: 0 auto;
+          width: 40vw;
+          height: 180px;
+          margin: -70px auto;
 
+          .snack1 {
+            width: 40%;
+            height: 150px;
+          }
+          .snack2 {
+            width: 40%;
+            height: 150px;
+          }
+        }
+      }
+    }
+    // 好食點心菜單製作rwd结束
     // 好食飲品菜單製作開始
     .drink-content {
       @include menu-content;
@@ -1544,7 +1844,81 @@ main {
     }
 
     //好食飲品菜單製作结束
+    // 好食飲品菜單rwd製作
+    @media screen and (max-width: 577px) {
+      .drink-content {
+        @include menu-content-rwd;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 450px;
+        .drink-intro {
+          width: 100%;
+          height: 530px;
+          .drink-title {
+            @include meal-title;
+            width: 100%;
+            height: 60px;
+            margin-top: -30px;
+          }
+          .row {
+            width: 100%;
+            .column1 {
+              width: 33%;
+              height: 64px;
+              .meal-content {
+                width: 100%;
+                .words {
+                  width: 103px;
+                  font-size: 12px;
+                }
+              }
+            }
+            .column2 {
+              width: 33%;
+              height: 64px;
+              .meal-content {
+                width: 100%;
+                .words {
+                  width: 103px;
+                  font-size: 12px;
+                }
+              }
+            }
+            .column3 {
+              width: 33%;
+              height: 64px;
+              .meal-content {
+                width: 100%;
+                .words {
+                  width: 103px;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+        .drink-pic {
+          display: none;
+          // display: flex;
+          // flex-direction: row;
+          // // margin: 0 auto;
+          // width: 40vw;
+          // height: 180px;
+          // margin: -70px auto;
 
+          // .drink1 {
+          //   width: 40%;
+          //   height: 150px;
+          // }
+          // .drink2 {
+          //   width: 40%;
+          //   height: 150px;
+          // }
+        }
+      }
+    }
+    // 好食飲品菜單製作rwd结束
     // 寵物鮮食菜單製作開始
     .pet-food-content {
       @include menu-content;
@@ -1676,7 +2050,21 @@ main {
   }
 
   // 寵物鮮食菜單製作結束
-
+  // 寵物鮮食菜單rwd製作
+  //蓋不過去
+  @media screen and (max-width: 577px) {
+    .pet-food-content{
+      width: 90vw;
+      .pet-food-intro{
+        width: 50%;
+      }
+      .pet-food-pic{
+        width: 30vw;
+      }
+    }
+   
+  }
+  // 寵物鮮食菜單製作rwd结束
   // 幸福菜單區塊結束
 
   // 寵物認養區塊開始
@@ -1742,12 +2130,12 @@ main {
 
       #q1:checked + label {
         &::after {
-          content         : '';
-          position        : absolute;
-          top             : -4.7vw;
-          left            : -4vw;
-          width           : 7vw;
-          height          : 7vw;
+          content: "";
+          position: absolute;
+          top: -4.7vw;
+          left: -4vw;
+          width: 7vw;
+          height: 7vw;
           background-image: url(./images/寵物認養/cat-dialog.svg);
           background-size: cover;
         }
@@ -1755,13 +2143,13 @@ main {
     }
 
     .dialog {
-      display         : flex;
+      display: flex;
       flex-wrap: wrap;
-      position        : relative;
-      width           : 69vw;
-      height          : 630px;
-      padding         : 50px;
-      border-radius   : 20px;
+      position: relative;
+      width: 69vw;
+      height: 630px;
+      padding: 50px;
+      border-radius: 20px;
       background-color: #f0bd0c;
 
       .profile-pic {
@@ -1780,12 +2168,11 @@ main {
 
         p {
           background-color: #ffffff;
-          margin-bottom   : 10px;
-          font-size       : font(2.5);
-          border-radius   : 20px;
-          box-shadow      : 0 0 10px 5px rgba(0, 0, 0, 0.2);
+          margin-bottom: 10px;
+          font-size: font(2.5);
+          border-radius: 20px;
+          box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
         }
-
 
         .from-customers {
           position: relative;
@@ -1794,7 +2181,7 @@ main {
           width: 35vw;
           line-height: 87px;
           background-color: #ffffff;
-          border-radius   : 20px;
+          border-radius: 20px;
 
           &::after {
             content: "";
@@ -1811,7 +2198,6 @@ main {
             margin-left: -15px;
           }
         }
-
 
         .from-us-1,
         .from-us-2 {
@@ -1855,106 +2241,103 @@ main {
   }
   // 寵物認養區塊結束
 
-  @media screen and (max-width : 1200px) {
+  @media screen and (max-width: 1200px) {
     #adoption-info {
-
       .dialog {
-        display         : flex;
+        display: flex;
         flex-wrap: wrap;
-        position        : relative;
-        width           : 80vw;
-        height          : 630px;
-        padding         : 50px;
-        border-radius   : 20px;
+        position: relative;
+        width: 80vw;
+        height: 630px;
+        padding: 50px;
+        border-radius: 20px;
         background-color: #f0bd0c;
 
         .profile-pic {
-          width           : 102px;
-          height          : 102px;
-          border-radius   : 50%;
-          margin-right    : 30px;
+          width: 102px;
+          height: 102px;
+          border-radius: 50%;
+          margin-right: 30px;
           background-image: url(./images/寵物認養/profile-pic.svg);
-          background-size : cover;
+          background-size: cover;
         }
 
         .message {
-          width        : 49vw;
-          height       : 26vw;
+          width: 49vw;
+          height: 26vw;
           border-radius: 6px;
 
           p {
             background-color: #ffffff;
-            margin-bottom   : 10px;
-            font-size       : font(2.5);
-            border-radius   : 20px;
-            box-shadow      : 0 0 10px 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            font-size: font(2.5);
+            border-radius: 20px;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
           }
 
-
           .from-customers {
-            position        : relative;
-            text-align      : center;
-            margin-bottom   : 40px;
-            width           : 35vw;
-            line-height     : 87px;
+            position: relative;
+            text-align: center;
+            margin-bottom: 40px;
+            width: 35vw;
+            line-height: 87px;
             background-color: #ffffff;
-            font-size       : font(2.5);
-            border-radius   : 20px;
+            font-size: font(2.5);
+            border-radius: 20px;
 
             &::after {
-              content           : '';
-              position          : absolute;
-              left              : 0;
-              top               : 50%;
-              width             : 0;
-              height            : 0;
-              border            : 34px solid transparent;
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 50%;
+              width: 0;
+              height: 0;
+              border: 34px solid transparent;
               border-right-color: #ffffff;
-              border-left       : 0;
-              border-top        : 0;
-              margin-top        : 8px;
-              margin-left       : -15px;
+              border-left: 0;
+              border-top: 0;
+              margin-top: 8px;
+              margin-left: -15px;
             }
           }
 
-
           .from-us-1,
           .from-us-2 {
-            position       : relative;
-            display        : flex;
-            align-items    : center;
+            position: relative;
+            display: flex;
+            align-items: center;
             justify-content: flex-start;
-            width          : 50vw;
-            padding        : 30px;
-            margin-bottom  : 20px;
+            width: 50vw;
+            padding: 30px;
+            margin-bottom: 20px;
 
             &::after {
-              content          : '';
-              position         : absolute;
-              right            : 0;
-              bottom           : 0;
-              width            : 0;
-              height           : 0;
-              border           : 34px solid transparent;
+              content: "";
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              width: 0;
+              height: 0;
+              border: 34px solid transparent;
               border-left-color: #ffffff;
-              border-right     : 0;
-              border-top       : 0;
-              margin-top       : 140px;
-              margin-right     : -15px;
+              border-right: 0;
+              border-top: 0;
+              margin-top: 140px;
+              margin-right: -15px;
             }
           }
         }
 
         .logo-pic {
-          position        : absolute;
-          right           : 20px;
-          bottom          : 50px;
-          width           : 102px;
-          height          : 102px;
-          border-radius   : 50%;
-          margin-right    : 30px;
+          position: absolute;
+          right: 20px;
+          bottom: 50px;
+          width: 102px;
+          height: 102px;
+          border-radius: 50%;
+          margin-right: 30px;
           background-image: url(./images/寵物認養/logo.svg);
-          background-size : cover;
+          background-size: cover;
         }
       }
     }
@@ -1970,10 +2353,9 @@ main {
     }
 
     .swiper {
-
-      width: 1490px;
+      width: 1440px;
       height: 100%;
-     
+
       .swiper-slide {
         position: relative;
         text-align: center;
@@ -1982,16 +2364,14 @@ main {
         height: 530px;
         background: #fff;
 
-
         &:hover {
           img {
             z-index: 0;
           }
         }
 
-
-        &:hover{
-          img{
+        &:hover {
+          img {
             z-index: 0;
           }
         }
@@ -2007,14 +2387,13 @@ main {
           height: 100%;
           object-fit: cover;
           z-index: 2;
-
         }
         .img-words {
           position: absolute;
           width: 100%;
           height: 100%;
           background-color: rgba(58, 56, 57, 0.7);
-          z-index: 1;
+
           h2 {
             margin: 25px 0px;
             font-size: 40px;
@@ -2033,15 +2412,44 @@ main {
       }
     }
   }
-  @media screen and (max-width:577px) {
-    .swiper{
-      width: 500px ;
-      height: 100%;
-      
+  @media screen and (max-width: 577px) {
+    #story {
+      width: 100%;
+
+      .swiper {
+        width: 600px;
+        height: 100%;
+        .swiper-slide {
+          width: 500px;
+          height: 100%;
+          img {
+            object-fit: cover;
+          }
+          .img-words {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(58, 56, 57, 0.7);
+
+            h2 {
+              margin: 25px 0px;
+              font-size: 36px;
+              color: #e19040;
+            }
+            p {
+              margin: 0px 20px 15px 20px;
+              font-size: 30px;
+              color: rgb(255, 255, 255);
+            }
+            a {
+              font-size: 28px;
+              color: #e19040;
+            }
+          }
+        }
+      }
     }
   }
-  
-
 
   .slide-3 {
     &:hover {
@@ -2051,15 +2459,14 @@ main {
 
       .slide-3 {
         &:hover {
-          width           : 100%;
-          height          : 100%;
+          width: 100%;
+          height: 100%;
           background-image: url(./images/下一站家/dog-3@2x.png);
         }
       }
     }
   }
 }
-
 
 footer {
   @include section-setting;

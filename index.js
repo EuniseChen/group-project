@@ -199,29 +199,28 @@ var swiper = new Swiper('.mySwiper', {
   },
   speed: 400,
   spaceBetween: 100,
-  slidesPerView: 3.5,
+  slidesPerView: 1.2,
   spaceBetween: 30,
   loop: true,
 
   pagination: {
     el: '.swiper-pagination',
     clickable: true
+  },
+  
+  breakpoints: {
+    
+    //  >576px 條件如下
+    576: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    }
   }
 
 })
-//swiper寬度設定
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: "auto",
-  pagination: {
-    el: '.swiper-pagination',
-    freeMode: false,
-    freeModeMomentum: true,
-  },
+//輪播設計結束
 
-});
-//swiper寬度設定
-var slide = document.querySelector('.swiper-slide')
-slide.style.width = "100%";
+
 
 
 
